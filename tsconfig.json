@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "sourceMap": false,
+        "allowSyntheticDefaultImports": true
+    },
+    "files": [
+        "./src/main.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

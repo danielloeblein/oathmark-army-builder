@@ -1,0 +1,257 @@
+{
+    "Dwarf": [
+        {
+            "name": "Anchor",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Brace",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Explosive Ammunition",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Fortress",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Gathering of Crows",
+            "castingNumber": 4,
+            "description": ""
+        },
+        {
+            "name": "Lightning Bolt",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Resolute",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Stoneheart",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Sunder",
+            "castingNumber": 7,
+            "description": ""
+        }
+    ],
+    "Elf": [
+        {
+            "name": "Confound",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Earthlines",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Fool's Gold",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Glamour",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Pathfinder",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Phase",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Sail Like a Swan",
+            "castingNumber": 4,
+            "description": ""
+        },
+        {
+            "name": "Trueflight",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Truesight",
+            "castingNumber": 8,
+            "description": ""
+        }
+    ],
+    "General": [
+        {
+            "name": "Calm the Waters",
+            "castingNumber": 4,
+            "description": ""
+        },
+        {
+            "name": "Courage",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Crushing Blow",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Dispel",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Enrage the Waters",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Fireball",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Fleetfeet",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Heal",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Looking Glass",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Mystic Shield",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Shift",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Smoke",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Summon Water Elemental",
+            "castingNumber": 9,
+            "description": ""
+        }
+    ],
+    "Goblin and Orc": [
+        {
+            "name": "Battlerage",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Boil",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Fury",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Horrify",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Immolate",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Poison Cloud",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Rain of Knives",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Fear",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Weakness",
+            "castingNumber": 8,
+            "description": ""
+        }
+    ],
+    "Human": [
+        {
+            "name": "Afflict",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Bells of Doom",
+            "castingNumber": 10,
+            "description": ""
+        },
+        {
+            "name": "Blade Mastery",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Lifebane",
+            "castingNumber": 10,
+            "description": ""
+        },
+        {
+            "name": "Mud",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Seize the Initiative",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Sunblind",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Stabilize",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Stolen March",
+            "castingNumber": 7,
+            "description": ""
+        }
+    ]
+}

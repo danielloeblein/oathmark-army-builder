@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Oathmark Army Builder</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="./sources/bundle.min.js"></script>
+	<link rel="stylesheet" href="./sources/bootstrap.min.css">
+	<link rel="stylesheet" href="./sources/printable.css">
+</head>
+
+<body>
+	<h1 class="text-center no-print">Chosen Terrains</h1>
+	<div class="terrainSelection container no-print" align="center">
+		<div id="capital" align="center">
+			<table class="table table-bordered table-sm">
+				<tr>
+					<th class="text-center region_1_field">
+						<button type="button" id="capitalButton" class="btn btn-primary btn-block">Choose capital</button>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="outerRing" align="center" style="display: none">
+			<table class="table table-bordered table-sm">
+				<tr>
+					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn btn-primary btn-block">Add Terrain</button></th>
+				</tr>
+			</table>
+		</div>
+		<div class="outerRing" align="center" style="display: none">
+			<table class="table table-bordered table-sm">
+				<tr>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
+				</tr>
+			</table>
+		</div>
+		<div class="outerRing" align="center" style="display: none">
+			<table class="table table-bordered table-sm">
+				<tr>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
+				</tr>
+			</table>
+		</div>
+		<div class="outerRing" align="center" style="display: none">
+			<table class="table table-bordered table-sm">
+				<tr>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+				</tr>
+			</table>
+		</div>
+		<div class="outerRing" align="center" style="display: none"><button class="btn btn-warning col-md-4" id="clearTerrains">Clear Terrains</button></div>
+	</div>
+	<h1 class="text-center no-print">Available Terrains</h1>
+	<div class="container no-print">
+		<table class="table table-bordered table-sm">
+			<tr>
+				<th class="text-center" width="14%">Dwarf</th>
+				<th class="text-center" width="14%">Human</th>
+				<th class="text-center" width="14%">Elf</th>
+				<th class="text-center" width="14%">Orc</th>
+				<th class="text-center" width="14%">Goblin</th>
+				<th class="text-center" width="14%">Undead</th>
+				<th class="text-center" width="14%">Unaligned</th>
+			</tr>
+			<tr>
+				<td id="dwarfTerrains"></td>
+				<td id="humanTerrains"></td>
+				<td id="elfTerrains"></td>
+				<td id="orcTerrains"></td>
+				<td id="goblinTerrains"></td>
+				<td id="undeadTerrains"></td>
+				<td id="unalignedTerrains"></td>
+			</tr>
+		</table>
+	</div>
+	<h1 class="text-center no-print">Available Troops</h1>
+	<div class="container-fluid no-print">
+		<table class="table table-bordered table-sm">
+			<tr>
+				<th class="text-center" width="12.5%">Type</th>
+				<th class="text-center" width="12.5%">Dwarf</th>
+				<th class="text-center" width="12.5%">Human</th>
+				<th class="text-center" width="12.5%">Elf</th>
+				<th class="text-center" width="12.5%">Orc</th>
+				<th class="text-center" width="12.5%">Goblin</th>
+				<th class="text-center" width="12.5%">Undead</th>
+				<th class="text-center" width="12.5%">Unaligned</th>
+			</tr>
+			<tr>
+				<th>Hero</th>
+				<td id="dwarfHero"></td>
+				<td id="humanHero"></td>
+				<td id="elfHero"></td>
+				<td id="orcHero"></td>
+				<td id="goblinHero"></td>
+				<td id="undeadHero"></td>
+				<td id="unalignedHero"></td>
+			</tr>
+			<tr>
+				<th>Spellcaster</th>
+				<td id="dwarfSpellcaster"></td>
+				<td id="humanSpellcaster"></td>
+				<td id="elfSpellcaster"></td>
+				<td id="orcSpellcaster"></td>
+				<td id="goblinSpellcaster"></td>
+				<td id="undeadSpellcaster"></td>
+				<td id="unalignedSpellcaster"></td>
+			</tr>
+			<tr>
+				<th>Infantry</th>
+				<td id="dwarfInfantry"></td>
+				<td id="humanInfantry"></td>
+				<td id="elfInfantry"></td>
+				<td id="orcInfantry"></td>
+				<td id="goblinInfantry"></td>
+				<td id="undeadInfantry"></td>
+				<td id="unalignedInfantry"></td>
+			</tr>
+			<tr>
+				<th>Ranged</th>
+				<td id="dwarfRanged"></td>
+				<td id="humanRanged"></td>
+				<td id="elfRanged"></td>
+				<td id="orcRanged"></td>
+				<td id="goblinRanged"></td>
+				<td id="undeadRanged"></td>
+				<td id="unalignedRanged"></td>
+			</tr>
+			<tr>
+				<th>Cavalry</th>
+				<td id="dwarfCavalry"></td>
+				<td id="humanCavalry"></td>
+				<td id="elfCavalry"></td>
+				<td id="orcCavalry"></td>
+				<td id="goblinCavalry"></td>
+				<td id="undeadCavalry"></td>
+				<td id="unalignedCavalry"></td>
+			</tr>
+			<tr>
+				<th>Monster</th>
+				<td id="dwarfMonster"></td>
+				<td id="humanMonster"></td>
+				<td id="elfMonster"></td>
+				<td id="orcMonster"></td>
+				<td id="goblinMonster"></td>
+				<td id="undeadMonster"></td>
+				<td id="unalignedMonster"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" id="armyContainer">
+		<h1 class="text-center"><input type="text" value="New Army" class="text-center container-fluid" id="armyName"/></h1>
+		<h2 class="text-center">Total points: <a id='currentPoints' class='text-decoration-none'>0</a></h2>
+		<div class="container text-center no-print">
+			<form method="post" enctype="multipart/form-data">
+				<div class="btn btn-warning col-md-3 form-group">
+				<input type="file" class="form-control-file" id="importArmyInput" accept="application/odb">
+				<input class="btn btn-secondary" type="button" id="importArmyButton" value="Import Army">
+				</div>
+			</form>
+			<div id="nonImportButtons">
+				<button class="btn btn-warning col-md-1">
+					<a class="text-reset text-decoration-none" id="exportArmy" download="oathmarkArmy.json" href=”” >Export Army</a>
+				</button>
+				<button class="btn btn-warning col-md-1" id="printArmy" onclick="window.print()">Print Army</button>
+				<button class="btn btn-warning col-md-1" id="clearArmy">Clear Army</button>
+			</div>
+		</div>
+		<div id='unitSheets' class="container">
+		</div>
+	</div>
+	<script src="./sources/jquery-3.5.1.min.js"></script>
+    <script src="./sources/popper.min.js"></script>
+	<script src="./sources/bootstrap.min.js"></script>
+</body>
+
+</html>

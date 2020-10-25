@@ -1,0 +1,20 @@
+{
+  "name": "oathmark-army-builder",
+  "version": "1.1.0",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@types/node": "^14.11.8",
+    "bootstrap": "^4.5.3",
+    "tsify": "^5.0.2"
+  },
+  "devDependencies": {
+    "bestzip": "^2.1.7",
+    "browserify": "^17.0.0",
+    "uglify-js": "^3.11.2"
+  },
+  "scripts": {
+    "minify": "uglifyjs --compress --mangle --output ./sources/bundle.min.js -- build/bundle.js",
+    "bundle": "tsc && browserify src/main.js -o build/bundle.js && npm run minify",
+    "package": "bestzip %npm_package_name%@%npm_package_version%.zip armyBuilder.html sources/*"
+  }
+}

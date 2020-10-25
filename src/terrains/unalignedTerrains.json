@@ -1,0 +1,207 @@
+{
+	"list":	[
+		{
+			"name": "Ancient Ruins",
+			"race": "Unaligned",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Gargoyle",
+					"count": 20,
+					"type": "Infantry",
+					"stats": {
+						"activation": 5,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 24,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Flying"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon"
+					]
+				}
+			]
+		}, {
+			"name": "Glade",
+			"race": "Unaligned",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Bodach",
+					"count": 1,
+					"type": "Spellcaster",
+					"stats": {
+						"activation": 2,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 2,
+						"health": 3,
+						"points": 400,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 2
+							},
+							{
+								"name": "Spellcaster",
+								"rank": 4
+							},
+							{
+								"name": "Monster"
+							}, {
+								"name": "Discorporate"
+							}
+						]
+					},
+					"equipment": [
+					],
+					"spelllist": [
+						"General",
+						"Dwarf",
+						"Elf",
+						"Human",
+						"Goblin and Orc"
+					]
+				}
+			]
+		}, {
+			"name": "High Fells",
+			"race": "Unaligned",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Dragon",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 2,
+						"movement": 6,
+						"fight": 8,
+						"shoot": 3,
+						"defense": 14,
+						"combatDice": 5,
+						"health": 12,
+						"points": 700,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Charge",
+								"rank": 2
+							},
+							{
+								"name": "Wild Charge"
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Shielding",
+								"rank": 2
+							},
+							{
+								"name": "Fire Breath"
+							},
+							{
+								"name": "Enormous"
+							}
+						]
+					},
+					"equipment": [
+					],
+					"options": [
+						{
+							"name": "Wings",
+							"points": 100,
+							"stats": {
+								"special": [
+									{
+										"name": "Flying"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Caverns",
+			"race": "Unaligned",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Surma",
+					"count": 2,
+					"type": "Monster",
+					"stats": {
+						"activation": 4,
+						"movement": 6,
+						"fight": 6,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 4,
+						"health": 6,
+						"points": 240,
+						"unitSize": 1,
+						"base": "50x50",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Shielding",
+								"rank": 2
+							},
+							{
+								"name": "Stone Gaze"
+							},
+							{
+								"name": "Large"
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}, {
+			"name": "Abandoned Temple Complex",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": "description text"
+		}, {
+			"name": "Island of Flowers",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": "description text"
+		}, {
+			"name": "Gold Mine",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": "description text"
+		}
+	]
+}

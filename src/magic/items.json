@@ -1,0 +1,97 @@
+{
+    "items": [
+        {
+            "name": "Armour of Starsilver",
+            "points": 50,
+            "description": ""
+        },
+        {
+            "name": "Banner of Courage",
+            "points": 60,
+            "stats": {
+                "special": [
+                    {
+                        "name": "Courage",
+                        "rank": "+"
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "name": "Boots of Striding",
+            "points": 30,
+            "stats": {
+                "special": [
+                    {
+                        "name": "Nimble"
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "name": "Crown of Regeneration",
+            "points": 50,
+            "stats": {
+                "special": [
+                    {
+                        "name": "Regeneration",
+                        "rank": 1
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "name": "Cloak of Discorporation",
+            "points": 100,
+            "stats": {
+                "special": [
+                    {
+                        "name": "Discorporate"
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "name": "Golden String Bow",
+            "points": 50,
+            "description": ""
+        },
+        {
+            "name": "Ring of Shielding",
+            "points": 50,
+            "stats": {
+                "special": [
+                    {
+                        "name": "Shielding",
+                        "rank": "+"
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "name": "Ring of Spellcasting",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Sceptre of Command",
+            "points": 75,
+            "description": ""
+        },
+        {
+            "name": "Sword of Starsilver",
+            "points": 50,
+            "description": ""
+        },
+        {
+            "name": "Sword of Flames",
+            "points": 50,
+            "description": ""
+        }
+    ]
+}

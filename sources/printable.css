@@ -1,0 +1,56 @@
+@media print {
+  .no-print {
+      display: none !important;
+    }
+  .only_print {
+    display: block !important;
+  }
+
+  .form-control
+  {
+    border: 0;
+    padding:0;
+    overflow:visible;
+    appearance: none;
+    padding-bottom: 5%;
+  }
+
+  input, textarea {
+    border: 0 !important;
+    border-style: none !important;
+  }
+
+  table.table-bordered{
+      border:1px solid black !important;
+  }
+  table.table-bordered > tbody > tr > th{
+      border:1px solid black !important;
+  }
+  table.table-bordered > tbody > tr > td{
+      border:1px solid black !important;
+  }
+
+  @page {
+    margin:0;
+  }
+
+  #armyContainer {
+    margin: 2cm;
+  }
+
+  .tableSeperator{
+      display:block;
+      width:100%;
+      height: 2cm;
+      clear: both;
+      }
+
+  }
+
+.only_print {
+  display: none;
+}
+
+#nonImportButtons {
+  display:none;
+}

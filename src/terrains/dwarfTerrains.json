@@ -1,0 +1,1331 @@
+{
+	"list":	[
+		{
+			"name": "Dwarf Capital",
+			"race": "Dwarf",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Ruler",
+					"either": [
+						{
+							"name": "Dwarf King",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 3,
+								"health": 3,
+								"points": 322,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						},
+						{
+							"name": "Dwarf Prince",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 2,
+								"health": 2,
+								"points": 165,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						}
+					]
+				},
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Dwarf General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 1,
+								"health": 2,
+								"points": 293,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						},
+						{
+							"name": "Dwarf Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 1,
+								"health": 1,
+								"points": 150,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						}
+					]
+				},
+				{
+					"name": "Dwarf Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 3,
+						"health": 1,
+						"points": 62,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+									},
+							{
+								"name": "Champion"
+									}, {
+								"name": "Magic Items"
+									}
+
+								]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					]
+				},
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Dwarf Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						}
+					]
+				},
+				{
+					"name": "Dwarf Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 16,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}, {
+								"name": "Brace"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Fire Over"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Militia",
+					"type": "Infantry",
+					"stats": {
+						"activation": 5,
+						"movement": 5,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+						]
+					},
+					"equipment": [
+						"Two-Handed Weapon"
+					]
+				},
+				{
+					"name": "Dwarf Engineer",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 75,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Engineers"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Figures",
+								"rank": 5
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Light Armor"
+					],
+					"options": [
+						{
+							"name": "Add Expert Engineers",
+							"points": 30
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Dwarf City",
+			"race": "Dwarf",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Dwarf General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 1,
+								"health": 2,
+								"points": 293,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						},
+						{
+							"name": "Dwarf Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 11,
+								"combatDice": 1,
+								"health": 1,
+								"points": 150,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							]
+						}
+					]
+				},
+				{
+					"name": "Dwarf Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 3,
+						"health": 1,
+						"points": 62,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Champion"
+							}, {
+								"name": "Magic Items"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					]
+				},
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Dwarf Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						}
+					]
+				},
+				{
+					"name": "Dwarf Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 16,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}, {
+								"name": "Brace"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Fire Over"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Dwarf Militia",
+					"type": "Infantry",
+					"stats": {
+						"activation": 5,
+						"movement": 5,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+						]
+					},
+					"equipment": [
+						"Two-Handed Weapon"
+					]
+				},
+				{
+					"name": "Dwarf Engineer",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 75,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Engineers"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Figures",
+								"rank": 5
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Light Armor"
+					],
+					"options": [
+						{
+							"name": "Add Expert Engineers",
+							"points": 30
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Forges",
+			"race": "Dwarf",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Dwarf Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 3,
+						"health": 1,
+						"points": 62,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Champion"
+							}, {
+								"name": "Magic Items"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					]
+				},
+				{
+					"name": "Dwarf Warrior",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 4,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 1,
+						"health": 1,
+						"points": 17,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					]
+				},
+				{
+					"name": "Dwarf Linebreaker",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 4,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 1,
+						"health": 1,
+						"points": 20,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+						]
+					},
+					"equipment": [
+						"Two-Handed Weapon",
+						"Heavy Armor"
+					]
+				}
+			]
+		}, {
+			"name": "Mountain Passes",
+			"race": "Dwarf",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Dwarf Border Guard",
+					"type": "Ranged",
+					"stats": {
+						"activation": 4,
+						"movement": 5,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 17,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Nimble"
+							},
+							{
+								"name": "Aimed Fire"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow"
+					]
+				}
+			]
+		}, {
+			"name": "Lumber Yard",
+			"race": "Dwarf",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Artillery",
+					"either": [
+						{
+							"name": "Dwarf Light Catapult",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 4,
+								"movement": 3,
+								"fight": 2,
+								"shoot": 3,
+								"defense": 9,
+								"combatDice": 1,
+								"health": 1,
+								"points": 120,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 3
+									},
+									{
+										"name": "Indirect Fire"
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							]
+						},
+						{
+							"name": "Dwarf Heavy Catapult",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 4,
+								"movement": 2,
+								"fight": 2,
+								"shoot": 4,
+								"defense": 9,
+								"combatDice": 1,
+								"health": 1,
+								"points": 140,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 4
+									},
+									{
+										"name": "Indirect Fire"
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							]
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Hermitages",
+			"race": "Dwarf",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Dwarf Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 200,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 4",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 3,
+								"points": 300,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 4
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						},
+						{
+							"name": "Dwarf Spellcaster Level 5",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 4,
+								"movement": 5,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 3,
+								"points": 400,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 5
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Champion"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Dwarf"
+							]
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Snow-capped Mountains",
+			"race": "Dwarf",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Indrik",
+					"count": 2,
+					"type": "Monster",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 4,
+						"health": 5,
+						"points": 160,
+						"unitSize": 1,
+						"base": "50x50",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Charge",
+								"rank": 3
+							},
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Courage",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}, {
+			"name": "Tarns",
+			"race": "Dwarf",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Eachy",
+					"count": 2,
+					"type": "Monster",
+					"stats": {
+						"activation": 7,
+						"movement": 5,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 3,
+						"health": 5,
+						"points": 120,
+						"unitSize": 1,
+						"base": "50x50",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Regenerate",
+								"rank": 1
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Courage",
+								"rank": 2
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}, {
+			"name": "Moors",
+			"race": "Dwarf",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Barghest",
+					"count": 2,
+					"type": "Monster",
+					"stats": {
+						"activation": 4,
+						"movement": 8,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 11,
+						"combatDice": 4,
+						"health": 4,
+						"points": 200,
+						"unitSize": 1,
+						"base": "50x50",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Discorporate"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}
+	]
+}

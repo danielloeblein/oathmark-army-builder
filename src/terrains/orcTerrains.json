@@ -1,0 +1,1922 @@
+{
+	"list":	[
+		{
+			"name": "Orc Capital",
+			"race": "Orc",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Ruler",
+					"either": [
+						{
+							"name": "Orc King",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 3,
+								"points": 279,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Wild Charge"
+									}, 
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						},
+						{
+							"name": "Orc Prince",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 2,
+								"health": 2,
+								"points": 145,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Wild Charge"
+									}, 
+									{
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Orc General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 260,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						},
+						{
+							"name": "Orc Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 133,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Orc Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 3,
+						"health": 1,
+						"points": 49,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Champion"
+							}, 
+							{
+								"name": "Magic Items"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					],
+					"options": [
+						{
+							"name": "Wolf Mount",
+							"points": 20,
+							"stats": {
+								"movement": 8,
+								"defense": 12,
+								"base": "25x50"
+							}
+						}
+					]
+				},
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Orc Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						}
+					]
+				},
+				{
+					"name": "Orc Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 13,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}, {
+								"name": "Brace"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Engineer",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 65,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Engineers"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Figures",
+								"rank": 5
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Light Armor"
+					],
+					"options": [
+						{
+							"name": "Add Expert Engineers",
+							"points": 50
+						},
+						{
+							"name": "Change to Figures (10)",
+							"points": 65,
+							"stats": {
+								"special": [
+									{
+										"name": "Figures",
+										"rank": 10
+									}	
+								]
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Orc City",
+			"race": "Orc",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Orc General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 260,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						},
+						{
+							"name": "Orc Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 133,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Orc Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 3,
+						"health": 1,
+						"points": 49,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Champion"
+							}, 
+							{
+								"name": "Magic Items"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					],
+					"options": [
+						{
+							"name": "Wolf Mount",
+							"points": 20,
+							"stats": {
+								"movement": 8,
+								"defense": 12,
+								"base": "25x50"
+							}
+						}
+					]
+				},
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Orc Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						}
+					]
+				},
+				{
+					"name": "Orc Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 13,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							}, {
+								"name": "Brace"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Orc Engineer",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 65,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Engineers"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Figures",
+								"rank": 5
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Light Armor"
+					],
+					"options": [
+						{
+							"name": "Add Expert Engineers",
+							"points": 50
+						},
+						{
+							"name": "Change to Figures (10)",
+							"points": 65,
+							"stats": {
+								"special": [
+									{
+										"name": "Figures",
+										"rank": 10
+									}	
+								]
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Smithies",
+			"race": "Orc",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Champion",
+					"either": [
+						{
+							"name": "Orc Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 49,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						},
+						{
+							"name": "Goblin Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 37,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Heavy Armor",
+								"Shield"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 12,
+										"base": "25x50"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Orc Warrior",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Heavy Armor",
+						"Shield"
+					]
+				},
+				{
+					"name": "Orc Linebreaker",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 18,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Two-Handed Weapon",
+						"Heavy Armor"
+					]
+				}
+			]
+		}, 
+		{
+			"name": "Ruined Villages",
+			"race": "Orc",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Artillery",
+					"either": [
+						{
+							"name": "Goblin Light Catapult",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 6,
+								"movement": 3,
+								"fight": 1,
+								"shoot": 3,
+								"defense": 8,
+								"combatDice": 1,
+								"health": 1,
+								"points": 80,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 3
+									},
+									{
+										"name": "Indirect Fire"
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							]
+						},
+						{
+							"name": "Orc Heavy Catapult",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 6,
+								"movement": 2,
+								"fight": 3,
+								"shoot": 4,
+								"defense": 9,
+								"combatDice": 1,
+								"health": 1,
+								"points": 120,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 4
+									},
+									{
+										"name": "Indirect Fire"
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Light Armor"
+							]
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"name": "Dungeons",
+			"race": "Orc",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Orc Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 2,
+								"points": 200,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 4",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 3,
+								"points": 300,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 4
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Orc Spellcaster Level 5",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 9,
+								"combatDice": 3,
+								"health": 3,
+								"points": 400,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 5
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									},
+									{
+										"name": "Wild Charge"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Goblin Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 40,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 10,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Goblin Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 80,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 10,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Goblin Spellcaster Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 180,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 10,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Goblin Spellcaster Level 4",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 3,
+								"points": 260,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 4
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 10,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						},
+						{
+							"name": "Goblin Spellcaster Level 5",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 6,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 3,
+								"points": 340,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 5
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Charge",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Wolf Mount",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 10,
+										"base": "25x50"
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Goblin and Orc"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Poisonous Swamps",
+			"race": "Orc",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Knucker",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 6,
+						"movement": 6,
+						"fight": 6,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 5,
+						"health": 8,
+						"points": 500,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Poisonous Breath"
+							},
+							{
+								"name": "Waterwalk"
+							},
+							{
+								"name": "Courage",
+								"rank": 3
+							},
+							{
+								"name": "Enormous"
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}
+	]
+}
