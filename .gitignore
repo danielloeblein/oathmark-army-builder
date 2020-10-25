@@ -6,8 +6,9 @@
 # Node artifact files
 node_modules/
 build/
+src/*.js
+src/models/*.js
 
 # Compiled JavaScript class files
-*.js
 package-lock.json
 
