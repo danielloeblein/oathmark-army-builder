@@ -113,7 +113,7 @@ class TroopSelection {
         const cellString: string = race + unit.type;
         const troopButton: HTMLButtonElement = document.createElement("button");
         troopButton.innerHTML = unit.name;
-        troopButton.className = "btn btn-success btn-block";
+        troopButton.className = "btn lightGrey btn-block";
         troopButton.onclick = () => {
             this.armySelection.addUnitSheet(unit);
             this.createTable();

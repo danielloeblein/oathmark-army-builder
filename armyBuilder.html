@@ -11,13 +11,14 @@
 </head>
 
 <body>
-	<h1 class="text-center no-print">Chosen Terrains</h1>
+	<p style="margin-bottom:1cm;" class="no-print" id="chosenTerrains">&nbsp;</p>
+	<h1 class="text-center no-print">CHOSEN TERRAINS</h1>
 	<div class="terrainSelection container no-print" align="center">
 		<div id="capital" align="center">
 			<table class="table table-bordered table-sm">
 				<tr>
 					<th class="text-center region_1_field">
-						<button type="button" id="capitalButton" class="btn btn-primary btn-block">Choose capital</button>
+						<button type="button" id="capitalButton" class="btn lightGrey btn-block">Choose capital</button>
 					</th>
 				</tr>
 			</table>
@@ -25,44 +26,45 @@
 		<div class="outerRing" align="center" style="display: none">
 			<table class="table table-bordered table-sm">
 				<tr>
-					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn lightGrey btn-block">Add Terrain</button></th>
 				</tr>
 			</table>
 		</div>
 		<div class="outerRing" align="center" style="display: none">
 			<table class="table table-bordered table-sm">
 				<tr>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
 				</tr>
 			</table>
 		</div>
 		<div class="outerRing" align="center" style="display: none">
 			<table class="table table-bordered table-sm">
 				<tr>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
 				</tr>
 			</table>
 		</div>
 		<div class="outerRing" align="center" style="display: none">
 			<table class="table table-bordered table-sm">
 				<tr>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn btn-primary btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
+					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
 				</tr>
 			</table>
 		</div>
-		<div class="outerRing" align="center" style="display: none"><button class="btn btn-warning col-md-4" id="clearTerrains">Clear Terrains</button></div>
+		<div class="outerRing" align="center" style="display: none"><button class="btn white col-md-4" id="clearTerrains">Clear Terrains</button></div>
 	</div>
-	<h1 class="text-center no-print">Available Terrains</h1>
+	<p style="margin-bottom:1.5cm;" class="no-print" id="availableTerrains">&nbsp;</p>
+	<h1 class="text-center no-print">AVAILABLE TERRAINS</h1>
 	<div class="container no-print">
 		<table class="table table-bordered table-sm">
 			<tr>
@@ -85,7 +87,8 @@
 			</tr>
 		</table>
 	</div>
-	<h1 class="text-center no-print">Available Troops</h1>
+	<p style="margin-bottom:1.5cm;" class="no-print" id="availableTroops">&nbsp;</p>
+	<h1 class="text-center no-print">AVAILABLE TROOPS</h1>
 	<div class="container-fluid no-print">
 		<table class="table table-bordered table-sm">
 			<tr>
@@ -160,27 +163,36 @@
 			</tr>
 		</table>
 	</div>
+	<p style="margin-bottom:1.5cm;" class="no-print">&nbsp;</p>
 	<div class="container" id="armyContainer">
 		<h1 class="text-center"><input type="text" value="New Army" class="text-center container-fluid" id="armyName"/></h1>
 		<h2 class="text-center">Total points: <a id='currentPoints' class='text-decoration-none'>0</a></h2>
 		<div class="container text-center no-print">
 			<form method="post" enctype="multipart/form-data">
-				<div class="btn btn-warning col-md-3 form-group">
+				<div class="btn lightGrey col-md-6 form-group">
 				<input type="file" class="form-control-file" id="importArmyInput" accept="application/odb">
-				<input class="btn btn-secondary" type="button" id="importArmyButton" value="Import Army">
+				<input class="btn white rounded col-md-8" type="button" id="importArmyButton" value="Import Army">
 				</div>
 			</form>
 			<div id="nonImportButtons">
-				<button class="btn btn-warning col-md-1">
+				<button class="btn lightGrey col-md-2">
 					<a class="text-reset text-decoration-none" id="exportArmy" download="oathmarkArmy.json" href=”” >Export Army</a>
 				</button>
-				<button class="btn btn-warning col-md-1" id="printArmy" onclick="window.print()">Print Army</button>
-				<button class="btn btn-warning col-md-1" id="clearArmy">Clear Army</button>
+				<button class="btn lightGrey col-md-2" id="printArmy" onclick="window.print()">Print Army</button>
+				<button class="btn white col-md-2" id="clearArmy">Clear Army</button>
 			</div>
 		</div>
 		<div id='unitSheets' class="container">
 		</div>
 	</div>
+	<p style="margin-bottom:1cm;" class="no-print">&nbsp;</p>
+	<nav class="navbar navbar-expand-lg fixed-bottom no-print">
+		<div class="collapse navbar-collapse navbar-nav">
+			<a class="nav-item white rounded" href="#chosenTerrains">CHOSEN TERRAINS</a>
+			<a class="nav-item white rounded" href="#availableTroops">AVAILABLE TROOPS</a>
+			<a class="nav-item white rounded" href="#armyContainer">ARMY</a>
+		</div>
+	</nav>
 	<script src="./sources/jquery-3.5.1.min.js"></script>
     <script src="./sources/popper.min.js"></script>
 	<script src="./sources/bootstrap.min.js"></script>

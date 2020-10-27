@@ -81,7 +81,7 @@ class RegionSelection {
             terrain.race === 'Undead' ? undeadTerrainTable : unalignedTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
-            terrainButton.className = "btn btn-info btn-block";
+            terrainButton.className = "btn lightGrey btn-block";
             terrainButton.onclick = () => {
                 if (button) {
                     button.parentElement.innerHTML = terrain.name;
@@ -95,9 +95,11 @@ class RegionSelection {
                 unalignedTerrainTable.innerHTML = '';
                 this.chosenTerrains.push({terrain: terrain, region: region});
                 this.troopSelection.createTable();
+                window.location.href="#chosenTerrains";
             };
             terrainTable.appendChild(terrainButton);
         });
+        window.location.href="#availableTerrains";
     }
 
     private createCapitalSelectionButtons(list: Array<Terrain>, button: HTMLElement = null, region: number = 1): void {
@@ -124,7 +126,7 @@ class RegionSelection {
             terrain.race === 'Undead' ? undeadTerrainTable : unalignedTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
-            terrainButton.className = "btn btn-info btn-block";
+            terrainButton.className = "btn lightGrey btn-block";
             terrainButton.onclick = () => {
                 if (button) {
                     button.parentElement.innerHTML = terrain.name;
@@ -143,9 +145,11 @@ class RegionSelection {
                     div.style.display = "block";
                 });
                 this.troopSelection.createTable();
+                window.location.href="#chosenTerrains";
             };
             terrainTable.appendChild(terrainButton);
         });
+        window.location.href="#availableTerrains";
     }
 
     private fillRegions(): void {
@@ -227,7 +231,7 @@ class RegionSelection {
                 tableHead.innerHTML = '';
                 const button: HTMLButtonElement = document.createElement('button');
                 button.innerHTML = i === 1 ? 'Choose Capital' : 'Add Terrain';
-                button.className = i === 1 ? 'btn btn-primary btn-block' : 'btn btn-primary btn-block region_' + i;
+                button.className = i === 1 ? 'btn lightGrey btn-block' : 'btn lightGrey btn-block region_' + i;
                 button.type = 'button';
                 if (i === 1) {
                     button.id = 'capitalButton';

@@ -186,7 +186,7 @@ class ArmySelection {
         tableSeperator.innerHTML = "&nbsp;";
         tableSeperator.className = "tableSeperator";
         const resetButton: HTMLButtonElement = document.createElement('button');
-        resetButton.className = "btn btn-danger btn-block no-print";
+        resetButton.className = "btn white btn-block no-print";
         resetButton.innerHTML = "Remove Unit";
         resetButton.onclick = () => {
             tableDiv.parentElement.removeChild(tableDiv);
@@ -327,7 +327,7 @@ class ArmySelection {
                     createSelected();
                 } else {
                     const optionButton: HTMLButtonElement = document.createElement('button');
-                    optionButton.className = "btn btn-secondary btn-block";
+                    optionButton.className = "btn lightGrey btn-block";
                     optionButton.innerHTML = option.name;
                     optionButton.onclick = () => {
                         changedUnit.selectedOptions.push(option);            
@@ -340,7 +340,7 @@ class ArmySelection {
             });
             if (changedUnit.unit.stats.special.find((item: Special)=> item.name.includes("Magic Items"))) {
                 const magicItemButton: HTMLButtonElement = document.createElement('button');
-                magicItemButton.className = "btn btn-secondary btn-block";
+                magicItemButton.className = "btn lightGrey btn-block";
                 magicItemButton.innerHTML = "Add magic item";
                 magicItemButton.onclick = () => {
                     this.showMagicItems(changedUnit, optionsCell_input, createSelected, populateOptionsField);
@@ -350,7 +350,7 @@ class ArmySelection {
             
             if (changedUnit.selectedOptions.length > 0) {
                 const resetOptionsButton: HTMLButtonElement = document.createElement('button');
-                resetOptionsButton.className = "btn btn-secondary btn-block";
+                resetOptionsButton.className = "btn lightGrey btn-block";
                 resetOptionsButton.innerHTML = "Reset Options";
                 resetOptionsButton.onclick = () => {
                     changedUnit.selectedOptions = [];
@@ -437,7 +437,7 @@ class ArmySelection {
         this.magicItems.forEach(item => {
             if (!unit.selectedOptions.find((option: Option)=> option.name === item.name)) {
                 const itemButton: HTMLButtonElement = document.createElement('button');
-                itemButton.className = "btn btn-outline-primary col-md-3";
+                itemButton.className = "btn invertedGrey rounded col-md-3";
                 itemButton.innerHTML = item.name;
                 itemButton.onclick = () => {
                     unit.selectedOptions.push(item);            
@@ -458,12 +458,12 @@ class ArmySelection {
         spellCell_title.colSpan = 2;
         const spellAdd_button: HTMLButtonElement = document.createElement('button');
         spellAdd_button.innerHTML = 'Add';
-        spellAdd_button.className = "btn btn-secondary btn-block no-print";
+        spellAdd_button.className = "btn lightGrey btn-block no-print";
         spellCell_title.appendChild(spellAdd_button);
 
         const spellClear_button: HTMLButtonElement = document.createElement('button');
         spellClear_button.innerHTML = 'Clear';
-        spellClear_button.className = "btn btn-secondary btn-block no-print";
+        spellClear_button.className = "btn lightGrey btn-block no-print";
         spellCell_title.appendChild(spellClear_button);
         const spellList_field: HTMLTableCellElement = document.createElement('td');
         spellList_field.colSpan = 8;
@@ -498,7 +498,7 @@ class ArmySelection {
                     if (!changedUnit.spellList.find((savedSpell: Spell) => savedSpell.name === spell.name)) {
                         const spellButton: HTMLButtonElement = document.createElement('button');
                         spellButton.innerHTML = spell.name + ' (' + spell.castingNumber + ')';
-                        spellButton.className = "btn btn-outline-primary col-md-3";
+                        spellButton.className = "btn invertedGrey rounded col-md-3";
                         spellButton.onclick = () => {
                             changedUnit.spellList.push(spell);
                             this.fillSpellListField(changedUnit, spellList_field, spellAdd_button);
