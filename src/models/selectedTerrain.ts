@@ -1,6 +1,6 @@
 import Terrain from "./terrain";
 class SelectedTerrain {
     public terrain: Terrain;
-    public region: number;
+    public region: string;
 };
 export default SelectedTerrain

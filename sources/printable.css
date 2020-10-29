@@ -147,3 +147,8 @@ body {
 .nav-item:hover {
   color: black !important;
 }
+
+.outerRing {
+  display: none;
+  cursor: pointer;
+}

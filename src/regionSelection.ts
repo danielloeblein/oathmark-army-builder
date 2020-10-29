@@ -37,24 +37,47 @@ class RegionSelection {
                 this.terrains_1.push(terrain);
             }
         }));
-        
-        document.getElementById('capitalButton').onclick = () => this.createCapitalSelectionButtons(this.terrains_1, document.getElementById('capitalButton'));
-        Array.from(document.getElementsByClassName('region_2')).forEach((button: HTMLElement) => {
-            button.onclick = () => this.createSelectionButtons(this.terrains_2, button, 2);
-        });
-        Array.from(document.getElementsByClassName('region_3')).forEach((button: HTMLElement) => {
-            button.onclick = () => this.createSelectionButtons(this.terrains_3, button, 3);
-        });
-        Array.from(document.getElementsByClassName('region_4')).forEach((button: HTMLElement) => {
-            button.onclick = () => this.createSelectionButtons(this.terrains_4, button, 4);
-        });
-        Array.from(document.getElementsByClassName('region_5')).forEach((button: HTMLElement) => {
-            button.onclick = () => this.createSelectionButtons(this.terrains_5, button, 5);
-        });
-
+        const capitalField: HTMLElement = document.getElementById("capitalButtonField");
+        const capitalButton: HTMLElement = document.getElementById('capitalButton');
+        capitalField.onclick = () => {
+            if (capitalField.innerHTML.trim() !== "Choose Capital") {
+                return;
+            }
+            this.createCapitalSelectionButtons(this.terrains_1, capitalButton, capitalField)
+        };
+        capitalButton.onclick = () => {
+            if (capitalField.innerHTML.trim() !== "Choose Capital") {
+                return;
+            }
+            this.createCapitalSelectionButtons(this.terrains_1, capitalButton, capitalField)
+        };
+        for (let i:number = 2; i<= 5; i++) {
+            for (let j:number = 1; j <= Math.min(i, 4); j++) {
+                const terrainButton: HTMLElement = document.getElementById(`region_${i}_${j}`);
+                const terrainField: HTMLElement = document.getElementById(`region_${i}_${j}_field`);
+                terrainButton.onclick = () => {
+                    if(terrainField.innerHTML.trim() !== "Choose Terrain") {
+                        return;
+                    }
+                    const terrainsList = i === 2 ? this.terrains_2 : 
+                                        i === 3 ? this.terrains_3 : 
+                                        i === 4 ? this.terrains_4 : this.terrains_5;
+                    this.createSelectionButtons(terrainsList, terrainButton, terrainField, `${i}_${j}`);
+                }
+                terrainField.onclick = () => {
+                    if(terrainField.innerHTML.trim() !== "Choose Terrain") {
+                        return;
+                    }
+                    const terrainsList = i === 2 ? this.terrains_2 : 
+                                        i === 3 ? this.terrains_3 : 
+                                        i === 4 ? this.terrains_4 : this.terrains_5;
+                    this.createSelectionButtons(terrainsList, terrainButton, terrainField, `${i}_${j}`);
+                }
+            }
+        }
     }
 
-    private createSelectionButtons(list: Array<Terrain>, button: HTMLElement, region: number): void {
+    private createSelectionButtons(list: Array<Terrain>, button: HTMLElement, field: HTMLElement, region: string): void {
         const dwarfTerrainTable: HTMLElement = document.getElementById('dwarfTerrains');
         const humanTerrainTable: HTMLElement = document.getElementById('humanTerrains');
         const elfTerrainTable: HTMLElement = document.getElementById('elfTerrains');
@@ -84,7 +107,11 @@ class RegionSelection {
             terrainButton.className = "btn lightGrey btn-block";
             terrainButton.onclick = () => {
                 if (button) {
-                    button.parentElement.innerHTML = terrain.name;
+                    button.style.fill = "white";
+                    button.style.cursor = "default";
+                    field.style.fill = "black";
+                    field.style.cursor = "default";
+                    field.innerHTML = terrain.name;
                 }
                 dwarfTerrainTable.innerHTML = '';
                 humanTerrainTable.innerHTML = '';
@@ -95,14 +122,14 @@ class RegionSelection {
                 unalignedTerrainTable.innerHTML = '';
                 this.chosenTerrains.push({terrain: terrain, region: region});
                 this.troopSelection.createTable();
-                window.location.href="#chosenTerrains";
+                window.location.href="#kingdomSVG";
             };
             terrainTable.appendChild(terrainButton);
         });
         window.location.href="#availableTerrains";
     }
 
-    private createCapitalSelectionButtons(list: Array<Terrain>, button: HTMLElement = null, region: number = 1): void {
+    private createCapitalSelectionButtons(list: Array<Terrain>, button: HTMLElement = null, textField: HTMLElement, region: string = '1'): void {
         const dwarfTerrainTable: HTMLElement = document.getElementById('dwarfTerrains');
         const humanTerrainTable: HTMLElement = document.getElementById('humanTerrains');
         const elfTerrainTable: HTMLElement = document.getElementById('elfTerrains');
@@ -129,7 +156,11 @@ class RegionSelection {
             terrainButton.className = "btn lightGrey btn-block";
             terrainButton.onclick = () => {
                 if (button) {
-                    button.parentElement.innerHTML = terrain.name;
+                    button.style.fill = "white";
+                    button.style.cursor = "default";
+                    textField.style.fill = "black";
+                    textField.style.cursor = "default";
+                    textField.innerHTML = terrain.name;
                 }
                 dwarfTerrainTable.innerHTML = '';
                 humanTerrainTable.innerHTML = '';
@@ -145,7 +176,7 @@ class RegionSelection {
                     div.style.display = "block";
                 });
                 this.troopSelection.createTable();
-                window.location.href="#chosenTerrains";
+                window.location.href="#kingdomSVG";
             };
             terrainTable.appendChild(terrainButton);
         });
@@ -225,25 +256,27 @@ class RegionSelection {
         goblinTerrainTable.innerHTML = '';
         undeadTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
-        for(let i: number = 1; i<=5; i++ ){
-            const fieldArray: HTMLCollection = document.getElementsByClassName('region_' + i + '_field');
-            Array.from(fieldArray).forEach((tableHead: HTMLTableHeaderCellElement) => {
-                tableHead.innerHTML = '';
-                const button: HTMLButtonElement = document.createElement('button');
-                button.innerHTML = i === 1 ? 'Choose Capital' : 'Add Terrain';
-                button.className = i === 1 ? 'btn lightGrey btn-block' : 'btn lightGrey btn-block region_' + i;
-                button.type = 'button';
-                if (i === 1) {
-                    button.id = 'capitalButton';
-                } 
-                tableHead.appendChild(button);
-            });
+        for(let i: number = 2; i<=5; i++ ){
+            for (let j: number = 1; j<=Math.min(i,4); j++) {
+                const regionButton: HTMLElement = document.getElementById(`region_${i}_${j}`);
+                const regionField: HTMLElement = document.getElementById(`region_${i}_${j}_field`);
+                regionButton.style.fill = "url(#grad1)";
+                regionField.style.fill = "wheat";
+                regionField.innerHTML = "Choose Terrain";
+            }
         }
-        const tableArray: HTMLCollection = document.getElementsByClassName('outerRing');
-        Array.from(tableArray).forEach((tableHead: HTMLTableHeaderCellElement)  => {
-            const tableElement: HTMLElement = <HTMLElement> tableHead;
-            tableElement.style.display = 'none';
+        const regionArray: HTMLCollection = document.getElementsByClassName('outerRing');
+        Array.from(regionArray).forEach((region: HTMLElement)  => {
+            region.style.display = "none";
+            region.style.cursor ="pointer";
         });
+        const capitalButton: HTMLElement = document.getElementById('capitalButton');
+        capitalButton.style.fill = "url(#grad1)";
+        capitalButton.style.cursor = "pointer";
+        const capitalField: HTMLElement = document.getElementById('capitalButtonField');
+        capitalField.style.fill = "wheat";
+        capitalField.style.cursor = "pointer";
+        capitalField.innerHTML = "Choose Capital";
         this.init();
         this.troopSelection.createTable();
         this.troopSelection.armySelection.clearArmy();
@@ -251,83 +284,31 @@ class RegionSelection {
 
     public fillTerrains(terrains: Array<SelectedTerrain>): void {
         this.chosenTerrains = terrains;
-        const secondRing: Array<Terrain> = [];
-        const thirdRing: Array<Terrain> = [];
-        const fourthRing: Array<Terrain> = [];
-        const fifthRing: Array<Terrain> = [];
-        const tableArray: HTMLCollection = document.getElementsByClassName('outerRing');
-        Array.from(tableArray).forEach((tableHead: HTMLTableHeaderCellElement)  => {
-            const tableElement: HTMLElement = <HTMLElement> tableHead;
-            tableElement.style.display = 'block';
-        });
-        terrains.forEach(terrain => {
-            switch (terrain.region) {
-                case 1:
-                    this.capital = terrain.terrain;
-                    break;
-                case 2:
-                    secondRing.push(terrain.terrain);
-                    break;
-                case 3:
-                    thirdRing.push(terrain.terrain);
-                    break;
-                case 4:
-                    fourthRing.push(terrain.terrain);
-                    break;
-                case 5:
-                    fifthRing.push(terrain.terrain);
-                    break;
-                default:
-                    break;
+        terrains.forEach((terrain: SelectedTerrain) => {
+            if(terrain.region === '1') {
+                const button: HTMLElement = document.getElementById('capitalButton');
+                button.style.fill = "white";
+                button.style.cursor = "default";
+                const field: HTMLElement = document.getElementById('capitalButtonField');
+                field.style.fill = "black";
+                field.style.cursor = "default";
+                field.innerHTML = terrain.terrain.name;
+                this.capital = terrain.terrain;
+            } else {
+                const button: HTMLElement = document.getElementById(`region_${terrain.region}`);
+                button.style.fill = "white";
+                button.style.cursor = "default";
+                const field: HTMLElement = document.getElementById(`region_${terrain.region}_field`);
+                field.style.fill = "black";
+                field.style.cursor = "default";
+                field.innerHTML = terrain.terrain.name;
             }
         });
-        for (let i: number = 1; i<=5; i++ ) {
-            const fieldArray: Array<Element> = Array.from(document.getElementsByClassName('region_' + i + '_field'));
-            if (i === 1) {
-                fieldArray[0].innerHTML = this.capital.name;
-            }
-            if (i === 2) {
-                let j : number = 0;
-                while (secondRing.length > 0) {
-                    const nextTerrain: Terrain = secondRing.shift();
-                    if (nextTerrain) {
-                        fieldArray[j].innerHTML = nextTerrain.name;
-                        j++
-                    }
-                }
-            }
-            if (i === 3) {
-                let j : number = 0;
-                while (thirdRing.length > 0) {
-                    const nextTerrain: Terrain = thirdRing.shift();
-                    if (nextTerrain) {
-                        fieldArray[j].innerHTML = nextTerrain.name;
-                        j++
-                    }
-                }
-            }
-            if (i === 4) {
-                let j : number = 0;
-                while (fourthRing.length > 0) {
-                    const nextTerrain: Terrain = fourthRing.shift();
-                    if (nextTerrain) {
-                        fieldArray[j].innerHTML = nextTerrain.name;
-                        j++
-                    }
-                }
-            }
-            if (i === 5) {
-                let j : number = 0;
-                while (fifthRing.length > 0) {
-                    const nextTerrain: Terrain = fifthRing.shift();
-                    if (nextTerrain) {
-                        fieldArray[j].innerHTML = nextTerrain.name;
-                        j++
-                    }
-                }
-            }
-        }
+
         this.fillRegions();
+        Array.from(document.getElementsByClassName('outerRing')).forEach((div: HTMLElement) => {
+            div.style.display = "block";
+        });
         this.troopSelection.createTable();
     }
 }

@@ -12,8 +12,142 @@
 
 <body>
 	<p style="margin-bottom:1cm;" class="no-print" id="chosenTerrains">&nbsp;</p>
-	<h1 class="text-center no-print">CHOSEN TERRAINS</h1>
 	<div class="terrainSelection container no-print" align="center">
+		<h1 class="text-center no-print"><input type="text" value="NEW KINGDOM" class="text-center container-fluid" id="kingdomName"/></h1>
+		<h2 class="text-center no-print">
+			<form>
+				<label>RULER:</label>
+				<input type="text" value="" class="text-left" id="kingName"/>
+			</form>
+		</h2>
+		<svg width="700" height="700" id="kingdomSVG">
+			<defs>
+				<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+				<stop offset="0%" style="stop-color:rgb(173, 164, 164); stop-opacity:1" />
+				<stop offset="100%" style="stop-color:#777; stop-opacity:1" />
+				</radialGradient>
+			</defs>
+			<g>
+				<circle cx="350" cy="350" r="80" fill="url(#grad1)" stroke="#202020" stroke-width="1" cursor="pointer" id="capitalButton"/>
+				<text x="50%" y="50%" text-anchor="middle" fill="wheat" font-size="20px" dy=".3em" cursor="pointer" id="capitalButtonField">
+					Choose Capital
+				</text>
+			</g>
+			<g>
+				<path d="M 350 230 L 350 270 A 80 80 0 1 1 350 430 L 350 470 A 120 120 0 1 0 350 230" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_2_1" class="outerRing"/>
+				<path d="M 350 250 A 100 100 0 1 1 350 450" stroke="none" fill="none"  id="region_2_1_path" />
+				<text dy=".4em">
+					<textPath xlink:href="#region_2_1_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_2_1_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 350 230 L 350 270 A 80 80 0 0 0 350 430 L 350 470 A 120 120 0 0 1 350 230" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_2_2" class="outerRing"/>
+				<path d="M 350 450 A 100 100 0 0 1 350 250" stroke="none" fill="none" id="region_2_2_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_2_2_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_2_2_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 350 190 L 350 230 A 120 120 0 0 1 454 410 L 489 430 A 160 160 0 0 0 350 190" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_3_1" class="outerRing"/>
+				<path d="M 350 210 A 140 140 0 0 1 471 420" stroke="none" fill="none" id="region_3_1_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_3_1_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_3_1_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+				<path d="M 489 430 L 454 410 A 120 120 0 0 1 246 410 L 211 430 A 160 160 0 0 0 489 430" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_3_2" class="outerRing"/>
+				<path d="M 229 420 A 140 140 0 0 0 471 420" stroke="none" fill="none" id="region_3_2_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_3_2_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_3_2_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+				<path d="M 211 430 L 246 410 A 120 120 0 0 1 350 230 L 350 190 A 160 160 0 0 0 211 430" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_3_3" class="outerRing"/>
+				<path d="M 229 420 A 140 140 0 0 1 350 210" stroke="none" fill="none" id="region_3_3_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_3_3_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_3_3_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 350 150 L 350 190 A 160 160 0 0 1 510 350 L 550 350 A 200 200 0 0 0 350 150" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_4_1" class="outerRing"/>
+				<path d="M 350 170 A 180 180 0 0 1 530 350" stroke="none" fill="none" id="region_4_1_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_4_1_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_4_1_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 510 350 L 550 350 A 200 200 0 0 1 350 550 L 350 510 A 160 160 0 0 0 510 350" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_4_2" class="outerRing"/>
+				<path d="M 350 530 A 180 180 0 0 0 530 350" stroke="none" fill="none" id="region_4_2_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_4_2_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_4_2_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 350 550 L 350 510 A 160 160 0 0 1 190 350 L 150 350 A 200 200 0 0 0 350 550" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_4_3" class="outerRing"/>
+				<path d="M 170 350 A 180 180 0 0 0 350 530" stroke="none" fill="none" id="region_4_3_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_4_3_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_4_3_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 190 350 L 150 350 A 200 200 0 0 1 350 150 L 350 190 A 160 160 0 0 0 190 350" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_4_4" class="outerRing"/>
+				<path d="M 170 350 A 180 180 0 0 1 350 170" stroke="none" fill="none" id="region_4_4_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_4_4_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_4_4_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 491 209 L 520 180 A 240 240 0 0 1 520 520 L 491 491 A 200 200 0 0 0 491 209" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_5_1" class="outerRing"/>
+				<path d="M 506 194 A 220 220 0 0 1 506 506" stroke="none" fill="none" id="region_5_1_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_5_1_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_5_1_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 491 491 L 520 520 A 240 240 0 0 1 180 520 L 209 491 A 200 200 0 0 0 491 491" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_5_2" class="outerRing"/>
+				<path d="M 194 506 A 220 220 0 0 0 506 506" stroke="none" fill="none" id="region_5_2_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_5_2_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_5_2_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 209 491 L 180 520 A 240 240 0 0 1 180 180 L 209 209 A 200 200 0 0 0 209 491" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_5_3" class="outerRing"/>
+				<path d="M 194 506 A 220 220 0 0 1 194 194" stroke="none" fill="none" id="region_5_3_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_5_3_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_5_3_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+			<g>
+				<path d="M 209 209 L 180 180 A 240 240 0 0 1 520 180 L 491 209 A 200 200 0 0 0 209 209" stroke="black" stroke-width="1" fill="url(#grad1)" id="region_5_4" class="outerRing"/>
+				<path d="M 194 194 A 220 220 0 0 1 506 194" stroke="none" fill="none" id="region_5_4_path"/>
+				<text dy=".4em">
+					<textPath xlink:href="#region_5_4_path" startOffset="50%" text-anchor="middle" font-size="20px" fill="wheat" id="region_5_4_field" class="outerRing">
+						Choose Terrain
+					</textPath>
+				</text>
+			</g>
+		</svg>
+	<!--
 		<div id="capital" align="center">
 			<table class="table table-bordered table-sm">
 				<tr>
@@ -60,7 +194,7 @@
 					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
 				</tr>
 			</table>
-		</div>
+		</div>-->
 		<div class="outerRing" align="center" style="display: none"><button class="btn white col-md-4" id="clearTerrains">Clear Terrains</button></div>
 	</div>
 	<p style="margin-bottom:1.5cm;" class="no-print" id="availableTerrains">&nbsp;</p>
@@ -165,7 +299,7 @@
 	</div>
 	<p style="margin-bottom:1.5cm;" class="no-print">&nbsp;</p>
 	<div class="container" id="armyContainer">
-		<h1 class="text-center"><input type="text" value="New Army" class="text-center container-fluid" id="armyName"/></h1>
+		<h1 class="text-center"><input type="text" value="NEW ARMY" class="text-center container-fluid" id="armyName"/></h1>
 		<h2 class="text-center">Total points: <a id='currentPoints' class='text-decoration-none'>0</a></h2>
 		<div class="container text-center no-print">
 			<form method="post" enctype="multipart/form-data">
@@ -188,7 +322,7 @@
 	<p style="margin-bottom:1cm;" class="no-print">&nbsp;</p>
 	<nav class="navbar navbar-expand-lg fixed-bottom no-print">
 		<div class="collapse navbar-collapse navbar-nav">
-			<a class="nav-item white rounded" href="#chosenTerrains">CHOSEN TERRAINS</a>
+			<a class="nav-item white rounded" href="#chosenTerrains">KINGDOM</a>
 			<a class="nav-item white rounded" href="#availableTroops">AVAILABLE TROOPS</a>
 			<a class="nav-item white rounded" href="#armyContainer">ARMY</a>
 		</div>
