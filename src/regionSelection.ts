@@ -7,6 +7,7 @@ import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import TroopSelection from "./troopSelection";
 import Terrain from "./models/terrain";
 import SelectedTerrain from "./models/selectedTerrain";
+import ArmySelection from "./armySelection";
 
 class RegionSelection {
     private terrains_1: Array<Terrain>;
@@ -19,6 +20,10 @@ class RegionSelection {
     private terrainLists: Array<Array<Terrain>>;
     private troopSelection: TroopSelection;
     private clear: HTMLButtonElement;
+    private kingdomName: string;
+    private kingName: string;
+    private import: HTMLInputElement;
+    private print: HTMLButtonElement;
 
     constructor() {
         this.terrains_1 =  [];
@@ -30,6 +35,12 @@ class RegionSelection {
         this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, orcTerrains.list, goblinTerrains.list, unalignedTerrains.list];
         this.clear = <HTMLButtonElement> document.getElementById("clearTerrains");
         this.clear.onclick = () => this.clearTerrains();
+        this.kingdomName = 'NEW KINGDOM';
+        this.kingName = 'NEW KING';
+        this.import = <HTMLInputElement> document.getElementById('importKingdomButton');
+        this.import.onclick = () => this.importKingdom();
+        this.print = <HTMLButtonElement> document.getElementById('printKingdom');
+        this.print.onclick = () => this.printKingdom();
     };
     public init(): void { 
         this.terrainLists.forEach((terrainList: Array<Terrain>)=> terrainList.forEach((terrain: Terrain) => {
@@ -75,6 +86,40 @@ class RegionSelection {
                 }
             }
         }
+
+        const kingdomNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("kingdomName");
+        kingdomNameInput.oninput = () => {
+            this.kingdomName = kingdomNameInput.value ? kingdomNameInput.value : 'NEW KINGDOM';
+            this.troopSelection.armySelection.exportArmy();
+            this.exportKingdom();
+        };
+
+        const kingNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("kingName");
+        kingNameInput.oninput = () => {
+            this.kingName = kingNameInput.value ? kingNameInput.value : 'NEW KING';
+            this.troopSelection.armySelection.exportArmy();
+            this.exportKingdom();
+        };
+    }
+
+    public getKingdomName(): string {
+        return this.kingdomName;
+    }
+
+    public setKingdomName(kingdomName: string): void {
+        this.kingdomName = kingdomName;
+        const kingdomNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("kingdomName");
+        kingdomNameInput.value = kingdomName;
+    }
+
+    public getKingName(): string {
+        return this.kingName;
+    }
+
+    public setKingName(kingName: string): void {
+        this.kingName = kingName;
+        const kingNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("kingName");
+        kingNameInput.value = kingName;
     }
 
     private createSelectionButtons(list: Array<Terrain>, button: HTMLElement, field: HTMLElement, region: string): void {
@@ -122,7 +167,8 @@ class RegionSelection {
                 unalignedTerrainTable.innerHTML = '';
                 this.chosenTerrains.push({terrain: terrain, region: region});
                 this.troopSelection.createTable();
-                window.location.href="#kingdomSVG";
+                this.exportKingdom();
+                window.location.href="#kingdomTerrains";
             };
             terrainTable.appendChild(terrainButton);
         });
@@ -175,8 +221,10 @@ class RegionSelection {
                 Array.from(document.getElementsByClassName('outerRing')).forEach((div: HTMLElement) => {
                     div.style.display = "block";
                 });
+                document.getElementById("nonImportKingdomButtons").style.display = "block";
                 this.troopSelection.createTable();
-                window.location.href="#kingdomSVG";
+                this.exportKingdom();
+                window.location.href="#kingdomTerrains";
             };
             terrainTable.appendChild(terrainButton);
         });
@@ -277,6 +325,7 @@ class RegionSelection {
         capitalField.style.fill = "wheat";
         capitalField.style.cursor = "pointer";
         capitalField.innerHTML = "Choose Capital";
+        document.getElementById("nonImportKingdomButtons").style.display = "none";
         this.init();
         this.troopSelection.createTable();
         this.troopSelection.armySelection.clearArmy();
@@ -309,7 +358,54 @@ class RegionSelection {
         Array.from(document.getElementsByClassName('outerRing')).forEach((div: HTMLElement) => {
             div.style.display = "block";
         });
+        this.exportKingdom();
+        document.getElementById("nonImportKingdomButtons").style.display = "block";
         this.troopSelection.createTable();
+    }
+
+    private exportKingdom(): void {
+        const exportObject = {
+            "kingdomName": this.getKingdomName(),
+            "kingName": this.getKingName(),
+            "terrains": this.getChosenTerrains()
+        }
+        const exportText: Blob = new Blob([JSON.stringify(exportObject)], {type: 'application/json'});
+        const url: string = window.URL.createObjectURL(exportText);
+        const exportLink: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById('exportKingdom');
+        exportLink.download = this.kingdomName + '.json';
+        exportLink.href = url;
+    }
+
+    private importKingdom(): void {
+        this.clearTerrains();
+        const that: RegionSelection = this;
+        const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById('importKingdomInput');
+        const fileReader: FileReader = new FileReader(); 
+        fileReader.onload = function() { 
+            const exportedKingdom = JSON.parse(<string>fileReader.result); 
+            that.fillTerrains(exportedKingdom.terrains);
+            that.setKingdomName(exportedKingdom.kingdomName);
+            that.setKingName(exportedKingdom.kingName);
+        };             
+        fileReader.readAsText(inputElement.files[0]); 
+    }
+
+    private printKingdom(): void {
+        const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
+        kingdomDiv.className = "container print";
+        const armyDiv: HTMLElement = document.getElementById("armyContainer");
+        armyDiv.className = "container no-print";
+        for(let i: number = 2; i<=5; i++ ){
+            for (let j: number = 1; j<=Math.min(i,4); j++) {
+                const regionField: HTMLElement = document.getElementById(`region_${i}_${j}_field`);
+                if (regionField.innerHTML.trim() !== "Choose Terrain") {
+                    regionField.setAttribute("class", "outerRing print");    
+                } else {
+                    regionField.setAttribute("class", "outerRing");    
+                }
+            }
+        }
+        window.print();
     }
 }
 export default RegionSelection;

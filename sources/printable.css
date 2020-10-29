@@ -6,6 +6,15 @@
     display: block !important;
   }
 
+  .outerRing {
+    fill: none !important;
+  }
+
+  .print {
+    display: block !important;
+    fill: black !important;
+  }
+
   .form-control
   {
     border: 0;
@@ -38,6 +47,10 @@
     margin: 2cm;
   }
 
+  #terrainSelection {
+    margin: 2cm;
+  }
+
   .tableSeperator{
       display:block;
       width:100%;
@@ -51,7 +64,7 @@
   display: none;
 }
 
-#nonImportButtons {
+#nonImportButtons, #nonImportKingdomButtons {
   display:none;
 }
 

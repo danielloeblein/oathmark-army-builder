@@ -11,16 +11,18 @@
 </head>
 
 <body>
-	<p style="margin-bottom:1cm;" class="no-print" id="chosenTerrains">&nbsp;</p>
-	<div class="terrainSelection container no-print" align="center">
-		<h1 class="text-center no-print"><input type="text" value="NEW KINGDOM" class="text-center container-fluid" id="kingdomName"/></h1>
-		<h2 class="text-center no-print">
+	<p style="margin-bottom:1cm;" class="no-print" id="kingdom">&nbsp;</p>
+	<div class="container no-print" id="terrainSelection" align="center">
+		<h1 class="text-center">
+			<input type="text" value="NEW KINGDOM" class="text-center container-fluid" id="kingdomName"/>
+		</h1>
+		<h2 class="text-left">
 			<form>
 				<label>RULER:</label>
 				<input type="text" value="" class="text-left" id="kingName"/>
 			</form>
 		</h2>
-		<svg width="700" height="700" id="kingdomSVG">
+		<svg width="700" height="700" id="kingdomTerrains">
 			<defs>
 				<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
 				<stop offset="0%" style="stop-color:rgb(173, 164, 164); stop-opacity:1" />
@@ -147,55 +149,21 @@
 				</text>
 			</g>
 		</svg>
-	<!--
-		<div id="capital" align="center">
-			<table class="table table-bordered table-sm">
-				<tr>
-					<th class="text-center region_1_field">
-						<button type="button" id="capitalButton" class="btn lightGrey btn-block">Choose capital</button>
-					</th>
-				</tr>
-			</table>
+		<div class="container text-center no-print">
+			<form method="post" enctype="multipart/form-data">
+				<div class="btn lightGrey col-md-6 form-group">
+				<input type="file" class="form-control-file" id="importKingdomInput" accept="application/json">
+				<input class="btn white rounded col-md-8" type="button" id="importKingdomButton" value="Import Kingdom">
+				</div>
+			</form>
+			<div id="nonImportKingdomButtons">
+				<button class="btn lightGrey col-md-2">
+					<a class="text-reset text-decoration-none" id="exportKingdom" download="oathmarkArmy.json" href=”” >Export Kingdom</a>
+				</button>
+				<button class="btn lightGrey col-md-2" id="printKingdom">Print Kingdom</button>
+				<button class="btn white col-md-2" id="clearTerrains">Clear Kingdoms</button>
+			</div>
 		</div>
-		<div class="outerRing" align="center" style="display: none">
-			<table class="table table-bordered table-sm">
-				<tr>
-					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_2_field" width="50%"><button type="button" class="region_2 btn lightGrey btn-block">Add Terrain</button></th>
-				</tr>
-			</table>
-		</div>
-		<div class="outerRing" align="center" style="display: none">
-			<table class="table table-bordered table-sm">
-				<tr>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_3_field" width="33%"><button type="button" class="region_3 btn lightGrey btn-block">Add Terrain</button></th>
-				</tr>
-			</table>
-		</div>
-		<div class="outerRing" align="center" style="display: none">
-			<table class="table table-bordered table-sm">
-				<tr>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_4_field" width="25%"><button type="button" class="region_4 btn lightGrey btn-block">Add Terrain</button></th>
-				</tr>
-			</table>
-		</div>
-		<div class="outerRing" align="center" style="display: none">
-			<table class="table table-bordered table-sm">
-				<tr>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
-					<th class="text-center region_5_field"  width="20%"><button type="button" class="region_5 btn lightGrey btn-block">Add Terrain</button></th>
-				</tr>
-			</table>
-		</div>-->
-		<div class="outerRing" align="center" style="display: none"><button class="btn white col-md-4" id="clearTerrains">Clear Terrains</button></div>
 	</div>
 	<p style="margin-bottom:1.5cm;" class="no-print" id="availableTerrains">&nbsp;</p>
 	<h1 class="text-center no-print">AVAILABLE TERRAINS</h1>
@@ -297,14 +265,14 @@
 			</tr>
 		</table>
 	</div>
-	<p style="margin-bottom:1.5cm;" class="no-print">&nbsp;</p>
+	<p style="margin-bottom:1.5cm;" class="no-print" id="army">&nbsp;</p>
 	<div class="container" id="armyContainer">
 		<h1 class="text-center"><input type="text" value="NEW ARMY" class="text-center container-fluid" id="armyName"/></h1>
 		<h2 class="text-center">Total points: <a id='currentPoints' class='text-decoration-none'>0</a></h2>
 		<div class="container text-center no-print">
 			<form method="post" enctype="multipart/form-data">
 				<div class="btn lightGrey col-md-6 form-group">
-				<input type="file" class="form-control-file" id="importArmyInput" accept="application/odb">
+				<input type="file" class="form-control-file" id="importArmyInput" accept="application/json">
 				<input class="btn white rounded col-md-8" type="button" id="importArmyButton" value="Import Army">
 				</div>
 			</form>
@@ -322,9 +290,9 @@
 	<p style="margin-bottom:1cm;" class="no-print">&nbsp;</p>
 	<nav class="navbar navbar-expand-lg fixed-bottom no-print">
 		<div class="collapse navbar-collapse navbar-nav">
-			<a class="nav-item white rounded" href="#chosenTerrains">KINGDOM</a>
+			<a class="nav-item white rounded" href="#kingdom">KINGDOM</a>
 			<a class="nav-item white rounded" href="#availableTroops">AVAILABLE TROOPS</a>
-			<a class="nav-item white rounded" href="#armyContainer">ARMY</a>
+			<a class="nav-item white rounded" href="#army">ARMY</a>
 		</div>
 	</nav>
 	<script src="./sources/jquery-3.5.1.min.js"></script>

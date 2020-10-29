@@ -18,6 +18,7 @@ class ArmySelection {
     private unitId: number;
     private import: HTMLInputElement;
     private clear: HTMLButtonElement;
+    private print: HTMLButtonElement;
     private regionSelection: RegionSelection;
     private troopSelection: TroopSelection;
     private totalPoints: number;
@@ -34,6 +35,8 @@ class ArmySelection {
         this.import.onclick = () => this.importArmy();
         this.clear = <HTMLButtonElement> document.getElementById('clearArmy');
         this.clear.onclick = () => this.clearArmy();
+        this.print = <HTMLButtonElement> document.getElementById('printArmy');
+        this.print.onclick = () => this.printArmy();
         this.magicItems = MagicItems.items;
         this.armyName = 'New Army';
         const armyNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("armyName");
@@ -381,8 +384,10 @@ class ArmySelection {
         return cost;
     }
 
-    private exportArmy(): void {
+    public exportArmy(): void {
         const exportObject = {
+            "kingdomName": this.regionSelection.getKingdomName(),
+            "kingName": this.regionSelection.getKingName(),
             "terrains": this.regionSelection.getChosenTerrains(),
             "armyName": this.armyName,
             "army": this.addedUnits
@@ -409,6 +414,8 @@ class ArmySelection {
             that.regionSelection.fillTerrains(exportedArmy.terrains);
             armyNameInput.value = exportedArmy.armyName;
             that.armyName = exportedArmy.armyName;
+            that.regionSelection.setKingdomName(exportedArmy.kingdomName);
+            that.regionSelection.setKingName(exportedArmy.kingName);
         };             
         fileReader.readAsText(inputElement.files[0]); 
     }
@@ -533,6 +540,14 @@ class ArmySelection {
 
     public getSelectedUnits() : Array<SelectedUnit> {
         return this.addedUnits;
+    }
+
+    private printArmy(): void {
+        const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
+        kingdomDiv.className = "container no-print";
+        const armyDiv: HTMLElement = document.getElementById("armyContainer");
+        armyDiv.className = "container print";
+        window.print();
     }
 }
 
