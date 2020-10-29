@@ -499,7 +499,7 @@ class ArmySelection {
             unit.spelllist.forEach((spelllist: string) => {
                 const spellListRow: HTMLTableRowElement = document.createElement("tr");
                 const spellListHead: HTMLTableSectionElement = document.createElement("thead");
-                spellListHead.innerHTML = spelllist + ' Spells';
+                spellListHead.innerHTML = `<h3>${spelllist} Spells</h3>`;
                 const spellListField: HTMLTableCellElement = document.createElement("td");
                 Spelllists[spelllist].forEach((spell: Spell) => {
                     if (!changedUnit.spellList.find((savedSpell: Spell) => savedSpell.name === spell.name)) {
