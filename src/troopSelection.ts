@@ -119,6 +119,67 @@ class TroopSelection {
             this.createTable();
         };
         document.getElementById(cellString).appendChild(troopButton);
+        this.addTroopTooltip(unit, troopButton);
+    }
+
+    private addTroopTooltip(unit: Unit, button: HTMLButtonElement) : void {
+        const overlay: HTMLSpanElement = document.createElement("span");
+        const troopTable: HTMLTableElement = document.createElement("table");
+        const statTitles: Array<string>  = ['A', 'M', 'F', 'S', 'D', 'CD', 'H', 'Pts', 'Special', 'Base'];
+        const statVerbose: Array<string> = ['activation', 'movement', 'fight', 'shoot', 'defense', 'combatDice', 'health', 'points', 'special', 'base'];
+        const statsTitleRow: HTMLTableRowElement = document.createElement('tr');
+        statTitles.forEach(title => {
+            const titleCell: HTMLTableHeaderCellElement = document.createElement('th');
+            titleCell.innerHTML = title;
+            titleCell.style.width = title === 'Special' ? "30%" : "7%";
+            statsTitleRow.appendChild(titleCell);
+        });
+        const statsInputRow: HTMLTableRowElement = document.createElement('tr');
+        statVerbose.forEach(stat => {
+            const statCell: HTMLTableCellElement = document.createElement('td');
+            if(stat === 'special') {
+                let specialStatStringArray: Array<string> = [];
+                unit.stats.special.forEach(specialStat => {
+                    if (specialStat.rank) {
+                        specialStatStringArray.push(specialStat.name + ' (' + specialStat.rank + ')');
+                    } else {
+                        specialStatStringArray.push(specialStat.name);
+                    }
+                });
+                statCell.innerHTML = specialStatStringArray.join(', ');
+            } else {
+                statCell.innerHTML = unit.stats[stat];
+            }
+            statsInputRow.appendChild(statCell);
+        })
+        troopTable.appendChild(statsTitleRow);
+        troopTable.appendChild(statsInputRow);
+        overlay.style.visibility = "hidden";
+        overlay.style.position = "absolute";
+        overlay.style.zIndex = "1";
+        overlay.className = "white no-print";
+        overlay.style.padding = "5%";
+        overlay.style.bottom = "125%";
+        overlay.style.width = "400%";
+        var rect = button.getBoundingClientRect();
+        if (rect.left > screen.width / 2) {
+            overlay.style.right = "0%";
+        } else {
+            overlay.style.left = "0%";
+        }      
+        overlay.style.borderRadius = "1em";
+        overlay.style.borderWidth = "0.2em";
+        overlay.style.borderStyle = "groove";
+        overlay.style.borderColor = "black";
+        overlay.appendChild(troopTable);
+        button.onmouseover = () => {
+            overlay.style.visibility = "visible";
+        }
+        button.onmouseout = () => {
+            overlay.style.visibility = "hidden";
+        }
+        button.style.position = "relative";
+        button.appendChild(overlay);
     }
 
     private addTroopToList(list: Array<Unit>, unit: UnitSelection): void {

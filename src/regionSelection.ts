@@ -8,6 +8,7 @@ import TroopSelection from "./troopSelection";
 import Terrain from "./models/terrain";
 import SelectedTerrain from "./models/selectedTerrain";
 import ArmySelection from "./armySelection";
+import UnitSelection from "./models/unitSelection";
 
 class RegionSelection {
     private terrains_1: Array<Terrain>;
@@ -170,6 +171,7 @@ class RegionSelection {
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
             };
+            this.addTerrainTooltip(terrain, terrainButton);
             terrainTable.appendChild(terrainButton);
         });
         window.location.href="#availableTerrains";
@@ -226,9 +228,49 @@ class RegionSelection {
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
             };
+            this.addTerrainTooltip(terrain, terrainButton);
             terrainTable.appendChild(terrainButton);
         });
         window.location.href="#availableTerrains";
+    }
+
+    private addTerrainTooltip(terrain: Terrain, button: HTMLButtonElement) : void {
+        if (!terrain.troops) {
+            return;
+        }
+        const troopStringArray: Array<string> = [];
+        terrain.troops.forEach((troop: UnitSelection) => {
+            if (troop.either) {
+                const troopEitherStringArray: Array<string> = [];
+                troop.either.forEach((singularTroop: UnitSelection) => {
+                    troopEitherStringArray.push(singularTroop.count ? `${singularTroop.count} ${singularTroop.name}` : singularTroop.name);
+                });
+                troopStringArray.push(troopEitherStringArray.join(' or '));    
+            } else {
+                troopStringArray.push(troop.count ? `${troop.count} ${troop.name}` : troop.name);
+            }
+        })
+        const overlay: HTMLSpanElement = document.createElement("span");
+        overlay.style.visibility = "hidden";
+        overlay.style.position = "absolute";
+        overlay.style.zIndex = "1";
+        overlay.className = "white no-print";
+        overlay.style.padding = "5%";
+        overlay.style.bottom = "125%";
+        overlay.style.left = "0%";
+        overlay.style.borderRadius = "1em";
+        overlay.style.borderWidth = "0.2em";
+        overlay.style.borderStyle = "groove";
+        overlay.style.borderColor = "black";
+        overlay.innerHTML = `<h4>Troops:</h4>${troopStringArray.join(';<br/>')}`;
+        button.onmouseover = () => {
+            overlay.style.visibility = "visible";
+        }
+        button.onmouseout = () => {
+            overlay.style.visibility = "hidden";
+        }
+        button.style.position = "relative";
+        button.appendChild(overlay);
     }
 
     private fillRegions(): void {
