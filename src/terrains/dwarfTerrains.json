@@ -419,7 +419,14 @@
 					"options": [
 						{
 							"name": "Add Expert Engineers",
-							"points": 30
+							"points": 30,
+							"stats": {
+								"special": [
+									{
+										"name": "Expert Engineers"
+									}	
+								]
+							}
 						}
 					]
 				}
@@ -761,7 +768,14 @@
 					"options": [
 						{
 							"name": "Add Expert Engineers",
-							"points": 30
+							"points": 30,
+							"stats": {
+								"special": [
+									{
+										"name": "Expert Engineers"
+									}	
+								]
+							}
 						}
 					]
 				}
@@ -1258,7 +1272,7 @@
 								"name": "Monster"
 							},
 							{
-								"name": "Regenerate",
+								"name": "Regeneration",
 								"rank": 1
 							},
 							{

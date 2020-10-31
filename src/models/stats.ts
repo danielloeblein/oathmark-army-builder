@@ -7,7 +7,7 @@ class Stats {
     public defense? : number;
     public combatDice? : number;
     public health? : number;
-    public points? : number;
+    public points? : number|string;
     public unitSize? : number;
     public base? : string;
     public special? : Array<Special>;

@@ -171,8 +171,8 @@ class RegionSelection {
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
             };
-            this.addTerrainTooltip(terrain, terrainButton);
             terrainTable.appendChild(terrainButton);
+            this.addTerrainTooltip(terrain, terrainButton);
         });
         window.location.href="#availableTerrains";
     }
@@ -228,8 +228,8 @@ class RegionSelection {
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
             };
-            this.addTerrainTooltip(terrain, terrainButton);
             terrainTable.appendChild(terrainButton);
+            this.addTerrainTooltip(terrain, terrainButton);
         });
         window.location.href="#availableTerrains";
     }
@@ -255,13 +255,20 @@ class RegionSelection {
         overlay.style.position = "absolute";
         overlay.style.zIndex = "1";
         overlay.className = "white no-print";
+        overlay.style.width = "200%";
         overlay.style.padding = "5%";
         overlay.style.bottom = "125%";
-        overlay.style.left = "0%";
+        const rect: DOMRect = button.getBoundingClientRect();
+        if (rect.left > screen.width / 2) {
+            overlay.style.right = "0%";
+        } else {
+            overlay.style.left = "0%";
+        }    
         overlay.style.borderRadius = "1em";
         overlay.style.borderWidth = "0.2em";
         overlay.style.borderStyle = "groove";
         overlay.style.borderColor = "black";
+        overlay.style.textAlign = "left";
         overlay.innerHTML = `<h4>Troops:</h4>${troopStringArray.join(';<br/>')}`;
         button.onmouseover = () => {
             overlay.style.visibility = "visible";

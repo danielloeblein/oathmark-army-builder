@@ -504,7 +504,14 @@
 					"options": [
 						{
 							"name": "Add Expert Engineers",
-							"points": 50
+							"points": 50,
+							"stats": {
+								"special": [
+									{
+										"name": "Expert Engineers"
+									}	
+								]
+							}
 						}
 					]
 				}
@@ -900,7 +907,14 @@
 					"options": [
 						{
 							"name": "Add Expert Engineers",
-							"points": 50
+							"points": 50,
+							"stats": {
+								"special": [
+									{
+										"name": "Expert Engineers"
+									}	
+								]
+							}
 						}
 					]
 				}

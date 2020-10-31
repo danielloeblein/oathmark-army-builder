@@ -1,0 +1,49 @@
+{
+    "Summon Water Elemental": {
+        "name": "Water Elemental",
+        "count": 1,
+        "type": "Monster",
+        "stats": {
+            "activation": 5,
+            "movement": 6,
+            "fight": 4,
+            "shoot": 0,
+            "defense": 12,
+            "combatDice": 4,
+            "health": 3,
+            "points": "NA",
+            "unitSize": 1,
+            "base": "50x50",
+            "special": [
+                {
+                    "name": "Champion"
+                },
+                {
+                    "name": "Courage",
+                    "rank": 4
+                },
+                {
+                    "name": "Large"
+                },
+                {
+                    "name": "Monster"
+                },
+                {
+                    "name": "Nimble"
+                },
+                {
+                    "name": "Regeneration",
+                    "rank": 1
+                },
+                {
+                    "name": "Spellcaster Control"
+                },
+                {
+                    "name": "Waterwalk"
+                }
+            ]
+        },
+        "equipment": [
+        ]
+    }
+}

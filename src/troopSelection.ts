@@ -161,7 +161,7 @@ class TroopSelection {
         overlay.style.padding = "5%";
         overlay.style.bottom = "125%";
         overlay.style.width = "400%";
-        var rect = button.getBoundingClientRect();
+        const rect: DOMRect = button.getBoundingClientRect();
         if (rect.left > screen.width / 2) {
             overlay.style.right = "0%";
         } else {
@@ -171,6 +171,7 @@ class TroopSelection {
         overlay.style.borderWidth = "0.2em";
         overlay.style.borderStyle = "groove";
         overlay.style.borderColor = "black";
+        overlay.innerHTML = `<h5>${unit.name}</h5>`
         overlay.appendChild(troopTable);
         button.onmouseover = () => {
             overlay.style.visibility = "visible";
