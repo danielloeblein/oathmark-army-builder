@@ -9,6 +9,10 @@
 ## Choose Troops
 ![Choose Troops](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/troopSelection.png?raw=true)
 
+## Adjust Units
+![Adjust Units](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/unitAdjustment.png?raw=true)
+
+
 ## Printable Kingdom Sheet
 ![Printable Kingdom Sheet](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/printableKingdomSheet.png?raw=true)
 
