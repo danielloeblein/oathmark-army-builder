@@ -1,8 +1,7 @@
 import * as dwarfTerrains from "./terrains/dwarfTerrains.json";
 import * as humanTerrains from "./terrains/humanTerrains.json";
 import * as elfTerrains from "./terrains/elfTerrains.json";
-import * as orcTerrains from "./terrains/orcTerrains.json";
-import * as goblinTerrains from "./terrains/goblinTerrains.json";
+import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import ArmySelection from "./armySelection";
 import RegionSelection from "./regionSelection";
@@ -21,8 +20,7 @@ class TroopSelection {
     private availableDwarfs: Array<Unit>;
     private availableHumans: Array<Unit>;
     private availableElfs: Array<Unit>;
-    private availableOrcs: Array<Unit>;
-    private availableGoblins: Array<Unit>;
+    private availableGoblinsAndOrcs: Array<Unit>;
     private availableUndead: Array<Unit>;
     private availableUnaligned: Array<Unit>;
     private pureAvailableTroops: Array<Unit>;
@@ -30,12 +28,11 @@ class TroopSelection {
 
     constructor(regionSelection: RegionSelection) {
         this.regionSelection = regionSelection
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, orcTerrains.list, goblinTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, unalignedTerrains.list];
         this.availableDwarfs = [];
         this.availableHumans = [];
         this.availableElfs = [];
-        this.availableOrcs = [];
-        this.availableGoblins = [];
+        this.availableGoblinsAndOrcs = [];
         this.availableUndead = [];
         this.availableUnaligned = [];
         this.pureAvailableTroops = [];
@@ -50,8 +47,7 @@ class TroopSelection {
         this.availableDwarfs = [];
         this.availableHumans = [];
         this.availableElfs = [];
-        this.availableOrcs = [];
-        this.availableGoblins = [];
+        this.availableGoblinsAndOrcs = [];
         this.availableUndead = [];
         this.availableUnaligned = [];
         this.pureAvailableTroops = [];
@@ -71,11 +67,8 @@ class TroopSelection {
                             case 'Elf':
                                 this.addTroopToList(this.availableElfs, troop);
                                 break;
-                            case 'Orc':
-                                this.addTroopToList(this.availableOrcs, troop);
-                                break;
-                            case 'Goblin':
-                                this.addTroopToList(this.availableGoblins, troop);
+                            case 'Goblin and Orc':
+                                this.addTroopToList(this.availableGoblinsAndOrcs, troop);
                                 break;
                             case 'Undead':
                                 this.addTroopToList(this.availableUndead, troop);
@@ -92,7 +85,7 @@ class TroopSelection {
 
     public createTable(): void {
         this.getAvailableTroops();
-        const races: Array<string> = ['dwarf', 'human', 'elf', 'orc', 'goblin', 'undead', 'unaligned'];
+        const races: Array<string> = ['dwarf', 'human', 'elf', 'goblinAndOrc', 'undead', 'unaligned'];
         const types: Array<string> = ['Hero', 'Spellcaster', 'Infantry', 'Ranged', 'Cavalry', 'Monster'];
         races.forEach(race => {
             types.forEach(type => {
@@ -103,8 +96,7 @@ class TroopSelection {
         this.availableDwarfs.forEach(unit => this.createTroopButton(unit, 'dwarf'));
         this.availableHumans.forEach(unit => this.createTroopButton(unit, 'human'));
         this.availableElfs.forEach(unit => this.createTroopButton(unit, 'elf'));
-        this.availableOrcs.forEach(unit => this.createTroopButton(unit, 'orc'));
-        this.availableGoblins.forEach(unit => this.createTroopButton(unit, 'goblin'));
+        this.availableGoblinsAndOrcs.forEach(unit => this.createTroopButton(unit, 'goblinAndOrc'));
         this.availableUndead.forEach(unit => this.createTroopButton(unit, 'undead'));
         this.availableUnaligned.forEach(unit => this.createTroopButton(unit, 'unaligned'));
     }

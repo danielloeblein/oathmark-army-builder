@@ -1,8 +1,7 @@
 import * as dwarfTerrains from "./terrains/dwarfTerrains.json";
 import * as humanTerrains from "./terrains/humanTerrains.json";
 import * as elfTerrains from "./terrains/elfTerrains.json";
-import * as orcTerrains from "./terrains/orcTerrains.json";
-import * as goblinTerrains from "./terrains/goblinTerrains.json";
+import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import TroopSelection from "./troopSelection";
 import Terrain from "./models/terrain";
@@ -33,7 +32,7 @@ class RegionSelection {
         this.terrains_4 =  [];
         this.terrains_5 =  [];
         this.chosenTerrains = [];
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, orcTerrains.list, goblinTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, unalignedTerrains.list];
         this.clear = <HTMLButtonElement> document.getElementById("clearTerrains");
         this.clear.onclick = () => this.clearTerrains();
         this.kingdomName = 'NEW KINGDOM';
@@ -127,15 +126,13 @@ class RegionSelection {
         const dwarfTerrainTable: HTMLElement = document.getElementById('dwarfTerrains');
         const humanTerrainTable: HTMLElement = document.getElementById('humanTerrains');
         const elfTerrainTable: HTMLElement = document.getElementById('elfTerrains');
-        const orcTerrainTable: HTMLElement = document.getElementById('orcTerrains');
-        const goblinTerrainTable: HTMLElement = document.getElementById('goblinTerrains');
+        const goblinAndOrcTerrainTable: HTMLElement = document.getElementById('goblinAndOrcTerrains');
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
-        orcTerrainTable.innerHTML = '';
-        goblinTerrainTable.innerHTML = '';
+        goblinAndOrcTerrainTable.innerHTML = '';
         undeadTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
         list.forEach((terrain: Terrain) => {
@@ -145,8 +142,7 @@ class RegionSelection {
             const terrainTable: HTMLElement = terrain.race === 'Dwarf' ? dwarfTerrainTable : 
             terrain.race === 'Human' ? humanTerrainTable : 
             terrain.race === 'Elf' ? elfTerrainTable : 
-            terrain.race === 'Orc' ? orcTerrainTable :
-            terrain.race === 'Goblin' ? goblinTerrainTable :
+            terrain.race === 'Goblin and Orc' ? goblinAndOrcTerrainTable :
             terrain.race === 'Undead' ? undeadTerrainTable : unalignedTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
@@ -162,8 +158,7 @@ class RegionSelection {
                 dwarfTerrainTable.innerHTML = '';
                 humanTerrainTable.innerHTML = '';
                 elfTerrainTable.innerHTML = '';
-                orcTerrainTable.innerHTML = '';
-                goblinTerrainTable.innerHTML = '';
+                goblinAndOrcTerrainTable.innerHTML = '';
                 undeadTerrainTable.innerHTML = '';
                 unalignedTerrainTable.innerHTML = '';
                 this.chosenTerrains.push({terrain: terrain, region: region});
@@ -181,23 +176,20 @@ class RegionSelection {
         const dwarfTerrainTable: HTMLElement = document.getElementById('dwarfTerrains');
         const humanTerrainTable: HTMLElement = document.getElementById('humanTerrains');
         const elfTerrainTable: HTMLElement = document.getElementById('elfTerrains');
-        const orcTerrainTable: HTMLElement = document.getElementById('orcTerrains');
-        const goblinTerrainTable: HTMLElement = document.getElementById('goblinTerrains');
+        const goblinAndOrcTerrainTable: HTMLElement = document.getElementById('goblinAndOrcTerrains');
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
-        orcTerrainTable.innerHTML = '';
-        goblinTerrainTable.innerHTML = '';
+        goblinAndOrcTerrainTable.innerHTML = '';
         undeadTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
         list.forEach((terrain: Terrain) => {
             const terrainTable: HTMLElement = terrain.race === 'Dwarf' ? dwarfTerrainTable : 
             terrain.race === 'Human' ? humanTerrainTable : 
             terrain.race === 'Elf' ? elfTerrainTable : 
-            terrain.race === 'Orc' ? orcTerrainTable :
-            terrain.race === 'Goblin' ? goblinTerrainTable :
+            terrain.race === 'Goblin and Orc' ? goblinAndOrcTerrainTable :
             terrain.race === 'Undead' ? undeadTerrainTable : unalignedTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
@@ -213,8 +205,7 @@ class RegionSelection {
                 dwarfTerrainTable.innerHTML = '';
                 humanTerrainTable.innerHTML = '';
                 elfTerrainTable.innerHTML = '';
-                orcTerrainTable.innerHTML = '';
-                goblinTerrainTable.innerHTML = '';
+                goblinAndOrcTerrainTable.innerHTML = '';
                 undeadTerrainTable.innerHTML = '';
                 unalignedTerrainTable.innerHTML = '';
                 this.capital = terrain;
@@ -342,15 +333,13 @@ class RegionSelection {
         const dwarfTerrainTable: HTMLElement = document.getElementById('dwarfTerrains');
         const humanTerrainTable: HTMLElement = document.getElementById('humanTerrains');
         const elfTerrainTable: HTMLElement = document.getElementById('elfTerrains');
-        const orcTerrainTable: HTMLElement = document.getElementById('orcTerrains');
-        const goblinTerrainTable: HTMLElement = document.getElementById('goblinTerrains');
+        const goblinAndOrcTerrainTable: HTMLElement = document.getElementById('goblinAndOrcTerrains');
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
-        orcTerrainTable.innerHTML = '';
-        goblinTerrainTable.innerHTML = '';
+        goblinAndOrcTerrainTable.innerHTML = '';
         undeadTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
         for(let i: number = 2; i<=5; i++ ){
