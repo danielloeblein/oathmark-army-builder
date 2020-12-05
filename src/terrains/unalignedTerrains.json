@@ -1,6 +1,59 @@
 {
 	"list":	[
 		{
+			"name": "Circle of Oathmarks",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Collegium",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Enchanted Glade",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},
+		{
+			"name": "Healing Well",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Master Fletchers",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Precious Metal Mines",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Memorial Gardens",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Military Academy",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		}, 
+		{
+			"name": "Temple",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Training Grounds",
+			"race": "Unaligned",
+			"region": 1,
+			"unique": ""
+		},  
+		{
 			"name": "Ancient Ruins",
 			"race": "Unaligned",
 			"region": 3,
@@ -187,21 +240,42 @@
 					]
 				}
 			]
-		}, {
+		}, 
+		{
 			"name": "Abandoned Temple Complex",
 			"race": "Unaligned",
 			"region": 4,
-			"unique": "description text"
-		}, {
+			"unique": ""
+		}, 
+		{
 			"name": "Island of Flowers",
 			"race": "Unaligned",
 			"region": 4,
-			"unique": "description text"
-		}, {
+			"unique": ""
+		}, 
+		{
+			"name": "Farseer Tower",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": ""
+		}, 
+		{
 			"name": "Gold Mine",
 			"race": "Unaligned",
 			"region": 4,
-			"unique": "description text"
+			"unique": ""
+		}, 
+		{
+			"name": "Sunken Stones",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": ""
+		},  
+		{
+			"name": "Well of Prophecy",
+			"race": "Unaligned",
+			"region": 4,
+			"unique": ""
 		}
 	]
 }

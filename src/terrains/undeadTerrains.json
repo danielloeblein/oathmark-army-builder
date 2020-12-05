@@ -1,0 +1,3438 @@
+{
+	"list":	[
+		{
+			"name": "Necropolis",
+			"race": "Undead",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Ruler",
+					"either": [
+						{
+							"name": "Revenant King",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 3,
+								"points": 325,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 100,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Revenant Prince",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 2,
+								"health": 2,
+								"points": 156,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Magic Items"
+									},
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 120,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						}
+					]
+				},
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Revenant General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 279,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 120,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Revenant Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 142,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Champion",
+					"either": [
+						{
+							"name": "Revenant Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 52,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Skeletal Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 3,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Spellcaster Control"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Light Armor"
+							]
+						}
+					]
+				},
+				{
+					"name": "Skeletal Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 11,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 12,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							}, 
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				}
+			]
+		},
+		{
+			"name": "Cursed Burial Ground",
+			"race": "Undead",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Necromancer Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 200,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 4",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 3,
+								"points": 300,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 4
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 5",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 3,
+								"points": 400,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 5
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, 
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 40,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						}
+					]
+				},
+				{
+					"name": "Minor Spellcaster",
+					"either": [
+						{
+							"name": "Necromancer Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 200,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						}
+					]
+				},
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Revenant General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 279,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 120,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Revenant Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 142,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Champion",
+					"either": [
+						{
+							"name": "Revenant Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 52,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Skeletal Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 3,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Spellcaster Control"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Light Armor"
+							]
+						}
+					]
+				},
+				{
+					"name": "Skeletal Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 11,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 12,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							}, 
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				}
+			]
+		},
+		{
+			"name": "Minor Necropolis",
+			"race": "Undead",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Revenant General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 279,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 120,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Revenant Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 142,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Champion",
+					"either": [
+						{
+							"name": "Revenant Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 52,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Skeletal Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 3,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Spellcaster Control"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Light Armor"
+							]
+						}
+					]
+				},
+				{
+					"name": "Skeletal Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 11,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 12,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							}, 
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				}
+			]
+		}, 
+		{
+			"name": "Minor Cursed Burial Ground",
+			"race": "Undead",
+			"region": 1,
+			"troops": [
+				{
+					"name": "Commander",
+					"either": [
+						{
+							"name": "Revenant General",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 2,
+								"points": 279,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 2
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 120,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Revenant Captain",
+							"count": 2,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 1,
+								"health": 1,
+								"points": 142,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Command",
+										"rank": 1
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Champion",
+					"either": [
+						{
+							"name": "Revenant Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 4,
+								"movement": 6,
+								"fight": 4,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 52,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Champion"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Undead Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 13,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "Skeletal Champion",
+							"count": 1,
+							"type": "Hero",
+							"stats": {
+								"activation": 3,
+								"movement": 6,
+								"fight": 3,
+								"shoot": 0,
+								"defense": 10,
+								"combatDice": 3,
+								"health": 1,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Champion"
+									}, 
+									{
+										"name": "Spellcaster Control"
+									},
+									{
+										"name": "Magic Items"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon",
+								"Shield",
+								"Light Armor"
+							]
+						}
+					]
+				},
+				{
+					"name": "Skeletal Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 11,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 12,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							}, 
+							{
+								"name": "Brace"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Skeletal Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 0,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 14,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Fire Over"
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Bow",
+						"Light Armor"
+					]
+				}
+			]
+		},
+		{
+			"name": "Catacombs",
+			"race": "Undead",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Revenant Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 4,
+						"movement": 6,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 3,
+						"health": 1,
+						"points": 52,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Champion"
+							},
+							{
+								"name": "Magic Items"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Heavy Armor"
+					],
+					"options": [
+						{
+							"name": "Undead Horse",
+							"points": 20,
+							"stats": {
+								"movement": 8,
+								"defense": 13,
+								"base": "25x50"
+							}
+						},
+						{
+							"name": "Chariot",
+							"points": 140,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Revenant Warrior",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 17,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Heavy Armor"
+					]
+				},
+				{
+					"name": "Revenant Linebreaker",
+					"type": "Infantry",
+					"stats": {
+						"activation": 4,
+						"movement": 6,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 1,
+						"health": 1,
+						"points": 20,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							}
+						]
+					},
+					"equipment": [
+						"Two-Handed Weapon",
+						"Heavy Armor"
+					]
+				}
+			]
+		},
+		{
+			"name": "Mausoleum",
+			"race": "Undead",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Skeletal Champion",
+					"count": 1,
+					"type": "Hero",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 10,
+						"combatDice": 3,
+						"health": 1,
+						"points": 50,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Champion"
+							}, 
+							{
+								"name": "Spellcaster Control"
+							},
+							{
+								"name": "Magic Items"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Revenant Chariot",
+					"count": 2,
+					"type": "Cavalry",
+					"stats": {
+						"activation": 4,
+						"movement": 7,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 3,
+						"health": 3,
+						"points": 150,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Charge",
+								"rank": 3
+							},
+							{
+								"name": "Wild Charge"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Limited Manoeuvres"
+							},
+							{
+								"name": "Limited Movement"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Heavy Armor"
+					],
+					"options": [
+						{
+							"name": "Archer",
+							"points": 25,
+							"stats": {
+								"shoot": 1,
+								"special": [
+									{
+										"name": "Archer"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"name": "Graveyard",
+			"race": "Undead",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Ghouls",
+					"type": "Infantry",
+					"stats": {
+						"activation": 5,
+						"movement": 6,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 15,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Nimble"
+							},
+							{
+								"name": "Wild Charge"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon"
+					]
+				}
+			]
+		}, {
+			"name": "Tomb",
+			"race": "Undead",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Artillery",
+					"either": [
+						{
+							"name": "Skeletal Light Catapult",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 3,
+								"movement": 3,
+								"fight": 1,
+								"shoot": 3,
+								"defense": 8,
+								"combatDice": 1,
+								"health": 1,
+								"points": 95,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 3
+									},
+									{
+										"name": "Indirect Fire"
+									},
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Spellcaster Control"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							]
+						},
+						{
+							"name": "Skeletal Balliste",
+							"count": 2,
+							"type": "Ranged",
+							"stats": {
+								"activation": 3,
+								"movement": 3,
+								"fight": 1,
+								"shoot": 3,
+								"defense": 8,
+								"combatDice": 1,
+								"health": 1,
+								"points": 95,
+								"unitSize": 1,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Artillery"
+									},
+									{
+										"name": "Crew",
+										"rank": 2
+									},
+									{
+										"name": "Aimed Fire"
+									},
+									{
+										"name": "Undead"
+									},
+									{
+										"name": "Uncaring"
+									},
+									{
+										"name": "Unthinking"
+									},
+									{
+										"name": "Spellcaster Control"
+									}
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							]
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Sepulchre",
+			"race": "Undead",
+			"region": 2,
+			"troops": [
+				{
+					"name": "Revenant Cavalry",
+					"type": "Cavalry",
+					"stats": {
+						"activation": 4,
+						"movement": 8,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 2,
+						"health": 1,
+						"points": 70,
+						"unitSize": 10,
+						"base": "25x50",
+						"special": [
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Charge",
+								"rank": 3
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Heavy Armor"
+					]
+				}
+			]
+		}, {
+			"name": "Dark Tower",
+			"race": "Undead",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Necromancer Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 50,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 20,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 100,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						},
+						{
+							"name": "Necromancer Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 5,
+								"movement": 6,
+								"fight": 2,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 200,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+									},
+									{
+										"name": "Fire Over"
+									}, {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"options": [
+								{
+									"name": "Horse",
+									"points": 30,
+									"stats": {
+										"movement": 8,
+										"defense": 11,
+										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 150,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								},
+								{
+									"name": "Lich",
+									"points": 10,
+									"stats": {
+										"special": [
+											{
+												"name": "Undead"
+											}
+										]
+									}
+								}
+							],
+							"spelllist": [
+								"General",
+								"Undead"
+							]
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Barrows",
+			"race": "Undead",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Wraith",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 3,
+						"movement": 6,
+						"fight": 4,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 4,
+						"health": 4,
+						"points": 154,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Shadowform"
+							},
+							{
+								"name": "Nimble"
+							},
+							{
+								"name": "Horrific"
+							}
+						]
+					},
+					"equipment": [
+					]
+				}			
+			]
+		}, {
+			"name": "Crypt",
+			"race": "Undead",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Vampire",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 2,
+						"movement": 6,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 3,
+						"health": 5,
+						"points": 312,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Discorporate"
+							},
+							{
+								"name": "Magic Items"
+							},
+							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
+								"name": "Spellcaster",
+								"rank": 3
+							},
+							{
+								"name": "Stone Gaze"
+							}
+						]
+					},
+					"equipment": [
+					],
+					"spelllist": [
+						"General",
+						"Undead"
+					]
+				}
+			]
+		}, {
+			"name": "Ash Wastes",
+			"race": "Undead",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Corpse Fire",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 4,
+						"movement": 6,
+						"fight": 3,
+						"shoot": 2,
+						"defense": 11,
+						"combatDice": 2,
+						"health": 3,
+						"points": 180,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Undead"
+							},
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Fire Breath"
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Regeneration",
+								"rank": 1
+							},
+							{
+								"name": "Spellcaster Control"
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		},
+		{
+			"name": "Endless Tunnels",
+			"race": "Undead",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Barrow Worm",
+					"count": 1,
+					"type": "Monster",
+					"stats": {
+						"activation": 8,
+						"movement": 6,
+						"fight": 8,
+						"shoot": 0,
+						"defense": 12,
+						"combatDice": 5,
+						"health": 16,
+						"points": 312,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Monster"
+							},
+							{
+								"name": "Enormous"
+							},
+							{
+								"name": "Nimble"
+							},
+							{
+								"name": "Horrific"
+							},
+							{
+								"name": "Spellcaster Control"
+							},
+							{
+								"name": "Undead"
+							},							
+							{
+								"name": "Uncaring"
+							},
+							{
+								"name": "Unthinking"
+							},
+							{
+								"name": "Waterwalk"
+							}							
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}
+	]
+}

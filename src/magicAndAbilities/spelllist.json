@@ -253,5 +253,42 @@
             "castingNumber": 7,
             "description": ""
         }
+    ],
+    "Undead": [
+        {
+            "name": "Bone Shards",
+            "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Death Vision",
+            "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Necrotic Touch",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
+            "name": "Poison Blades",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Reanimate",
+            "castingNumber": 4,
+            "description": ""
+        },
+        {
+            "name": "Revive",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Summon Barrow Worm",
+            "castingNumber": 10,
+            "description": ""
+        }
     ]
 }

@@ -29,12 +29,13 @@
 										"rank": 2
 									},
 									{
+										"name": "Champion"
+									},
+									{
 										"name": "Shielding",
 										"rank": 1
 									},
 									{
-										"name": "Champion"
-									}, {
 										"name": "Magic Items"
 									}
 
@@ -42,8 +43,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						},
 						{
@@ -67,12 +68,13 @@
 										"rank": 1
 									},
 									{
+										"name": "Champion"
+									},
+									{
 										"name": "Shielding",
 										"rank": 1
 									},
 									{
-										"name": "Champion"
-									}, {
 										"name": "Magic Items"
 									}
 
@@ -80,8 +82,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						}
 					]
@@ -121,8 +123,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						},
 						{
@@ -157,8 +159,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						}
 					]
@@ -180,21 +182,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							},
+							{
 								"name": "Shielding",
 								"rank": 1
-									},
+							},
 							{
-								"name": "Champion"
-									}, {
 								"name": "Magic Items"
-									}
-
-								]
+							}
+						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -404,11 +406,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -471,8 +473,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						},
 						{
@@ -507,8 +509,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							]
 						}
 					]
@@ -530,20 +532,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							},
+							{
 								"name": "Shielding",
 								"rank": 1
 							},
 							{
-								"name": "Champion"
-							}, {
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -753,11 +756,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -802,20 +805,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							}, 
+							{
 								"name": "Shielding",
 								"rank": 1
 							},
 							{
-								"name": "Champion"
-							}, {
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -841,8 +845,8 @@
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -1174,18 +1178,18 @@
 										"rank": 5
 									},
 									{
+										"name": "Champion"
+									},
+									{
 										"name": "Shielding",
 										"rank": 2
 									},
 									{
 										"name": "Fire Over"
-									}, {
-										"name": "Magic Items"
-									},
+									}, 
 									{
-										"name": "Champion"
+										"name": "Magic Items"
 									}
-
 								]
 							},
 							"equipment": [
@@ -1224,15 +1228,15 @@
 								"name": "Monster"
 							},
 							{
+								"name": "Shielding",
+								"rank": 1
+							},
+							{
 								"name": "Charge",
 								"rank": 3
 							},
 							{
 								"name": "Brace"
-							},
-							{
-								"name": "Shielding",
-								"rank": 1
 							},
 							{
 								"name": "Large"
@@ -1323,16 +1327,16 @@
 								"rank": 1
 							},
 							{
-								"name": "Horrific"
+								"name": "Wild Charge"
 							},
 							{
 								"name": "Discorporate"
 							},
 							{
-								"name": "Large"
+								"name": "Horrific"
 							},
 							{
-								"name": "Wild Charge"
+								"name": "Large"
 							}
 						]
 					},

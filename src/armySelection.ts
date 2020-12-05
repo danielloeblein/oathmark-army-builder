@@ -1,20 +1,28 @@
 import RegionSelection from "./regionSelection";
 import TroopSelection from "./troopSelection";
-import MagicItems from "./magic/items.json";
-import Spelllists from "./magic/spelllist.json";
-import SpecialAbilities from "./specialAbilities.json";
+import Veterans from "./veterans";
+import Compendium from "./compendium";
+import MagicItems from "./magicAndAbilities/items.json";
+import Spelllists from "./magicAndAbilities/spelllist.json";
+import SpecialAbilities from "./magicAndAbilities/specialAbilities.json";
+import HeroicTraits from "./magicAndAbilities/heroicTraits.json";
 import Unit from "./models/unit";
 import SelectedUnit from "./models/selectedUnit";
 import Special from "./models/special";
 import Item from "./models/item";
+import HeroicTrait from "./models/heroicTrait";
 import Spell from "./models/spell";
 import Option from "./models/option";
-import SummonedTroops from "./magic/summonedTroops.json";
+import SummonedTroops from "./magicAndAbilities/summonedTroops.json";
+import SelectedTerrain from "./models/selectedTerrain";
+import VeteranUnit from "./models/veteranUnit";
 
 const statTitles: Array<string>  = ['A', 'M', 'F', 'S', 'D', 'CD', 'H', 'Pts', 'Special', 'Base'];
 const statVerbose: Array<string> = ['activation', 'movement', 'fight', 'shoot', 'defense', 'combatDice', 'health', 'points', 'special', 'base'];
 const magicItemsId: string = "magicItemsContainer";
 const spellTableId: string = "spellTable";
+const heroicTraitsId: string = "heroicTraitsContainer";
+const CACHED_ARMY: string = "cachedArmy";
 class ArmySelection {
     private addedUnits: Array<SelectedUnit>;
     private unitId: number;
@@ -23,14 +31,23 @@ class ArmySelection {
     private print: HTMLButtonElement;
     private regionSelection: RegionSelection;
     private troopSelection: TroopSelection;
+    public veterans: Veterans;
+    private compendium: Compendium;
     private totalPoints: number;
     private armyName: string
     private magicItems: Array<Item>;
+    private veteranButtons: object;
+    private unitSheets: Array<any>;
+    private unitsNumber: number;
 
     constructor(regionSelection: RegionSelection, troopSelection: TroopSelection) {
         this.addedUnits = [];
+        this.unitSheets = [];
+        this.unitsNumber = 0;
         this.regionSelection = regionSelection;
         this.troopSelection = troopSelection;
+        this.veterans = new Veterans(this.troopSelection, this);
+        this.compendium = new Compendium(this.regionSelection, this);
         this.unitId = 0;
         this.totalPoints = 0;
         this.import = <HTMLInputElement> document.getElementById('importArmyButton');
@@ -41,17 +58,26 @@ class ArmySelection {
         this.print.onclick = () => this.printArmy();
         this.magicItems = MagicItems.items;
         this.armyName = 'New Army';
+        this.veteranButtons = {};
         const armyNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("armyName");
         armyNameInput.oninput = () => {
             this.armyName = armyNameInput.value ? armyNameInput.value : 'New Army';
+            document.getElementById('armyNameBar').innerHTML = this.armyName;
             this.exportArmy();
         };
     }
 
-    public addUnitSheet(unit: Unit, quantity = 1, unitId = this.unitId, selectedOptions = [], battleHonors = 0, name = '', spellList = []): HTMLDivElement {
+    public init(): void {
+        const cachedArmy = window.localStorage.getItem(CACHED_ARMY)
+        if (cachedArmy) {
+            this.loadArmy(JSON.parse(<string> cachedArmy));
+        };
+    }
+
+    public addUnitSheet(unit: Unit, quantity: number, unitId: number, selectedOptions: Array<any>, battleHonors: number, name: string, spellList: Array<any>, xp: number): HTMLDivElement {
         document.getElementById("nonImportButtons").style.display = "block";
         const currentUnitId: number = unitId;
-        this.addedUnits.push({unit: unit, quantity, unitId: currentUnitId, selectedOptions, battleHonors, name, spellList});
+        this.addedUnits.push({unit: unit, quantity, unitId: currentUnitId, selectedOptions, battleHonors, name, spellList, xp});
         this.unitId = currentUnitId + 1;
         const tableDiv: HTMLDivElement = document.createElement('div');
         tableDiv.style.pageBreakInside = 'avoid';
@@ -70,6 +96,8 @@ class ArmySelection {
         inputField.oninput = () => {
             const changedUnit: SelectedUnit = this.addedUnits.find(unit => unit.unitId === currentUnitId);
             changedUnit.name = inputField.value;
+            this.changeUnitNameInLink(changedUnit);
+            this.addVeteranButton(resetButton, unit, currentUnitId, specialStatCell, notesCell_input, unitCost_input, tableDiv);
             this.exportArmy();
         };
         inputField.className = "form-control";
@@ -109,6 +137,7 @@ class ArmySelection {
                 }
             });
             unitCost_input.innerHTML = String(this.calculateUnitCost(changedUnit.unit.stats.points, optionsCost, changedUnit.quantity, changedUnit.battleHonors));
+            this.changeUnitNameInLink(changedUnit);
             this.calculateTotalPoints();
             this.troopSelection.createTable();
         };
@@ -133,6 +162,7 @@ class ArmySelection {
             statsTitleRow.appendChild(titleCell);
         });
         const statsInputRow: HTMLTableRowElement = document.createElement('tr');
+        let specialStatCell: HTMLTableCellElement;
         statVerbose.forEach(stat => {
             const statCell: HTMLTableCellElement = document.createElement('td');
             statCell.id = stat + '_' + currentUnitId;
@@ -156,6 +186,7 @@ class ArmySelection {
                         statCell.appendChild(seperator);
                     }
                 }
+                specialStatCell = statCell;
             } else {
                 statCell.innerHTML = unit.stats[stat];
             }
@@ -201,16 +232,24 @@ class ArmySelection {
         tableSeperator.innerHTML = "&nbsp;";
         tableSeperator.className = "tableSeperator";
         const resetButton: HTMLButtonElement = document.createElement('button');
-        resetButton.className = "btn white btn-block no-print";
+        resetButton.className = "btn white col-md-12 no-print";
         resetButton.innerHTML = "Remove Unit";
         resetButton.onclick = () => {
             tableDiv.parentElement.removeChild(tableDiv);
+            this.removeSideBarLink(currentUnitId);
+            this.unitSheets = this.unitSheets.filter((unitSheet) => unitSheet.unit?.unitId !== currentUnitId);
             this.addedUnits =this.addedUnits.filter(unit => unit.unitId !== currentUnitId);
             this.calculateTotalPoints();
             this.troopSelection.createTable();
+            this.veterans.redrawVeterans();
+            this.redrawUnits();
         }
         tableDiv.appendChild(tableSeperator);
         tableDiv.appendChild(resetButton);
+        const changedUnit: SelectedUnit = this.addedUnits.find(unit => unit.unitId === currentUnitId);
+        if (changedUnit.name) {
+            this.addVeteranButton(resetButton, unit, currentUnitId, specialStatCell, notesCell_input, unitCost_input, tableDiv);
+        }
         tableDiv.appendChild(table);
         tableDiv.style.marginRight = "2.5cm";
         document.getElementById('unitSheets').appendChild(tableDiv);
@@ -224,8 +263,64 @@ class ArmySelection {
         optionsInput.colSpan = 8;
         optionsRow.appendChild(optionsInput);
     
+        this.createSideBarLink(tableDiv, changedUnit);
         this.calculateTotalPoints();
+        this.veterans.redrawVeterans();
+        this.unitSheets.push({tableDiv: tableDiv, changedUnit: changedUnit});
+        this.addSwitchButtons(tableDiv, changedUnit);
         return tableDiv;
+    }
+
+    addUnit(unit: Unit, quantity = 1, unitId = this.unitId, selectedOptions = [], battleHonors = 0, name = '', spellList = [], xp = 0): void {
+        const currentUnitId: number = unitId;
+        this.addedUnits.push({unit: unit, quantity, unitId: currentUnitId, selectedOptions, battleHonors, name, spellList, xp});
+        this.unitId = currentUnitId + 1;
+        this.redrawUnits();
+    }
+
+    private addVeteranButton(resetButton: HTMLButtonElement, unit: Unit, currentUnitId: number, specialStatCell: HTMLTableCellElement, notesCell_input: HTMLTableCellElement, unitCost_input: HTMLTableCellElement, tableDiv: HTMLDivElement) {
+        if (this.veteranButtons[currentUnitId]) {
+            try {
+                tableDiv.removeChild(this.veteranButtons[currentUnitId]);
+            } catch {
+
+            }
+        }
+        const addToVeteransButton: HTMLButtonElement = document.createElement('button');
+        resetButton.className = "btn white col-md-6 no-print";
+        addToVeteransButton.className = "btn white col-md-6 no-print";
+        const changedUnit: SelectedUnit = this.addedUnits.find(unit => unit.unitId === currentUnitId);
+        if (this.veterans.veteransList.find((veteranUnit: VeteranUnit) => veteranUnit.unit.name === changedUnit.name)) {
+            addToVeteransButton.innerHTML = "Update Veteran Unit";
+        } else {
+            addToVeteransButton.innerHTML = "Add to Veterans";
+        }
+        addToVeteransButton.onclick = () => {
+            const changedUnitToAdd: SelectedUnit = this.addedUnits.find(unit => unit.unitId === currentUnitId);
+            let specialString = '';
+            specialStatCell.childNodes.forEach((node: Node) => {
+                const nodeAsHTMLElement: HTMLElement = <HTMLElement>node;
+                if (nodeAsHTMLElement.innerText.includes("Legendary Hero")) {
+                    nodeAsHTMLElement.childNodes[0].childNodes.forEach((childNode: Node) => {
+                        if (childNode.nodeName === "OUTPUT") {
+                            specialString += `Legendary Hero (${childNode.textContent})`;
+                        }
+                    }
+                    );
+                } else {
+                    specialString += nodeAsHTMLElement.innerText;
+                }
+            });
+            let notesString = '';
+            notesCell_input.childNodes.forEach((node: Node) => {
+                const nodeAsHTMLElement: HTMLElement = <HTMLElement>node;
+                notesString += nodeAsHTMLElement.innerText;
+            });
+            this.veterans.addVeteranUnit(changedUnitToAdd, unitCost_input.innerHTML, specialString, notesString);
+            this.addVeteranButton(resetButton, unit, currentUnitId, specialStatCell, notesCell_input, unitCost_input, tableDiv);
+        };
+        this.veteranButtons[currentUnitId] = addToVeteransButton;
+        tableDiv.insertBefore(addToVeteransButton, resetButton);
     }
 
     private calculateTotalPoints(): void {
@@ -240,12 +335,16 @@ class ArmySelection {
             this.totalPoints += this.calculateUnitCost(addedUnit.unit.stats.points, optionsCost, addedUnit.quantity, addedUnit.battleHonors);
         });
         document.getElementById('currentPoints').innerHTML = String(this.totalPoints);
+        document.getElementById('armyPointsBar').innerHTML = String(this.totalPoints);
+        this.compendium.fillCompendium();
         this.exportArmy();
     }
 
     private getBattleHonor(unit: Unit, unitId: number): Option {
         const changedUnit: SelectedUnit = this.addedUnits.find(unit => unit.unitId === unitId);
         if (['infantry', 'ranged', 'cavalry'].includes(unit.type.toLowerCase()) 
+        && !unit.stats.special.find((special: Special) => special.name === "Unthinking")
+        && !unit.stats.special.find((special: Special) => special.name === "Spellcaster Control")
         && ['25x25', '25x50'].includes(unit.stats.base)
         && !unit.name.toLowerCase().includes('slave')
         && !unit.name.toLowerCase().includes('militia')
@@ -267,6 +366,19 @@ class ArmySelection {
                 }
             }
         };
+    }
+
+    private getHeroicTrait(unit: SelectedUnit): Array<HeroicTrait> {
+        const availableTraits: Array<HeroicTrait> = [];
+        if (unit.unit.stats.special.some((specialAbility: Special) => ['Champion', 'Command', 'Spellcaster'].includes(specialAbility.name)) 
+        && !unit.unit.stats.special.some((specialAbility: Special) => ['Monster'].includes(specialAbility.name))) {
+            HeroicTraits.traits.forEach((trait: HeroicTrait) => {
+                if (!trait.only || unit.unit.stats.special.some((specialAbility: Special) => trait.only === specialAbility.name)) {
+                    availableTraits.push(trait);
+                }
+            });
+        };
+        return availableTraits;
     }
 
     private createOptions(unit: Unit, unitId: number, unitCost_input: HTMLElement, notesCell_input: HTMLElement): HTMLTableCellElement {
@@ -311,8 +423,37 @@ class ArmySelection {
                                     specialSpan.innerHTML = specialOption.name + ' (' + rank + ')';                                         
                                 } else {
                                     if (specialOption.rank) {
-                                        const rank: number = specialOption.rank === '+' ? 1 : <number> specialOption.rank;
-                                        specialSpan.innerHTML = specialOption.name + ' (' + rank + ')';
+                                        if (specialOption.rank === "xp") {
+                                            const rangeForm: HTMLFormElement = document.createElement('form');
+                                            const rangeInput: HTMLInputElement = document.createElement('input');
+                                            rangeInput.setAttribute('type', 'number');
+                                            rangeInput.min = '0';
+                                            rangeInput.max  = '999999';
+                                            rangeInput.value = String(changedUnit.xp);
+                                            rangeInput.style.width = '5em';
+                                            const rangeOutput: HTMLOutputElement = document.createElement('output');
+                                            rangeOutput.value = String(changedUnit.xp);
+                                            rangeOutput.className = 'only_print_inline';
+                                            rangeInput.oninput = () => {
+                                               changedUnit.xp = rangeInput.valueAsNumber;
+                                               rangeOutput.value = rangeInput.value;
+                                               this.exportArmy();
+                                            };
+                                            rangeInput.className = "no-print";
+                                            const rangeLabel: HTMLLabelElement = document.createElement('label');
+                                            rangeLabel.innerHTML = specialOption.name + ' (';
+                                            const rangeEndLabel: HTMLLabelElement = document.createElement('label');
+                                            rangeEndLabel.innerHTML = ')';
+                                            rangeForm.style.display = "inline-block";
+                                            rangeForm.appendChild(rangeLabel);
+                                            rangeForm.appendChild(rangeInput);
+                                            rangeForm.appendChild(rangeOutput);
+                                            rangeForm.appendChild(rangeEndLabel);
+                                            specialSpan.appendChild(rangeForm);
+                                        } else {
+                                            const rank: number = specialOption.rank === '+' ? 1 : <number> specialOption.rank;
+                                            specialSpan.innerHTML = specialOption.name + ' (' + rank + ')';
+                                        }
                                     } else {
                                         specialSpan.innerHTML = specialOption.name;
                                     }
@@ -390,6 +531,16 @@ class ArmySelection {
                 }
                 optionsCell_input.appendChild(magicItemButton);
             }
+
+            if (this.getHeroicTrait(changedUnit).length > 0) {
+                const heroicTraitButton: HTMLButtonElement = document.createElement('button');
+                heroicTraitButton.className = "btn lightGrey btn-block";
+                heroicTraitButton.innerHTML = "Add heroic trait";
+                heroicTraitButton.onclick = () => {
+                    this.showHeroicTraits(changedUnit, this.getHeroicTrait(changedUnit), optionsCell_input, createSelected, populateOptionsField);
+                }
+                optionsCell_input.appendChild(heroicTraitButton);
+            }
             
             if (changedUnit.selectedOptions.length > 0) {
                 const resetOptionsButton: HTMLButtonElement = document.createElement('button');
@@ -424,7 +575,7 @@ class ArmySelection {
         return cost;
     }
 
-    private addSpecialTooltip(special: Special, field: HTMLElement) : void {
+    public addSpecialTooltip(special: Special, field: HTMLElement) : void {
         if (!SpecialAbilities[special.name]) {
             return;
         }
@@ -460,34 +611,59 @@ class ArmySelection {
             "kingName": this.regionSelection.getKingName(),
             "terrains": this.regionSelection.getChosenTerrains(),
             "armyName": this.armyName,
-            "army": this.addedUnits
+            "army": this.addedUnits,
+            "veterans": this.veterans.veteransList
         }
         const exportText: Blob = new Blob([JSON.stringify(exportObject)], {type: 'application/json'});
         const url: string = window.URL.createObjectURL(exportText);
         const exportLink: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById('exportArmy');
         exportLink.download = this.armyName + '.json';
         exportLink.href = url;
+        window.localStorage.setItem(CACHED_ARMY, JSON.stringify(exportObject));
     }
 
     private importArmy(): void {
-        this.regionSelection.clearTerrains();
         const that: ArmySelection = this;
-        const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById('importArmyInput');
-        const armyNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("armyName");
+        const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById('importArmyInput');       
         const fileReader: FileReader = new FileReader(); 
         fileReader.onload = function() { 
             const exportedArmy = JSON.parse(<string>fileReader.result); 
-            exportedArmy.army.forEach((unit: SelectedUnit) => {
-                that.addUnitSheet(unit.unit, unit.quantity, unit.unitId, unit.selectedOptions, unit.battleHonors, unit.name, unit.spellList);
-                that.calculateTotalPoints();
-            }); 
-            that.regionSelection.fillTerrains(exportedArmy.terrains);
-            armyNameInput.value = exportedArmy.armyName;
-            that.armyName = exportedArmy.armyName;
-            that.regionSelection.setKingdomName(exportedArmy.kingdomName);
-            that.regionSelection.setKingName(exportedArmy.kingName);
+            that.loadArmy(exportedArmy);
         };             
         fileReader.readAsText(inputElement.files[0]); 
+    }
+
+    private loadArmy(army: any): void {
+        this.regionSelection.clearTerrains();
+        const armyNameInput: HTMLInputElement = <HTMLInputElement> document.getElementById("armyName");
+        this.addedUnits = army.army;
+        this.redrawUnits();
+        this.regionSelection.fillTerrains(army.terrains);
+        armyNameInput.value = army.armyName;
+        this.armyName = army.armyName;
+        document.getElementById('armyNameBar').innerHTML = this.armyName;
+        this.regionSelection.setKingdomName(army.kingdomName);
+        this.regionSelection.setKingName(army.kingName);
+        this.veterans.updateKingdomName(army.kingdomName);
+        this.veterans.veteransList = army.veterans ? army.veterans : [];
+        this.veterans.redrawVeterans();
+    }
+
+    private redrawUnits(): void {
+        document.getElementById("unitSheets").innerHTML = '';
+        const unitListSave: Array<SelectedUnit> = [];
+        this.addedUnits.forEach((unit: SelectedUnit) => {
+            unitListSave.push(unit);
+        });
+        this.addedUnits = [];
+        this.clearSideBar();
+        this.unitsNumber = unitListSave.length;
+        unitListSave.forEach((unit: SelectedUnit) => {
+            this.addUnitSheet(unit.unit, unit.quantity, unit.unitId, unit.selectedOptions, unit.battleHonors, unit.name, unit.spellList, unit.xp);
+            this.calculateTotalPoints();
+        })
+        this.unitsNumber = 0;
+        this.exportArmy();
     }
 
     public clearArmy(): void {
@@ -496,7 +672,10 @@ class ArmySelection {
         this.troopSelection.createTable();
         document.getElementById("unitSheets").innerHTML = '';
         this.calculateTotalPoints();
+        this.clearSideBar();
+        this.unitSheets = [];
         document.getElementById("nonImportButtons").style.display = "none";
+        this.veterans.redrawVeterans();
     }
 
     private showMagicItems(unit: SelectedUnit, optionsContainer: HTMLElement, selectedCB: Function, populateCB: Function): void {
@@ -507,6 +686,10 @@ class ArmySelection {
         const oldSpellTable: HTMLElement = document.getElementById(spellTableId);
         if (oldSpellTable) {
             oldSpellTable.parentElement.removeChild(oldSpellTable);
+        }
+        const oldTraitContainer: HTMLElement = document.getElementById(heroicTraitsId)
+        if (oldTraitContainer) {
+            oldTraitContainer.parentElement.removeChild(oldTraitContainer);
         }
         const magicItemsContainer: HTMLElement = document.createElement('div');
         magicItemsContainer.className = "no-print";
@@ -587,6 +770,7 @@ class ArmySelection {
             summonedUnitSheets.forEach((summonedUnit: HTMLDivElement) => summonedUnit.parentElement.removeChild(summonedUnit));
             summonedUnitSheets = [];
             this.fillSpellListField(changedUnit, spellList_field, spellAdd_button);
+            this.compendium.fillCompendium();
         };
         spellAdd_button.onclick = () => {
             const oldSpellTable: HTMLElement = document.getElementById(spellTableId);
@@ -597,6 +781,10 @@ class ArmySelection {
             if (oldContainer) {
                 oldContainer.parentElement.removeChild(oldContainer);
             }           
+            const oldTraitContainer: HTMLElement = document.getElementById(heroicTraitsId)
+            if (oldTraitContainer) {
+                oldTraitContainer.parentElement.removeChild(oldTraitContainer);
+            }
             const spellTable: HTMLTableElement = document.createElement("table");
             spellTable.id = spellTableId;
             unit.spelllist.forEach((spelllist: string) => {
@@ -658,6 +846,7 @@ class ArmySelection {
         }
         button.style.position = "relative";
         button.appendChild(overlay);
+        this.compendium.fillCompendium();
     }
 
     private fillSpellListField(changedUnit: SelectedUnit, spellList_field: HTMLElement, spellAdd_button: HTMLButtonElement): void {
@@ -680,12 +869,63 @@ class ArmySelection {
         if (changedUnit.selectedOptions.find(option => option.name === 'Ring of Spellcasting')) {
             maxSpells++;
         }
+        if (this.regionSelection.getChosenTerrains().find((terrain: SelectedTerrain) => terrain.terrain.name === 'Abandoned Temple Complex')) {
+            maxSpells++;
+        }
         if (changedUnit.spellList.length >= maxSpells) {
             spellAdd_button.style.display = 'none';
         } else {
             spellAdd_button.style.display = 'block';
         }
         this.exportArmy();
+    }
+
+    private showHeroicTraits(unit: SelectedUnit, heroicTraits: Array<HeroicTrait>, optionsContainer: HTMLElement, selectedCB: Function, populateCB: Function): void {
+        const oldContainer: HTMLElement = document.getElementById(heroicTraitsId)
+        if (oldContainer) {
+            oldContainer.parentElement.removeChild(oldContainer);
+        }
+        const oldSpellTable: HTMLElement = document.getElementById(spellTableId);
+        if (oldSpellTable) {
+            oldSpellTable.parentElement.removeChild(oldSpellTable);
+        }
+        const oldItemContainer: HTMLElement = document.getElementById(magicItemsId)
+        if (oldItemContainer) {
+            oldItemContainer.parentElement.removeChild(oldItemContainer);
+        } 
+        const heroicTraitsContainer: HTMLElement = document.createElement('div');
+        heroicTraitsContainer.className = "no-print";
+        heroicTraitsContainer.id = heroicTraitsId;
+        heroicTraits.forEach((trait: HeroicTrait) => {
+            if (!unit.selectedOptions.find((option: Option)=> option.name === trait.name)) {
+                const traitButton: HTMLButtonElement = document.createElement('button');
+                traitButton.className = "btn invertedGrey rounded col-md-3";
+                traitButton.innerHTML = `${trait.name} (${trait.points} Points)`;
+                traitButton.onclick = () => {
+                    const legendaryHero = unit.selectedOptions.some((selectedOption: Option) => selectedOption.stats?.special?.some((special: Special) => special.name === "Legendary Hero")) ? {} : 
+                    {
+                        "special": [
+                            {
+                                "name": "Legendary Hero",
+                                "rank": "xp"
+                            }
+                        ]
+                    } 
+                    unit.selectedOptions.push({
+                        "name": trait.name,
+                        "description": trait.description,
+                        "points": trait.points,
+                        "stats": legendaryHero
+                    });            
+                    selectedCB();  
+                    populateCB();
+                    heroicTraitsContainer.parentElement.removeChild(heroicTraitsContainer);
+                };
+                this.addItemTooltip(trait, traitButton);
+                heroicTraitsContainer.appendChild(traitButton);
+            }
+        });
+        optionsContainer.parentElement.parentElement.parentElement.parentElement.appendChild(heroicTraitsContainer);
     }
 
     public getSelectedUnits() : Array<SelectedUnit> {
@@ -695,16 +935,87 @@ class ArmySelection {
     private printArmy(): void {
         const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
         kingdomDiv.className = "container no-print";
+        const compendiumDiv: HTMLElement = document.getElementById("compendiumContainer");
+        compendiumDiv.className = "container no-print";
         const armyDiv: HTMLElement = document.getElementById("armyContainer");
         armyDiv.className = "container print";
+        const veteransDiv: HTMLElement = document.getElementById("veteransContainer");
+        veteransDiv.className = "container no-print";
         window.print();
     }
 
     private addSummonedUnit(spell: Spell): HTMLDivElement|void {
         if (SummonedTroops[spell.name]) {
-            return this.addUnitSheet(SummonedTroops[spell.name]);
+            return this.addUnit(SummonedTroops[spell.name]);
         }
         return;
+    }
+
+    private createSideBarLink(tableDiv: HTMLDivElement, unit: SelectedUnit): void {
+        tableDiv.id = `${unit.unitId}_link`;
+        const sideBar: HTMLDivElement = <HTMLDivElement> document.getElementById('armyBar');
+        const unitAnchor: HTMLAnchorElement = document.createElement('a');
+        unitAnchor.innerHTML = unit.name ? unit.name : `${unit.unit.name}${unit.quantity > 1 ? ` (${unit.quantity})`: ''}`; 
+        unitAnchor.href = `#${unit.unitId}_link`;
+        unitAnchor.className = 'white rounded';
+        unitAnchor.style.display = 'block';
+        unitAnchor.style.textAlign = 'center';
+        unitAnchor.style.textDecoration = 'none';
+        unitAnchor.id = `${unit.unitId}_anchor`;
+        sideBar.appendChild(unitAnchor);
+    }
+
+    private changeUnitNameInLink(unit: SelectedUnit): void {
+        const unitAnchor: HTMLAnchorElement = <HTMLAnchorElement> document.getElementById(`${unit.unitId}_anchor`);
+        unitAnchor.innerHTML = unit.name ? unit.name : `${unit.unit.name}${unit.quantity > 1 ? ` (${unit.quantity})`: ''}`; 
+    }
+
+    private removeSideBarLink(unitId: number): void {
+        const unitAnchor: HTMLAnchorElement = <HTMLAnchorElement> document.getElementById(`${unitId}_anchor`);
+        unitAnchor.parentElement.removeChild(unitAnchor);
+    }
+
+    private clearSideBar(): void {
+        const sideBar: HTMLDivElement = <HTMLDivElement> document.getElementById('armyBar');
+        const anchors: HTMLCollectionOf<HTMLAnchorElement> = sideBar.getElementsByTagName('a');
+        Array.from(anchors).forEach((anchor: HTMLAnchorElement) => anchor.parentElement.removeChild(anchor));
+    }
+
+    private addSwitchButtons(tableDiv: HTMLDivElement, unit: SelectedUnit): void {
+        const index: number = this.addedUnits.indexOf(unit);
+        if(index > 0) {
+            const switchUp: HTMLHeadElement = document.createElement('h2');
+            switchUp.innerHTML = "&and;";
+            switchUp.style.textAlign = "center";
+            switchUp.style.cursor = "pointer";
+            switchUp.style.marginBottom = "-0.1em";
+            switchUp.style.borderRadius = "2em 2em 0 0";
+            switchUp.className = "no-print lightGrey";
+            switchUp.onclick = () => {
+                const unitBefore = this.addedUnits[index - 1];
+                this.addedUnits[index - 1] = unit;
+                this.addedUnits[index] = unitBefore;
+                this.redrawUnits();
+            };
+            tableDiv.insertBefore(switchUp, tableDiv.children[1]);
+        }
+        if(index < (this.unitsNumber ? (this.unitsNumber -1) : (this.addedUnits.length - 1))) {
+            const switchDown: HTMLHeadElement = document.createElement('h2');
+            switchDown.innerHTML = "&or;";
+            switchDown.style.textAlign = "center";
+            switchDown.style.cursor = "pointer";
+            switchDown.style.marginTop = "-0.5em";
+            switchDown.style.borderRadius = "0 0 2em 2em";
+            switchDown.className = "no-print lightGrey";
+            switchDown.onclick = () => {
+                const unitAfter = this.addedUnits[index + 1];
+                this.addedUnits[index + 1] = unit;
+                this.addedUnits[index] = unitAfter;
+                this.redrawUnits();
+            };
+            tableDiv.appendChild(switchDown);
+        }
+        
     }
 }
 

@@ -29,12 +29,13 @@
 										"rank": 2
 									},
 									{
-										"name": "Shielding",
-										"rank": 1
+										"name": "Champion"
 									},
 									{
-										"name": "Champion"
-									}, {
+										"name": "Shielding",
+										"rank": 1
+									}, 
+									{
 										"name": "Magic Items"
 									}
 
@@ -42,8 +43,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -78,12 +79,13 @@
 										"rank": 1
 									},
 									{
-										"name": "Shielding",
-										"rank": 1
+										"name": "Champion"
 									},
 									{
-										"name": "Champion"
-									}, {
+										"name": "Shielding",
+										"rank": 1
+									}, 
+									{
 										"name": "Magic Items"
 									}
 
@@ -91,8 +93,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -143,8 +145,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -190,8 +192,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -224,21 +226,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							},
+							{
 								"name": "Shielding",
 								"rank": 1
-									},
+							},
 							{
-								"name": "Champion"
-									}, {
 								"name": "Magic Items"
-									}
-
-								]
+							}
+						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -463,11 +465,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -530,8 +532,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -577,8 +579,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -611,20 +613,21 @@
 						"base": "25x25",
 						"special": [
 							{
-								"name": "Shielding",
-								"rank": 1
+								"name": "Champion"
 							},
 							{
-								"name": "Champion"
-							}, {
+								"name": "Shielding",
+								"rank": 1
+							}, 
+							{
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -849,11 +852,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -898,20 +901,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							}, 
+							{
 								"name": "Shielding",
 								"rank": 1
 							},
 							{
-								"name": "Champion"
-							}, {
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -948,8 +952,8 @@
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -1024,11 +1028,11 @@
 						"base": "25x25",
 						"special": [
 							{
-								"name": "Nimble"
-							},
-							{
 								"name": "Shielding",
 								"rank": 1
+							},
+							{
+								"name": "Nimble"
 							}
 						]
 					},
@@ -1063,11 +1067,11 @@
 								"name": "Artillery"
 							},
 							{
-								"name": "Crew",
-								"rank": 2
+								"name": "Aimed Fire"
 							},
 							{
-								"name": "Aimed Fire"
+								"name": "Crew",
+								"rank": 2
 							},
 							{
 								"name": "Shielding",
@@ -1375,18 +1379,18 @@
 										"rank": 5
 									},
 									{
+										"name": "Champion"
+									},
+									{
 										"name": "Shielding",
 										"rank": 2
 									},
 									{
 										"name": "Fire Over"
-									}, {
-										"name": "Magic Items"
-									},
+									}, 
 									{
-										"name": "Champion"
+										"name": "Magic Items"
 									}
-
 								]
 							},
 							"equipment": [
@@ -1466,17 +1470,17 @@
 								"name": "Monster"
 							},
 							{
+								"name": "Horrific"
+							},
+							{
 								"name": "Shielding",
 								"rank": 2
 							},
 							{
-								"name": "Horrific"
+								"name": "Flying"
 							},
 							{
 								"name": "Enormous"
-							},
-							{
-								"name": "Flying"
 							}
 						]
 					},
@@ -1509,14 +1513,14 @@
 								"base": "50x50",
 								"special": [
 									{
-										"name": "Nimble"
+										"name": "Horrific"
 									},
 									{
 										"name": "Shielding",
 										"rank": 1
 									},
 									{
-										"name": "Horrific"
+										"name": "Nimble"
 									}
 								]
 							},
@@ -1540,21 +1544,21 @@
 								"base": "50x50",
 								"special": [
 									{
-										"name": "Nimble"
+										"name": "Horrific"
 									},
 									{
 										"name": "Charge",
 										"rank": 2
 									},
 									{
-										"name": "Horrific"
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Nimble"
 									},
 									{
 										"name": "Regeneration",
 										"rank": 1
-									},
-									{
-										"name": "Wild Charge"
 									}
 								]
 							},

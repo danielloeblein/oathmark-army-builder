@@ -2,6 +2,7 @@ import * as dwarfTerrains from "./terrains/dwarfTerrains.json";
 import * as humanTerrains from "./terrains/humanTerrains.json";
 import * as elfTerrains from "./terrains/elfTerrains.json";
 import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
+import * as undeadTerrains from "./terrains/undeadTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import ArmySelection from "./armySelection";
 import RegionSelection from "./regionSelection";
@@ -28,7 +29,7 @@ class TroopSelection {
 
     constructor(regionSelection: RegionSelection) {
         this.regionSelection = regionSelection
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, unalignedTerrains.list];
         this.availableDwarfs = [];
         this.availableHumans = [];
         this.availableElfs = [];
@@ -41,6 +42,7 @@ class TroopSelection {
     };
     init(): void {
         this.regionSelection.setTroopSelection(this);
+        this.armySelection.init();
     }
 
     private getAvailableTroops(): void {
@@ -107,7 +109,7 @@ class TroopSelection {
         troopButton.innerHTML = unit.name;
         troopButton.className = "btn lightGrey btn-block";
         troopButton.onclick = () => {
-            this.armySelection.addUnitSheet(unit);
+            this.armySelection.addUnit(unit);
             this.createTable();
         };
         document.getElementById(cellString).appendChild(troopButton);
@@ -189,7 +191,7 @@ class TroopSelection {
         });
     }
 
-    private isTroopRemaining(troop: Unit): boolean {
+    public isTroopRemaining(troop: Unit): boolean {
         const allSelectedTroops: Array<SelectedUnit> = this.armySelection.getSelectedUnits();
         if (troop.name.includes('General')) {
             if(allSelectedTroops.find((selectedTroop: SelectedUnit) => selectedTroop.unit.name.includes('General'))) {

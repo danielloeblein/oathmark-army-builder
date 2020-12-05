@@ -29,12 +29,13 @@
 										"rank": 2
 									},
 									{
-										"name": "Shielding",
-										"rank": 1
+										"name": "Champion"
 									},
 									{
-										"name": "Champion"
-									}, {
+										"name": "Shielding",
+										"rank": 1
+									}, 
+									{
 										"name": "Magic Items"
 									}
 
@@ -42,8 +43,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -78,12 +79,13 @@
 										"rank": 1
 									},
 									{
-										"name": "Shielding",
-										"rank": 1
+										"name": "Champion"
 									},
 									{
-										"name": "Champion"
-									}, {
+										"name": "Shielding",
+										"rank": 1
+									}, 
+									{
 										"name": "Magic Items"
 									}
 
@@ -91,8 +93,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -143,8 +145,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -190,8 +192,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -224,21 +226,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							}, 
+							{
 								"name": "Shielding",
 								"rank": 1
-									},
+							},
 							{
-								"name": "Champion"
-									}, {
 								"name": "Magic Items"
-									}
-
-								]
+							}
+						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -463,8 +465,8 @@
 						]
 					},
 					"equipment": [
-						"Shield",
-						"Hand Weapon"
+						"Hand Weapon",
+						"Shield"
 					]
 				},
 				{
@@ -486,11 +488,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -565,8 +567,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -612,8 +614,8 @@
 							},
 							"equipment": [
 								"Hand Weapon",
-								"Heavy Armor",
-								"Shield"
+								"Shield",
+								"Heavy Armor"
 							],
 							"options": [
 								{
@@ -646,20 +648,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							},
+							{
 								"name": "Shielding",
 								"rank": 1
 							},
 							{
-								"name": "Champion"
-							}, {
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -907,11 +910,11 @@
 								"name": "Engineers"
 							},
 							{
-								"name": "Waterwalk"
-							},
-							{
 								"name": "Figures",
 								"rank": 5
+							},
+							{
+								"name": "Waterwalk"
 							}
 						]
 					},
@@ -968,20 +971,21 @@
 						"base": "25x25",
 						"special": [
 							{
+								"name": "Champion"
+							},
+							{
 								"name": "Shielding",
 								"rank": 1
 							},
 							{
-								"name": "Champion"
-							}, {
 								"name": "Magic Items"
 							}
 						]
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					],
 					"options": [
 						{
@@ -1018,8 +1022,8 @@
 					},
 					"equipment": [
 						"Hand Weapon",
-						"Heavy Armor",
-						"Shield"
+						"Shield",
+						"Heavy Armor"
 					]
 				},
 				{
@@ -1488,18 +1492,18 @@
 										"rank": 5
 									},
 									{
+										"name": "Champion"
+									},
+									{
 										"name": "Shielding",
 										"rank": 2
 									},
 									{
 										"name": "Fire Over"
-									}, {
-										"name": "Magic Items"
-									},
+									}, 
 									{
-										"name": "Champion"
+										"name": "Magic Items"
 									}
-
 								]
 							},
 							"equipment": [
@@ -1560,18 +1564,18 @@
 									"rank": 1
 								},
 								{
-									"name": "Large"
-								},
-								{
 									"name": "Courage",
 									"rank": 2
+								},
+								{
+									"name": "Large"
 								}
 							]
 						},
 						"equipment": [
-							"Light Armor",
+							"Hand Weapon",
 							"Shield",
-							"Hand Weapon"
+							"Light Armor"
 						]
 					},
 					{
@@ -1598,11 +1602,11 @@
 									"rank": 1
 								},
 								{
-									"name": "Large"
-								},
-								{
 									"name": "Courage",
 									"rank": 2
+								},
+								{
+									"name": "Large"
 								}
 							]
 						},
@@ -1643,15 +1647,15 @@
 								"rank": 2
 							},
 							{
+								"name": "Charge",
+								"rank": 1
+							},
+							{
 								"name": "Spellcaster",
 								"rank": 3
 							},
 							{
 								"name": "Large"
-							},
-							{
-								"name": "Charge",
-								"rank": 1
 							}
 						]
 					},
@@ -1694,6 +1698,9 @@
 								"rank": 1
 							},
 							{
+								"name": "Wild Charge"
+							},
+							{
 								"name": "Horrific"
 							},
 							{
@@ -1702,9 +1709,6 @@
 							},
 							{
 								"name": "Enormous"
-							},
-							{
-								"name": "Wild Charge"
 							}
 						]
 					},

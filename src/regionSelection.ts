@@ -2,6 +2,7 @@ import * as dwarfTerrains from "./terrains/dwarfTerrains.json";
 import * as humanTerrains from "./terrains/humanTerrains.json";
 import * as elfTerrains from "./terrains/elfTerrains.json";
 import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
+import * as undeadTerrains from "./terrains/undeadTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import TroopSelection from "./troopSelection";
 import Terrain from "./models/terrain";
@@ -24,6 +25,7 @@ class RegionSelection {
     private kingName: string;
     private import: HTMLInputElement;
     private print: HTMLButtonElement;
+    private printAll: HTMLButtonElement;
 
     constructor() {
         this.terrains_1 =  [];
@@ -32,7 +34,7 @@ class RegionSelection {
         this.terrains_4 =  [];
         this.terrains_5 =  [];
         this.chosenTerrains = [];
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, unalignedTerrains.list];
         this.clear = <HTMLButtonElement> document.getElementById("clearTerrains");
         this.clear.onclick = () => this.clearTerrains();
         this.kingdomName = 'NEW KINGDOM';
@@ -41,10 +43,12 @@ class RegionSelection {
         this.import.onclick = () => this.importKingdom();
         this.print = <HTMLButtonElement> document.getElementById('printKingdom');
         this.print.onclick = () => this.printKingdom();
+        this.printAll= <HTMLButtonElement> document.getElementById('printAll');
+        this.printAll.onclick = () => this.printEverything();
     };
     public init(): void { 
         this.terrainLists.forEach((terrainList: Array<Terrain>)=> terrainList.forEach((terrain: Terrain) => {
-            if(terrain.region === 1 && terrain.name.toLowerCase().includes('capital')) {
+            if(terrain.region === 1 && !(terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || terrain.race === 'Unaligned')) {
                 this.terrains_1.push(terrain);
             }
         }));
@@ -91,6 +95,7 @@ class RegionSelection {
         kingdomNameInput.oninput = () => {
             this.kingdomName = kingdomNameInput.value ? kingdomNameInput.value : 'NEW KINGDOM';
             this.troopSelection.armySelection.exportArmy();
+            this.troopSelection.armySelection.veterans.updateKingdomName(this.kingdomName);
             this.exportKingdom();
         };
 
@@ -165,6 +170,7 @@ class RegionSelection {
                 this.troopSelection.createTable();
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
+                this.troopSelection.armySelection.veterans.redrawVeterans();
             };
             terrainTable.appendChild(terrainButton);
             this.addTerrainTooltip(terrain, terrainButton);
@@ -200,7 +206,15 @@ class RegionSelection {
                     button.style.cursor = "default";
                     textField.style.fill = "black";
                     textField.style.cursor = "default";
-                    textField.innerHTML = terrain.name;
+                    let terrainName: string = terrain.name;
+                    if (terrain.name.length > 15) {
+                        terrainName = '';
+                        terrain.name.split(' ').forEach((name: string, index: number) => {
+                            const y = index === 0 ? -15 : 25;
+                            terrainName += `<tspan x="350" dy="${y}">${name}</tspan>`;
+                        });
+                    }
+                    textField.innerHTML = terrainName;
                 }
                 dwarfTerrainTable.innerHTML = '';
                 humanTerrainTable.innerHTML = '';
@@ -218,6 +232,7 @@ class RegionSelection {
                 this.troopSelection.createTable();
                 this.exportKingdom();
                 window.location.href="#kingdomTerrains";
+                this.troopSelection.armySelection.veterans.redrawVeterans();
             };
             terrainTable.appendChild(terrainButton);
             this.addTerrainTooltip(terrain, terrainButton);
@@ -226,11 +241,11 @@ class RegionSelection {
     }
 
     private addTerrainTooltip(terrain: Terrain, button: HTMLButtonElement) : void {
-        if (!terrain.troops) {
+        if (!terrain.troops && !terrain.unique) {
             return;
         }
         const troopStringArray: Array<string> = [];
-        terrain.troops.forEach((troop: UnitSelection) => {
+        terrain.troops?.forEach((troop: UnitSelection) => {
             if (troop.either) {
                 const troopEitherStringArray: Array<string> = [];
                 troop.either.forEach((singularTroop: UnitSelection) => {
@@ -260,7 +275,7 @@ class RegionSelection {
         overlay.style.borderStyle = "groove";
         overlay.style.borderColor = "black";
         overlay.style.textAlign = "left";
-        overlay.innerHTML = `<h4>Troops:</h4>${troopStringArray.join(';<br/>')}`;
+        overlay.innerHTML = troopStringArray.length > 0 ? `<h4>Troops:</h4>${troopStringArray.join(';<br/>')}` : `<h4>Special:</h4>${terrain.unique}`;
         button.onmouseover = () => {
             overlay.style.visibility = "visible";
         }
@@ -276,7 +291,7 @@ class RegionSelection {
         this.terrainLists.forEach((terrainList: Array<Terrain>) => terrainList.forEach((terrain: Terrain) => {
             switch (terrain.region) {
                 case 1:
-                    if (!terrain.name.toLowerCase().includes('capital')) {
+                    if (terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || terrain.race === 'Unaligned') {
                         this.terrains_2.push(terrain);
                         this.terrains_3.push(terrain);
                         this.terrains_4.push(terrain);
@@ -367,6 +382,7 @@ class RegionSelection {
         this.init();
         this.troopSelection.createTable();
         this.troopSelection.armySelection.clearArmy();
+        this.troopSelection.armySelection.veterans.redrawVeterans();
     }
 
     public fillTerrains(terrains: Array<SelectedTerrain>): void {
@@ -399,6 +415,7 @@ class RegionSelection {
         this.exportKingdom();
         document.getElementById("nonImportKingdomButtons").style.display = "block";
         this.troopSelection.createTable();
+        this.troopSelection.armySelection.veterans.redrawVeterans();
     }
 
     private exportKingdom(): void {
@@ -412,6 +429,7 @@ class RegionSelection {
         const exportLink: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById('exportKingdom');
         exportLink.download = this.kingdomName + '.json';
         exportLink.href = url;
+        this.troopSelection.armySelection.exportArmy();
     }
 
     private importKingdom(): void {
@@ -424,6 +442,7 @@ class RegionSelection {
             that.fillTerrains(exportedKingdom.terrains);
             that.setKingdomName(exportedKingdom.kingdomName);
             that.setKingName(exportedKingdom.kingName);
+            that.troopSelection.armySelection.veterans.updateKingdomName(exportedKingdom.kingdomName);
         };             
         fileReader.readAsText(inputElement.files[0]); 
     }
@@ -431,8 +450,34 @@ class RegionSelection {
     private printKingdom(): void {
         const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
         kingdomDiv.className = "container print";
+        const compendiumDiv: HTMLElement = document.getElementById("compendiumContainer");
+        compendiumDiv.className = "container no-print";
         const armyDiv: HTMLElement = document.getElementById("armyContainer");
         armyDiv.className = "container no-print";
+        const veteransDiv: HTMLElement = document.getElementById("veteransContainer");
+        veteransDiv.className = "container no-print";
+        for(let i: number = 2; i<=5; i++ ){
+            for (let j: number = 1; j<=Math.min(i,4); j++) {
+                const regionField: HTMLElement = document.getElementById(`region_${i}_${j}_field`);
+                if (regionField.innerHTML.trim() !== "Choose Terrain") {
+                    regionField.setAttribute("class", "outerRing print");    
+                } else {
+                    regionField.setAttribute("class", "outerRing");    
+                }
+            }
+        }
+        window.print();
+    }
+
+    private printEverything(): void {
+        const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
+        kingdomDiv.className = "container print";
+        //const compendiumDiv: HTMLElement = document.getElementById("compendiumContainer");
+        //compendiumDiv.className = "container print";
+        const armyDiv: HTMLElement = document.getElementById("armyContainer");
+        armyDiv.className = "container print";
+        const veteransDiv: HTMLElement = document.getElementById("veteransContainer");
+        veteransDiv.className = "container print";
         for(let i: number = 2; i<=5; i++ ){
             for (let j: number = 1; j<=Math.min(i,4); j++) {
                 const regionField: HTMLElement = document.getElementById(`region_${i}_${j}_field`);

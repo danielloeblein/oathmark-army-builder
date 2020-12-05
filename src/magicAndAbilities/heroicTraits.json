@@ -1,0 +1,130 @@
+{
+    "traits": [
+        {
+            "name": "Arcane Knowledge",
+            "points": 30,
+            "only": "Spellcaster",
+            "description": ""
+        },
+        {
+            "name": "Bladestorm",
+            "points": 30,
+            "only": "Champion",
+            "description": ""
+        },
+        {
+            "name": "Freedom Fighter",
+            "points": 30,
+            "only": "Commander",
+            "description": ""
+        },
+        {
+            "name": "Hold the Line",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Murderous Blow",
+            "points": 30,
+            "only": "Champion",
+            "description": ""
+        },
+        {
+            "name": "Moment of Glory",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Overawe",
+            "points": 30,
+            "only": "Champion",
+            "description": ""
+        },
+        {
+            "name": "Pathfinder",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Protect the Valorous",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Quick Casting",
+            "points": 30,
+            "only": "Spellcaster",
+            "description": ""
+        },
+        {
+            "name": "Quick Step",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Seize the Initiative",
+            "points": 30,
+            "only": "Command",
+            "description": ""
+        },
+        {
+            "name": "Seize the Moment",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Shields Up",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Shield Wall",
+            "points": 30,
+            "only": "Shielding",
+            "description": ""
+        },
+        {
+            "name": "Signal Horn",
+            "points": 30,
+            "only": "Command",
+            "description": ""
+        },
+        {
+            "name": "Sniper",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Spell Focus",
+            "points": 30,
+            "only": "Spellcaster",
+            "description": ""
+        },
+        {
+            "name": "Stand Your Ground",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Strategic Mastermind",
+            "points": 30,
+            "only": "Command",
+            "description": ""
+        },
+        {
+            "name": "Steady Aim",
+            "points": 30,        
+            "description": ""
+        },
+        {
+            "name": "Take Command",
+            "points": 30,
+            "description": ""
+        },
+        {
+            "name": "Turn the Line",
+            "points": 30,
+            "description": ""
+        }
+    ]
+}

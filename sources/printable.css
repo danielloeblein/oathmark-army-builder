@@ -6,6 +6,9 @@
     display: block !important;
   }
 
+  .only_print_inline {
+    display: inline !important;
+  }
   .outerRing {
     fill: none !important;
   }
@@ -43,7 +46,15 @@
     margin:0;
   }
 
+  #veteransContainer {
+    margin: 2cm;
+  }
+
   #armyContainer {
+    margin: 2cm;
+  }
+
+  #compendiumContainer {
     margin: 2cm;
   }
 
@@ -52,19 +63,34 @@
   }
 
   .tableSeperator{
-      display:block;
-      width:100%;
-      height: 2cm;
-      clear: both;
-      }
-
+    display:block;
+    width:100%;
+    height: 2cm;
+    clear: both;
   }
+
+  .compendiumSeperator{
+    display:block;
+    width:100%;
+    height: 0.5cm;
+    clear: both;
+  }
+
+  .companionDiv{
+    padding-left: 2.5cm;
+    padding-right: 2.5cm;
+  }
+}
 
 .only_print {
   display: none;
 }
 
-#nonImportButtons, #nonImportKingdomButtons {
+.only_print_inline {
+  display: none;
+}
+
+#nonImportButtons, #nonImportKingdomButtons, #nonImportVeteransButtons {
   display:none;
 }
 
@@ -164,4 +190,56 @@ body {
 .outerRing {
   display: none;
   cursor: pointer;
+}
+
+#armyBar{
+  position: fixed;
+  top: 4em;
+  bottom: 4em;
+  right: -18em; 
+  transition: 0.3s; 
+  padding: 1em; 
+  width: 20em; 
+  background-color: wheat;
+  border-color: #1c1c1c #202020 #222;
+  border-radius: 2em 0 0 2em; 
+  background-image: -webkit-linear-gradient(top, #efefef, #777);
+  background-image: -moz-linear-gradient(top, #efefef, #777);
+  background-image: -o-linear-gradient(top, #efefef, #777);
+  background-image: linear-gradient(to bottom, #efefef, #777);
+  overflow: auto;
+}
+
+#armyBar h4{
+  text-align: center; 
+}
+
+#armyBar:hover {
+  right: 0; 
+}
+
+#veteranBar{
+  position: fixed;
+  top: 4em;
+  bottom: 4em;
+  left: -18em; 
+  transition: 0.3s; 
+  padding: 1em; 
+  width: 20em; 
+  background-color: wheat;
+  border-color: #1c1c1c #202020 #222;
+  border-radius: 0 2em 2em 0; 
+  background-image: -webkit-linear-gradient(top, #efefef, #777);
+  background-image: -moz-linear-gradient(top, #efefef, #777);
+  background-image: -o-linear-gradient(top, #efefef, #777);
+  background-image: linear-gradient(to bottom, #efefef, #777);
+  overflow: auto;
+}
+
+#veteranBar h4{
+  text-align: center; 
+}
+
+#veteranBar:hover {
+  left: 0; 
 }

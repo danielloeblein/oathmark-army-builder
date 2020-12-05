@@ -9,5 +9,6 @@ class SelectedUnit {
     public battleHonors: number;
     public name: string;
     public spellList: Array<Spell>;
+    public xp: number;
 }
 export default SelectedUnit;

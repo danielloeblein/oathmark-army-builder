@@ -189,7 +189,7 @@
 	</div>
 	<p style="margin-bottom:1.5cm;" class="no-print" id="availableTroops">&nbsp;</p>
 	<h1 class="text-center no-print">AVAILABLE TROOPS</h1>
-	<div class="container-fluid no-print">
+	<div class="container-fluid no-print" style="margin-left: 2em; margin-right: 2em; width: 95%;">
 		<table class="table table-bordered table-sm">
 			<tr>
 				<th class="text-center" width="12.5%">Type</th>
@@ -256,6 +256,27 @@
 			</tr>
 		</table>
 	</div>
+	<p style="margin-bottom:1.5cm;" class="no-print" id="veterans">&nbsp;</p>
+	<div class="container" id="veteransContainer">
+		<h1 class="text-center" id="veteransHeadline">VETERANS</h1>
+		<div class="container text-center no-print">
+			<form method="post" enctype="multipart/form-data">
+				<div class="btn lightGrey col-md-6 form-group">
+				<input type="file" class="form-control-file" id="importVeteransInput" accept="application/json">
+				<input class="btn white rounded col-md-8" type="button" id="importVeteransButton" value="Import Veterans">
+				</div>
+			</form>
+			<div id="nonImportVeteransButtons">
+				<button class="btn lightGrey col-md-2">
+					<a class="text-reset text-decoration-none" id="exportVeterans" download="oathmarkVeterans.json" href=”” >Export Veterans</a>
+				</button>
+				<button class="btn lightGrey col-md-2" id="printVeterans">Print Veterans</button>
+				<button class="btn white col-md-2" id="clearVeterans">Clear Veterans</button>
+			</div>
+		</div>
+		<div id='veteranSheets' class="container">
+		</div>
+	</div>
 	<p style="margin-bottom:1.5cm;" class="no-print" id="army">&nbsp;</p>
 	<div class="container" id="armyContainer">
 		<h1 class="text-center"><input type="text" value="NEW ARMY" class="text-center container-fluid" id="armyName"/></h1>
@@ -271,21 +292,40 @@
 				<button class="btn lightGrey col-md-2">
 					<a class="text-reset text-decoration-none" id="exportArmy" download="oathmarkArmy.json" href=”” >Export Army</a>
 				</button>
-				<button class="btn lightGrey col-md-2" id="printArmy" onclick="window.print()">Print Army</button>
+				<button class="btn lightGrey col-md-2" id="printArmy">Print Army</button>
 				<button class="btn white col-md-2" id="clearArmy">Clear Army</button>
 			</div>
 		</div>
 		<div id='unitSheets' class="container">
 		</div>
 	</div>
+	<div class="container no-print" id="compendiumContainer" align="center" style="display: none">
+		<p style="margin-bottom:1.5cm;" class="no-print" id="compendium">&nbsp;</p>
+		<h1 class="text-center">COMPENDIUM</h1>
+		<button class="btn lightGrey col-md-2 no-print" id="printCompendium" style="margin-bottom: 0.5cm">Print Compendium</button>
+		<div id="abilities"></div>
+		<div id="spells"></div>
+		<div id="items"></div>
+		<div id="traits"></div>
+		<div id="unique"></div>
+	</div>
 	<p style="margin-bottom:1cm;" class="no-print">&nbsp;</p>
 	<nav class="navbar navbar-expand-lg fixed-bottom no-print">
 		<div class="collapse navbar-collapse navbar-nav">
 			<a class="nav-item white rounded" href="#kingdom">KINGDOM</a>
 			<a class="nav-item white rounded" href="#availableTroops">AVAILABLE TROOPS</a>
+			<a class="nav-item white rounded" href="#veterans">VETERANS</a>
 			<a class="nav-item white rounded" href="#army">ARMY</a>
+			<a class="nav-item white rounded" href="#compendium" style="display: none;" id="compendiumNav">COMPENDIUM</a>
+			<button class="nav-item invertedGrey rounded" id="printAll">PRINT ALL</button>
 		</div>
 	</nav>
+	<div id="armyBar" class="no-print">
+		<h4><span  id="armyNameBar">New Army</span> (<span id="armyPointsBar">0</span> Points)</h4>
+	</div> 
+	<div id="veteranBar" class="no-print">
+		<h4><span  id="veteranNameBar">Veterans</span></h4>
+	</div> 
 	<script src="./sources/jquery-3.5.1.min.js"></script>
     <script src="./sources/popper.min.js"></script>
 	<script src="./sources/bootstrap.min.js"></script>
