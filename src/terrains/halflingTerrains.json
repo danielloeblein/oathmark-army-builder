@@ -1,0 +1,607 @@
+{
+	"list":	[
+		{
+			"name": "Halfling Village",
+			"race": "Halfling",
+			"region": 2,
+			"troops": [
+				{
+                    "name": "Halfling Adventurer",
+                    "count": 1,
+                    "type": "Hero",
+                    "stats": {
+                        "activation": 6,
+                        "movement": 5,
+                        "fight": 2,
+                        "shoot": 0,
+                        "defense": 9,
+                        "combatDice": 2,
+                        "health": 2,
+                        "points": 122,
+                        "unitSize": 1,
+                        "base": "25x25",
+                        "special": [
+                            {
+                                "name": "Command",
+                                "rank": 1
+                            },
+                            {
+                                "name": "Champion"
+                            },
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+                            {
+                                "name": "Shielding",
+                                "rank": 1
+                            },
+                            {
+                                "name": "Magic Items"
+                            }
+
+                        ]
+                    },
+                    "equipment": [
+                        "Hand Weapon",
+                        "Light Armor"
+                    ],
+                    "options": [
+                        {
+                            "name": "Pony Mount",
+                            "points": 30,
+                            "stats": {
+                                "movement": 7,
+                                "defense": 11,
+                                "base": "25x50"
+                            }
+                        }
+                    ]
+				},
+                {
+                    "name": "Halfling Captain",
+                    "count": 1,
+                    "type": "Hero",
+                    "stats": {
+                        "activation": 6,
+                        "movement": 5,
+                        "fight": 2,
+                        "shoot": 0,
+                        "defense": 9,
+                        "combatDice": 1,
+                        "health": 1,
+                        "points": 98,
+                        "unitSize": 1,
+                        "base": "25x25",
+                        "special": [
+                            {
+                                "name": "Command",
+                                "rank": 1
+                            },
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+                            {
+                                "name": "Shielding",
+                                "rank": 1
+                            }
+                        ]
+                    },
+                    "equipment": [
+                        "Hand Weapon",
+                        "Light Armor"
+                    ],
+                    "options": [
+                        {
+                            "name": "Pony Mount",
+                            "points": 20,
+                            "stats": {
+                                "movement": 7,
+                                "defense": 11,
+                                "base": "25x50"
+                            }
+                        }
+                    ]
+                },
+				{
+					"name": "Halfling Champion",
+					"count": 2,
+					"type": "Hero",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 3,
+						"health": 1,
+						"points": 31,
+						"unitSize": 1,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Champion"
+                            },
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+							{
+								"name": "Shielding",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Shield",
+						"Light Armor"
+                    ],
+                    "options": [
+                        {
+                            "name": "Pony Mount",
+                            "points": 20,
+                            "stats": {
+                                "movement": 7,
+                                "defense": 11,
+                                "base": "25x50"
+                            }
+                        },
+                        {
+                            "name": "Two-handed Weapon",
+                            "points": 2,
+                            "stats": {
+                                "fight": 3
+                            }
+                        }
+                    ]
+				},
+                {
+                    "name": "Halfling Spellcaster Level 1",
+                    "count": 1,
+                    "type": "Spellcaster",
+                    "stats": {
+                        "activation": 6,
+                        "movement": 5,
+                        "fight": 1,
+                        "shoot": 0,
+                        "defense": 8,
+                        "combatDice": 2,
+                        "health": 2,
+                        "points": 35,
+                        "unitSize": 1,
+                        "base": "25x25",
+                        "special": [
+                            {
+                                "name": "Spellcaster",
+                                "rank": 1
+                            },
+                            {
+                                "name": "Shielding",
+                                "rank": 1
+                            },
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+                            {
+                                "name": "Fire Over"
+                            }, 
+                            {
+                                "name": "Magic Items"
+                            }
+
+                        ]
+                    },
+                    "equipment": [
+                        "Hand Weapon"
+                    ],
+                    "spelllist": [
+                        "General",
+                        "Halfling"
+                    ],
+                    "options": [
+                        {
+                            "name": "Pony Mount",
+                            "points": 20,
+                            "stats": {
+                                "movement": 7,
+                                "defense": 11,
+                                "base": "25x50"
+                            }
+                        }
+                    ]
+                },
+				{
+					"name": "Halfling Soldier",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 9,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+							{
+								"name": "Shielding",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Halfling Spearman",
+					"type": "Infantry",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 10,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+							{
+								"name": "Shielding",
+								"rank": 1
+                            }, 
+                            {
+								"name": "Brace"
+							}
+						]
+					},
+					"equipment": [
+						"Spear",
+						"Light Armor"
+					]
+				},
+				{
+					"name": "Halfling Archer",
+					"type": "Ranged",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 0,
+						"shoot": 1,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 9,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+							{
+								"name": "Fire Over"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+						"Halfling Bow",
+						"Light Armor"
+					]
+				}
+			]
+		}, {
+			"name": "Dells",
+			"race": "Halfling",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Halfling Border Scout",
+					"type": "Ranged",
+					"stats": {
+						"activation": 6,
+						"movement": 5,
+						"fight": 0,
+						"shoot": 2,
+						"defense": 9,
+						"combatDice": 1,
+						"health": 1,
+						"points": 9,
+						"unitSize": 20,
+						"base": "25x25",
+						"special": [
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+							{
+								"name": "Nimble"
+							},
+							{
+								"name": "Aimed Fire"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon",
+                        "Sling",
+                        "Light Armor"
+					]
+				}
+			]
+		}, {
+			"name": "Logging Camp",
+			"race": "Halfling",
+			"region": 3,
+			"troops": [
+                {
+                    "name": "Halfling Light Catapult",
+                    "count": 1,
+                    "type": "Ranged",
+                    "stats": {
+                        "activation": 6,
+                        "movement": 3,
+                        "fight": 1,
+                        "shoot": 3,
+                        "defense": 9,
+                        "combatDice": 1,
+                        "health": 1,
+                        "points": 80,
+                        "unitSize": 1,
+                        "base": "50x100",
+                        "special": [
+                            {
+                                "name": "Artillery"
+                            },
+                            {
+                                "name": "Crew",
+                                "rank": 3
+                            },
+                            {
+                                "name": "Courage",
+                                "rank": 2
+                            },
+                            {
+                                "name": "Indirect Fire"
+                            },
+                            {
+                                "name": "Shielding",
+                                "rank": 1
+                            }
+                        ]
+                    },
+                    "equipment": [
+                        "Hand Weapon",
+                        "Light Armor"
+                    ]
+                }
+			]
+		}, {
+			"name": "Hidden Grotto",
+			"race": "Halfling",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Spellcaster",
+					"either": [
+						{
+							"name": "Halfling Spellcaster Level 1",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 5,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 2,
+								"health": 2,
+								"points": 35,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 1
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+                                    },
+                                    {
+                                        "name": "Courage",
+                                        "rank": 2
+                                    },
+									{
+										"name": "Fire Over"
+                                    }, 
+                                    {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Halfling"
+                            ],
+                            "options": [
+                                {
+                                    "name": "Pony Mount",
+                                    "points": 20,
+                                    "stats": {
+                                        "movement": 7,
+                                        "defense": 11,
+                                        "base": "25x50"
+                                    }
+                                }
+                            ]
+						},
+						{
+							"name": "Halfling Spellcaster Level 2",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 5,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 2,
+								"health": 2,
+								"points": 70,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 2
+									},
+									{
+										"name": "Shielding",
+										"rank": 1
+                                    },
+                                    {
+                                        "name": "Courage",
+                                        "rank": 2
+                                    },
+									{
+										"name": "Fire Over"
+                                    }, 
+                                    {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Halfling"
+                            ], 
+                            "options": [
+                                {
+                                    "name": "Pony Mount",
+                                    "points": 30,
+                                    "stats": {
+                                        "movement": 7,
+                                        "defense": 11,
+                                        "base": "25x50"
+                                    }
+                                }
+                            ]
+						},
+						{
+							"name": "Halfling Spellcaster Level 3",
+							"count": 1,
+							"type": "Spellcaster",
+							"stats": {
+								"activation": 6,
+								"movement": 5,
+								"fight": 1,
+								"shoot": 0,
+								"defense": 8,
+								"combatDice": 3,
+								"health": 2,
+								"points": 144,
+								"unitSize": 1,
+								"base": "25x25",
+								"special": [
+									{
+										"name": "Spellcaster",
+										"rank": 3
+									},
+									{
+										"name": "Shielding",
+										"rank": 2
+                                    },
+                                    {
+                                        "name": "Courage",
+                                        "rank": 2
+                                    },
+									{
+										"name": "Fire Over"
+                                    }, 
+                                    {
+										"name": "Magic Items"
+									}
+
+								]
+							},
+							"equipment": [
+								"Hand Weapon"
+							],
+							"spelllist": [
+								"General",
+								"Halfling"
+                            ],
+                            "options": [
+                                {
+                                    "name": "Pony Mount",
+                                    "points": 30,
+                                    "stats": {
+                                        "movement": 7,
+                                        "defense": 11,
+                                        "base": "25x50"
+                                    }
+                                }
+                            ]
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Dog House",
+			"race": "Halfling",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Hound",
+					"type": "Monster",
+					"stats": {
+						"activation": 6,
+						"movement": 8,
+						"fight": 1,
+						"shoot": 0,
+						"defense": 8,
+						"combatDice": 1,
+						"health": 1,
+						"points": 12,
+						"unitSize": 5,
+						"base": "25x25",
+						"special": [
+							{
+								"name": "Courage",
+								"rank": 1
+							}
+						]
+					},
+					"equipment": [
+					]
+				}
+			]
+		}
+	]
+}

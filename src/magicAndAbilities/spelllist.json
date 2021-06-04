@@ -290,5 +290,32 @@
             "castingNumber": 10,
             "description": ""
         }
+    ],
+    "Halfling": [
+        {
+            "name": "Camouflage",
+            "castingNumber": 3,
+            "description": ""
+        },
+        {
+            "name": "Heroic Effort",
+            "castingNumber": 3,
+            "description": ""
+        },
+        {
+            "name": "Mettle",
+            "castingNumber": 5,
+            "description": ""
+        },
+        {
+            "name": "Stench",
+            "castingNumber": 7,
+            "description": ""
+        },
+        {
+            "name": "Stout-Heart",
+            "castingNumber": 5,
+            "description": ""
+        }
     ]
 }

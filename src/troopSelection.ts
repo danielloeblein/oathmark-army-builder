@@ -3,6 +3,7 @@ import * as humanTerrains from "./terrains/humanTerrains.json";
 import * as elfTerrains from "./terrains/elfTerrains.json";
 import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
 import * as undeadTerrains from "./terrains/undeadTerrains.json";
+import * as halflingTerrains from "./terrains/halflingTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
 import ArmySelection from "./armySelection";
 import RegionSelection from "./regionSelection";
@@ -23,18 +24,20 @@ class TroopSelection {
     private availableElfs: Array<Unit>;
     private availableGoblinsAndOrcs: Array<Unit>;
     private availableUndead: Array<Unit>;
+    private availableHalflings: Array<Unit>;
     private availableUnaligned: Array<Unit>;
     private pureAvailableTroops: Array<Unit>;
     private eitherTroops: Array<UnitSelection>;
 
     constructor(regionSelection: RegionSelection) {
         this.regionSelection = regionSelection
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, unalignedTerrains.list, halflingTerrains.list];
         this.availableDwarfs = [];
         this.availableHumans = [];
         this.availableElfs = [];
         this.availableGoblinsAndOrcs = [];
         this.availableUndead = [];
+        this.availableHalflings = [];
         this.availableUnaligned = [];
         this.pureAvailableTroops = [];
         this.eitherTroops = [];
@@ -51,6 +54,7 @@ class TroopSelection {
         this.availableElfs = [];
         this.availableGoblinsAndOrcs = [];
         this.availableUndead = [];
+        this.availableHalflings = [];
         this.availableUnaligned = [];
         this.pureAvailableTroops = [];
         this.eitherTroops = [];
@@ -75,6 +79,9 @@ class TroopSelection {
                             case 'Undead':
                                 this.addTroopToList(this.availableUndead, troop);
                                 break;    
+                            case 'Halfling':
+                                this.addTroopToList(this.availableHalflings, troop);
+                                break;    
                             default:
                                 this.addTroopToList(this.availableUnaligned, troop);
                                 break;
@@ -87,7 +94,7 @@ class TroopSelection {
 
     public createTable(): void {
         this.getAvailableTroops();
-        const races: Array<string> = ['dwarf', 'human', 'elf', 'goblinAndOrc', 'undead', 'unaligned'];
+        const races: Array<string> = ['dwarf', 'human', 'elf', 'goblinAndOrc', 'undead', 'halfling', 'unaligned'];
         const types: Array<string> = ['Hero', 'Spellcaster', 'Infantry', 'Ranged', 'Cavalry', 'Monster'];
         races.forEach(race => {
             types.forEach(type => {
@@ -100,6 +107,7 @@ class TroopSelection {
         this.availableElfs.forEach(unit => this.createTroopButton(unit, 'elf'));
         this.availableGoblinsAndOrcs.forEach(unit => this.createTroopButton(unit, 'goblinAndOrc'));
         this.availableUndead.forEach(unit => this.createTroopButton(unit, 'undead'));
+        this.availableHalflings.forEach(unit => this.createTroopButton(unit, 'halfling'));
         this.availableUnaligned.forEach(unit => this.createTroopButton(unit, 'unaligned'));
     }
 

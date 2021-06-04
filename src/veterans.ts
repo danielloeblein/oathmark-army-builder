@@ -192,7 +192,7 @@ class Veterans {
         const kingdomDiv: HTMLElement = document.getElementById("terrainSelection");
         kingdomDiv.className = "container no-print";
         const compendiumDiv: HTMLElement = document.getElementById("compendiumContainer");
-        compendiumDiv.className = "container no-print";
+        compendiumDiv.className = "container-fluid no-print";
         const armyDiv: HTMLElement = document.getElementById("armyContainer");
         armyDiv.className = "container no-print";
         const veteransDiv: HTMLElement = document.getElementById("veteransContainer");

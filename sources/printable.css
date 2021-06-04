@@ -55,7 +55,9 @@
   }
 
   #compendiumContainer {
-    margin: 2cm;
+    margin-top: 1cm;
+    left: 1cm;
+    right: 1cm;
   }
 
   #terrainSelection {
@@ -76,9 +78,8 @@
     clear: both;
   }
 
-  .companionDiv{
-    padding-left: 2.5cm;
-    padding-right: 2.5cm;
+  .compendiumDiv{
+    color-adjust: exact;
   }
 }
 
