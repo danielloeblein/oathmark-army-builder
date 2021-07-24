@@ -7,7 +7,7 @@
 ![Choose Terrains](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/terrainSelection.png?raw=true)
 
 ## Choose Troops
-![Choose Troops(https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/troopSelection.png?raw=true)
+![Choose Troops](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/troopSelection.png?raw=true)
 
 ## Adjust Units
 ![Adjust Units](https://github.com/danielloeblein/oathmark-army-builder/blob/master/examples/unitAdjustment.png?raw=true)
