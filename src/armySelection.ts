@@ -16,6 +16,8 @@ import Option from "./models/option";
 import SummonedTroops from "./magicAndAbilities/summonedTroops.json";
 import SelectedTerrain from "./models/selectedTerrain";
 import VeteranUnit from "./models/veteranUnit";
+import Formations from "./formations";
+import Chariots from "./chariots";
 
 const statTitles: Array<string>  = ['A', 'M', 'F', 'S', 'D', 'CD', 'H', 'Pts', 'Special', 'Base'];
 const statVerbose: Array<string> = ['activation', 'movement', 'fight', 'shoot', 'defense', 'combatDice', 'health', 'points', 'special', 'base'];
@@ -31,6 +33,7 @@ class ArmySelection {
     private print: HTMLButtonElement;
     private regionSelection: RegionSelection;
     private troopSelection: TroopSelection;
+    private formations: Formations;
     public veterans: Veterans;
     private compendium: Compendium;
     private totalPoints: number;
@@ -39,6 +42,7 @@ class ArmySelection {
     private veteranButtons: object;
     private unitSheets: Array<any>;
     private unitsNumber: number;
+    private chariots: Chariots;
 
     constructor(regionSelection: RegionSelection, troopSelection: TroopSelection) {
         this.addedUnits = [];
@@ -46,6 +50,7 @@ class ArmySelection {
         this.unitsNumber = 0;
         this.regionSelection = regionSelection;
         this.troopSelection = troopSelection;
+        this.formations = new Formations(regionSelection, this);
         this.veterans = new Veterans(this.troopSelection, this);
         this.compendium = new Compendium(this.regionSelection, this);
         this.unitId = 0;
@@ -67,7 +72,8 @@ class ArmySelection {
         };
     }
 
-    public init(): void {
+    public init(chariots: Chariots): void {
+        this.chariots = chariots;
         const cachedArmy = window.localStorage.getItem(CACHED_ARMY)
         if (cachedArmy) {
             this.loadArmy(JSON.parse(<string> cachedArmy));
@@ -140,8 +146,13 @@ class ArmySelection {
             this.changeUnitNameInLink(changedUnit);
             this.calculateTotalPoints();
             this.troopSelection.createTable();
+            if (unit.name.includes('Chariot')) {
+                this.redrawUnits();
+            }
+            this.createOptions(unit, currentUnitId, unitCost_input, notesCell_input, true);
         };
         rangeInput.className = "no-print";
+        rangeInput.id = 'unitSize' + '_' + currentUnitId;
         const rangeOutput: HTMLOutputElement = document.createElement('output');
         rangeOutput.value = String(quantity);
         rangeOutput.className = 'only_print';
@@ -381,14 +392,30 @@ class ArmySelection {
         return availableTraits;
     }
 
-    private createOptions(unit: Unit, unitId: number, unitCost_input: HTMLElement, notesCell_input: HTMLElement): HTMLTableCellElement {
-        const optionsCell_input: HTMLTableCellElement = document.createElement('td');
-        optionsCell_input.colSpan = 9;
+    private createOptions(unit: Unit, unitId: number, unitCost_input: HTMLElement, notesCell_input: HTMLElement, update: boolean = false): HTMLTableCellElement {
+        let optionsCell_input: HTMLTableCellElement;
+        if (update) {
+            optionsCell_input =<HTMLTableCellElement> document.getElementById('optionsInput_' + unitId);
+        } else {
+            optionsCell_input = document.createElement('td');
+            optionsCell_input.colSpan = 9;
+            optionsCell_input.id = 'optionsInput_' + unitId;
+        }
         let optionsArray: Array<Option> = [];
         if (unit.options) {
-            unit.options.forEach(option => optionsArray.push(option));
+            unit.options.forEach(option => {
+                if (option.name === 'Chariot') {
+                    if (!this.chariots.isChariotAvailable(unit)) {
+                        return ;
+                    }
+                }
+                return optionsArray.push(option);
+
+            });
         }
         const changedUnit: SelectedUnit = this.addedUnits.find(unit => unit.unitId === unitId);
+        const formations: Array<Option> = this.formations.getAvailableFormations(changedUnit);
+        formations.forEach(option => optionsArray.push(option));
         const createSelected: Function = () => {
             let optionsCost: number = 0;
             let selectedOptionsAnchorArray: Array<HTMLAnchorElement> = [];
@@ -462,8 +489,13 @@ class ArmySelection {
                                 specialStatSpanArray.push(specialSpan);
                             });
                         } else {
-                            const statField: HTMLElement = document.getElementById(stat + '_' + unitId);
-                            statField.innerHTML = selectedOption.stats[stat];
+                            if (stat === 'unitSize') {
+                                const statField: HTMLInputElement = <HTMLInputElement> document.getElementById(stat + '_' + unitId);
+                                statField.max = String(selectedOption.stats[stat]);
+                            } else {
+                                const statField: HTMLElement = document.getElementById(stat + '_' + unitId);
+                                statField.innerHTML = selectedOption.stats[stat];
+                            }
                         }
                     });
                 }
@@ -502,7 +534,8 @@ class ArmySelection {
         }
         const populateOptionsField: Function = () => {
             const currentBattleHonor: Option = this.getBattleHonor(unit, unitId);
-            if (currentBattleHonor && changedUnit.battleHonors !== currentBattleHonor.battleHonors) {
+            if (currentBattleHonor && changedUnit.battleHonors !== currentBattleHonor.battleHonors && 
+                optionsArray.every((option: Option) => option.name !== currentBattleHonor.name)) {
                 optionsArray.push(currentBattleHonor);
             }
             optionsCell_input.innerHTML = '';
@@ -515,9 +548,12 @@ class ArmySelection {
                     optionButton.innerHTML = option.points ? `${option.name} (${option.points} Points)` : option.name;
                     optionButton.onclick = () => {
                         changedUnit.selectedOptions.push(option);            
-                        createSelected();  
+                        createSelected();
                         optionButton.parentElement.removeChild(optionButton);
                         populateOptionsField();
+                        if (option.name === 'Chariot') {
+                            this.troopSelection.createTable();
+                        }
                     }
                     optionsCell_input.appendChild(optionButton);
                 }
@@ -558,6 +594,7 @@ class ArmySelection {
                             statField.innerHTML = changedUnit.unit.stats[stat];
                         }
                     });
+                    this.troopSelection.createTable();
                 }
                 optionsCell_input.appendChild(resetOptionsButton);
             }
@@ -568,7 +605,7 @@ class ArmySelection {
     }
 
     private calculateUnitCost(core: number|string, options: number, quantity: number, battleHonors: number): number {
-        let cost: number = core === "NA" ? 0 : <number> core * quantity + options;
+        let cost: number = core === "NA" ? 0 : <number> core * quantity + options * quantity;
         for(let i: number = 0; i < battleHonors; i++) {
             cost = Math.ceil(parseFloat((cost * 1.1).toFixed(1)));
         }
@@ -649,7 +686,7 @@ class ArmySelection {
         this.veterans.redrawVeterans();
     }
 
-    private redrawUnits(): void {
+    public redrawUnits(): void {
         document.getElementById("unitSheets").innerHTML = '';
         const unitListSave: Array<SelectedUnit> = [];
         this.addedUnits.forEach((unit: SelectedUnit) => {

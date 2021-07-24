@@ -58,6 +58,33 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 70,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -111,6 +138,35 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 85,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						}
@@ -163,6 +219,35 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 90,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -210,6 +295,35 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 100,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						}
@@ -238,7 +352,7 @@
 								"name": "Shielding",
 								"rank": 1
 							},
-														{
+							{
 								"name": "Charge",
 								"rank": 1
 							}
@@ -257,6 +371,35 @@
 								"movement": 8,
 								"defense": 12,
 								"base": "25x50"
+							}
+						},
+						{
+							"name": "Chariot",
+							"points": 110,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 3
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
 							}
 						}
 					]
@@ -312,6 +455,35 @@
 										"defense": 10,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -366,6 +538,35 @@
 										"movement": 8,
 										"defense": 10,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -569,6 +770,35 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 90,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -615,6 +845,35 @@
 										"movement": 8,
 										"defense": 12,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 100,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							]
@@ -663,6 +922,35 @@
 								"movement": 8,
 								"defense": 12,
 								"base": "25x50"
+							}
+						},
+						{
+							"name": "Chariot",
+							"points": 110,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 3
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
 							}
 						}
 					]
@@ -718,6 +1006,35 @@
 										"defense": 10,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -772,6 +1089,35 @@
 										"movement": 8,
 										"defense": 10,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -982,6 +1328,32 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 105,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -1034,6 +1406,32 @@
 										"movement": 8,
 										"defense": 12,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							]
@@ -1088,6 +1486,32 @@
 								"movement": 8,
 								"defense": 12,
 								"base": "25x50"
+							}
+						},
+						{
+							"name": "Chariot",
+							"points": 100,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
 							}
 						}
 					]
@@ -1146,6 +1570,32 @@
 										"defense": 11,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 125,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -1203,6 +1653,32 @@
 										"movement": 8,
 										"defense": 11,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -1445,6 +1921,30 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 60,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -1501,6 +2001,32 @@
 										"movement": 8,
 										"defense": 12,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 85,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							]
@@ -1560,6 +2086,32 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 105,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -1612,6 +2164,32 @@
 										"movement": 8,
 										"defense": 12,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							]
@@ -1666,6 +2244,32 @@
 								"movement": 8,
 								"defense": 12,
 								"base": "25x50"
+							}
+						},
+						{
+							"name": "Chariot",
+							"points": 100,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
 							}
 						}
 					]
@@ -1724,6 +2328,32 @@
 										"defense": 11,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -1781,6 +2411,32 @@
 										"movement": 8,
 										"defense": 11,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -2018,6 +2674,32 @@
 										"defense": 12,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 100,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							]
 						},
@@ -2063,6 +2745,35 @@
 										"movement": 8,
 										"defense": 12,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 110,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							]
@@ -2435,6 +3146,32 @@
 										"defense": 11,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -2492,6 +3229,32 @@
 										"movement": 8,
 										"defense": 11,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -2551,6 +3314,32 @@
 										"defense": 11,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -2608,6 +3397,32 @@
 										"movement": 8,
 										"defense": 11,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -2670,6 +3485,32 @@
 										"defense": 11,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 135,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -2724,6 +3565,35 @@
 										"movement": 8,
 										"defense": 10,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -2780,6 +3650,35 @@
 										"defense": 10,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -2835,6 +3734,35 @@
 										"defense": 10,
 										"base": "25x50"
 									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
 								}
 							],
 							"spelllist": [
@@ -2889,6 +3817,35 @@
 										"movement": 8,
 										"defense": 10,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -2947,6 +3904,35 @@
 										"movement": 8,
 										"defense": 10,
 										"base": "25x50"
+									}
+								},
+								{
+									"name": "Chariot",
+									"points": 115,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
 									}
 								}
 							],
@@ -3053,6 +4039,124 @@
 						]
 					},
 					"equipment": [
+					]
+				}
+			]
+		},
+		{
+			"name": "Orc Wainwrights",
+			"race": "Goblin and Orc",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Orc Chariot",
+					"count": 2,
+					"type": "Cavalry",
+					"stats": {
+						"activation": 6,
+						"movement": 7,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 3,
+						"health": 3,
+						"points": 136,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Charge",
+								"rank": 3
+							},
+							{
+								"name": "Wild Charge"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Limited Manoeuvres"
+							},
+							{
+								"name": "Limited Movement"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon", "Shield"
+					],
+					"options": [
+						{
+							"name": "Archer",
+							"points": 25,
+							"stats": {
+								"shoot": 1,
+								"special": [
+									{
+										"name": "Archer"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Goblin Wainwrights",
+			"race": "Goblin and Orc",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Goblin Chariot",
+					"count": 2,
+					"type": "Cavalry",
+					"stats": {
+						"activation": 6,
+						"movement": 7,
+						"fight": 2,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 3,
+						"health": 3,
+						"points": 118,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Charge",
+								"rank": 3
+							},
+							{
+								"name": "Wild Charge"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Limited Manoeuvres"
+							},
+							{
+								"name": "Limited Movement"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon", "Shield"
+					],
+					"options": [
+						{
+							"name": "Archer",
+							"points": 25,
+							"stats": {
+								"shoot": 1,
+								"special": [
+									{
+										"name": "Archer"
+									}
+								]
+							}
+						}
 					]
 				}
 			]

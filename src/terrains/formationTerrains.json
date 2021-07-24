@@ -1,0 +1,119 @@
+{
+	"list":	[
+        {
+			"name": "Battle Plain",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Shield Wall",
+                "restrictions": {
+                    "units": ["Soldier", "Spearman", "Warrior"],
+                    "unitSize": {
+                        "min": 5,
+                        "max": 20
+                    },
+                    "special": ["Shielding"]
+                },
+                "points": {
+                    "all": 2
+                }
+            }
+		},
+        {
+			"name": "Chariot Tracks",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Chariot Unit",
+                "restrictions": {
+                    "units": ["Chariot"]
+                },
+                "points": {
+                    "all": 10
+                },
+                "unitSize": 2
+            }
+		},
+        {
+			"name": "Javelin Range",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Javelin Storm",
+                "restrictions": {
+                    "units": ["Soldier", "Spearman", "Warrior"],
+                    "excludedSpecial": ["Charge", "Wild Charge"]
+                },
+                "points": {
+                    "Human": 1,
+                    "Skeletal": 1,
+                    "Halfling": 1,
+                    "Elf": 2,
+                    "Dwarf": 2,
+                    "Revenant": 2
+                }
+            }
+		},
+        {
+			"name": "Proving Grounds",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Phalanx",
+                "restrictions": {
+                    "units": ["Spearman"],
+                    "unitSize": {
+                        "min": 10,
+                        "max": 20
+                    }
+                },
+                "points": {
+                    "all": 2
+                }
+            }
+		},
+        {
+			"name": "Practice Field",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Square",
+                "restrictions": {
+                    "units": ["Soldier", "Spearman", "Warrior", "Linebreaker"],
+                    "unitSize": {
+                        "min": 10,
+                        "max": 20
+                    }
+                },
+                "points": {
+                    "all": 1
+                }
+            }
+		},
+        {
+			"name": "Skirmish Grounds",
+			"race": "Formation",
+			"region": 1,
+			"unique": "",
+            "formation": {
+                "name": "Skirmish",
+                "restrictions": {
+                    "unitSize": {
+                        "min": 0,
+                        "max": 5
+                    },
+                    "equipment": ["Bow", "Sling"],
+                    "base": "25x25"
+                },
+                "points": {
+                    "all": 2
+                }
+            }
+		}
+    ]
+}

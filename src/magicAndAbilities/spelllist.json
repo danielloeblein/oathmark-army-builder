@@ -115,6 +115,16 @@
             "description": ""
         },
         {
+            "name": "Dragon Bane",
+            "castingNumber": 7,
+            "description": ""    
+        },
+        {
+            "name": "Earthbound",
+            "castingNumber": 6,
+            "description": ""    
+        },
+        {
             "name": "Enrage the Waters",
             "castingNumber": 6,
             "description": ""
@@ -132,6 +142,11 @@
         {
             "name": "Heal",
             "castingNumber": 6,
+            "description": ""
+        },
+        {
+            "name": "Inspiration",
+            "castingNumber": 5,
             "description": ""
         },
         {
@@ -155,8 +170,18 @@
             "description": ""
         },
         {
+            "name": "Sphere of Protection",
+            "castingNumber": 8,
+            "description": ""
+        },
+        {
             "name": "Summon Water Elemental",
             "castingNumber": 9,
+            "description": ""
+        },
+        {
+            "name": "Tanglefeet",
+            "castingNumber": 7,
             "description": ""
         }
     ],

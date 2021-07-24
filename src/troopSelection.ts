@@ -12,6 +12,8 @@ import SelectedTerrain from "./models/selectedTerrain";
 import Unit from "./models/unit";
 import UnitSelection from "./models/unitSelection";
 import SelectedUnit from "./models/selectedUnit";
+import Chariots from "./chariots";
+import { unzip } from "zlib";
 
 const MAX_SAME_UNITS: number = 4;
 
@@ -28,6 +30,7 @@ class TroopSelection {
     private availableUnaligned: Array<Unit>;
     private pureAvailableTroops: Array<Unit>;
     private eitherTroops: Array<UnitSelection>;
+    private chariots: Chariots;
 
     constructor(regionSelection: RegionSelection) {
         this.regionSelection = regionSelection
@@ -42,10 +45,11 @@ class TroopSelection {
         this.pureAvailableTroops = [];
         this.eitherTroops = [];
         this.armySelection = new ArmySelection(regionSelection, this);
+        this.chariots = new Chariots(this.armySelection, this.regionSelection, this);
     };
     init(): void {
         this.regionSelection.setTroopSelection(this);
-        this.armySelection.init();
+        this.armySelection.init(this.chariots);
     }
 
     private getAvailableTroops(): void {
@@ -119,6 +123,9 @@ class TroopSelection {
         troopButton.onclick = () => {
             this.armySelection.addUnit(unit);
             this.createTable();
+            if (unit.name.includes('Chariot')) {
+                this.armySelection.redrawUnits();
+            }
         };
         document.getElementById(cellString).appendChild(troopButton);
         this.addTroopTooltip(unit, troopButton);
@@ -200,6 +207,9 @@ class TroopSelection {
     }
 
     public isTroopRemaining(troop: Unit): boolean {
+        if (troop.name.includes('Chariot')) {
+            return this.chariots.isChariotAvailable(troop);
+        }
         const allSelectedTroops: Array<SelectedUnit> = this.armySelection.getSelectedUnits();
         if (troop.name.includes('General')) {
             if(allSelectedTroops.find((selectedTroop: SelectedUnit) => selectedTroop.unit.name.includes('General'))) {

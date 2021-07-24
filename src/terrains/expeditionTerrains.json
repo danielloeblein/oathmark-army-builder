@@ -1,0 +1,46 @@
+{
+	"list":	[
+        {
+			"name": "Abandoned Temple Complex",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		}, 
+		{
+			"name": "Island of Flowers",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		}, 
+		{
+			"name": "Farseer Tower",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		}, 
+		{
+			"name": "Gold Mine",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		}, 
+		{
+			"name": "Sunken Stones",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		},
+		{
+			"name": "The High Seat",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		},  
+		{
+			"name": "Well of Prophecy",
+			"race": "Expedition",
+			"region": 4,
+			"unique": ""
+		}
+    ]
+}

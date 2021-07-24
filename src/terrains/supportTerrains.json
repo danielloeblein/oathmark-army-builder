@@ -1,0 +1,57 @@
+{
+	"list":	[
+        {
+			"name": "Circle of Oathmarks",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Collegium",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Enchanted Glade",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},
+		{
+			"name": "Healing Well",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Master Fletchers",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Precious Metal Mines",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Memorial Gardens",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Military Academy",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		}, 
+		{
+			"name": "Temple",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		},  {
+			"name": "Training Grounds",
+			"race": "Support",
+			"region": 1,
+			"unique": ""
+		}
+    ]
+}

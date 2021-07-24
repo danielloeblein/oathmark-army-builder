@@ -3,4 +3,4 @@ class SelectedTerrain {
     public terrain: Terrain;
     public region: string;
 };
-export default SelectedTerrain
+export default SelectedTerrain;

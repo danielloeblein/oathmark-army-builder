@@ -15,7 +15,7 @@
         {
             "name": "Freedom Fighter",
             "points": 30,
-            "only": "Commander",
+            "only": "Command",
             "description": ""
         },
         {
@@ -78,7 +78,7 @@
             "description": ""
         },
         {
-            "name": "Shield Wall",
+            "name": "Heroic Shield Wall",
             "points": 30,
             "only": "Shielding",
             "description": ""

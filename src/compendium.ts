@@ -5,7 +5,9 @@ import HeroicTraits from "./magicAndAbilities/heroicTraits.json";
 import MagicalItems from "./magicAndAbilities/items.json";
 import Abilities from "./magicAndAbilities/specialAbilities.json";
 import Spells from "./magicAndAbilities/spelllist.json";
-import Terrains from "./terrains/unalignedTerrains.json";
+import SupportTerrains from "./terrains/supportTerrains.json";
+import ExpeditionTerrains from "./terrains/expeditionTerrains.json";
+import FormationTerrains from "./terrains/formationTerrains.json";
 import Special from "./models/special";
 import SelectedUnit from "./models/selectedUnit";
 import SelectedTerrain from "./models/selectedTerrain";
@@ -33,6 +35,7 @@ class Compendium {
     private compendiumContainer: HTMLDivElement;
     private compendiumNav: HTMLAnchorElement;
     private isCompendiumContainerFilled: boolean;
+    private availableTerrains: Array<Terrain>;
 
     constructor(regionSelection: RegionSelection, armySelection: ArmySelection) {
         this.regionSelection = regionSelection;
@@ -42,6 +45,7 @@ class Compendium {
         this.compendiumContainer = <HTMLDivElement> document.getElementById('compendiumContainer');
         this.compendiumNav = <HTMLAnchorElement> document.getElementById('compendiumNav');
         this.isCompendiumContainerFilled = false;
+        this.availableTerrains = SupportTerrains.list.concat(ExpeditionTerrains.list).concat(FormationTerrains.list);
     }
 
     fillCompendium(): void {
@@ -98,7 +102,7 @@ class Compendium {
                 abilityParagraph.style.textAlign = "justify";
                 abilityParagraph.style.width = "3.5in";
                 abilityParagraph.style.minHeight = "2.5in";
-                abilityParagraph.style.fontSize = "12px";
+                abilityParagraph.style.fontSize = Abilities[ability.name].length > 850 ? "8px" : Abilities[ability.name].length > 600 ? "10px" : "12px";
                 abilityParagraph.style.backgroundImage = abilityBackground;
                 abilityParagraph.style.backgroundSize = '100%';
                 abilityParagraph.style.backgroundRepeat = 'no-repeat';
@@ -286,7 +290,7 @@ class Compendium {
         const usedTerrains: Array<Terrain> = []
         const terrainsDiv: HTMLDivElement = <HTMLDivElement> document.getElementById('unique');
         terrainsDiv.innerHTML = "";
-        Terrains.list.forEach((terrain: Terrain) => {
+        this.availableTerrains.forEach((terrain: Terrain) => {
             if(terrain.unique) {
                 this.regionSelection.getChosenTerrains().forEach((chosenTerrain: SelectedTerrain) => {
                     if (chosenTerrain.terrain.name === terrain.name) {

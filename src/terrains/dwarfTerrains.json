@@ -45,6 +45,35 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 110,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 2
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -84,6 +113,37 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 125,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
@@ -125,6 +185,37 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -161,6 +252,37 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
@@ -197,6 +319,37 @@
 						"Hand Weapon",
 						"Shield",
 						"Heavy Armor"
+					],
+					"options": [
+						{
+							"name": "Chariot",
+							"points": 140,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
+							}
+						}
 					]
 				},
 				{
@@ -240,6 +393,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -280,6 +464,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
@@ -475,6 +690,37 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 140,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -511,6 +757,37 @@
 								"Hand Weapon",
 								"Shield",
 								"Heavy Armor"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
@@ -547,6 +824,37 @@
 						"Hand Weapon",
 						"Shield",
 						"Heavy Armor"
+					],
+					"options": [
+						{
+							"name": "Chariot",
+							"points": 140,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
+							}
+						}
 					]
 				},
 				{
@@ -590,6 +898,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -630,6 +969,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
@@ -820,6 +1190,37 @@
 						"Hand Weapon",
 						"Shield",
 						"Heavy Armor"
+					],
+					"options": [
+						{
+							"name": "Chariot",
+							"points": 140,
+							"stats": {
+								"movement": 7,
+								"defense": 13,
+								"combatDice": 3,
+								"health": 3,
+								"base": "50x100",
+								"special": [
+									{
+										"name": "Charge",
+										"rank": 2
+									},
+									{
+										"name": "Wild Charge"
+									},
+									{
+										"name": "Large"
+									},
+									{
+										"name": "Limited Manoeuvres"
+									},
+									{
+										"name": "Limited Movement"
+									}
+								]
+							}
+						}
 					]
 				},
 				{
@@ -1035,6 +1436,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -1075,6 +1507,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -1115,6 +1578,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -1155,6 +1649,37 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						},
 						{
@@ -1198,12 +1723,103 @@
 							"spelllist": [
 								"General",
 								"Dwarf"
+							],
+							"options": [
+								{
+									"name": "Chariot",
+									"points": 160,
+									"stats": {
+										"movement": 7,
+										"defense": 13,
+										"combatDice": 3,
+										"health": 3,
+										"base": "50x100",
+										"special": [
+											{
+												"name": "Charge",
+												"rank": 3
+											},
+											{
+												"name": "Wild Charge"
+											},
+											{
+												"name": "Large"
+											},
+											{
+												"name": "Limited Manoeuvres"
+											},
+											{
+												"name": "Limited Movement"
+											}
+										]
+									}
+								}
 							]
 						}
 					]
 				}
 			]
-		}, {
+		}, 
+		{
+			"name": "Dwarf Wainwrights",
+			"race": "Dwarf",
+			"region": 3,
+			"troops": [
+				{
+					"name": "Dwarf Chariot",
+					"count": 2,
+					"type": "Cavalry",
+					"stats": {
+						"activation": 4,
+						"movement": 7,
+						"fight": 3,
+						"shoot": 0,
+						"defense": 13,
+						"combatDice": 3,
+						"health": 3,
+						"points": 172,
+						"unitSize": 1,
+						"base": "50x100",
+						"special": [
+							{
+								"name": "Charge",
+								"rank": 3
+							},
+							{
+								"name": "Wild Charge"
+							},
+							{
+								"name": "Large"
+							},
+							{
+								"name": "Limited Manoeuvres"
+							},
+							{
+								"name": "Limited Movement"
+							}
+						]
+					},
+					"equipment": [
+						"Hand Weapon", "Shield"
+					],
+					"options": [
+						{
+							"name": "Archer",
+							"points": 25,
+							"stats": {
+								"shoot": 1,
+								"special": [
+									{
+										"name": "Archer"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Snow-capped Mountains",
 			"race": "Dwarf",
 			"region": 3,

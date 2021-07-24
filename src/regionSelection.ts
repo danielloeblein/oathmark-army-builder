@@ -5,6 +5,9 @@ import * as goblinAndOrcTerrains from "./terrains/goblinAndOrcTerrains.json";
 import * as undeadTerrains from "./terrains/undeadTerrains.json";
 import * as halflingTerrains from "./terrains/halflingTerrains.json";
 import * as unalignedTerrains from "./terrains/unalignedTerrains.json";
+import * as expeditionTerrains from "./terrains/expeditionTerrains.json";
+import * as supportTerrains from "./terrains/supportTerrains.json";
+import * as formationTerrains from "./terrains/formationTerrains.json";
 import TroopSelection from "./troopSelection";
 import Terrain from "./models/terrain";
 import SelectedTerrain from "./models/selectedTerrain";
@@ -35,7 +38,7 @@ class RegionSelection {
         this.terrains_4 =  [];
         this.terrains_5 =  [];
         this.chosenTerrains = [];
-        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, halflingTerrains.list, unalignedTerrains.list];
+        this.terrainLists = [dwarfTerrains.list, humanTerrains.list, elfTerrains.list, goblinAndOrcTerrains.list, undeadTerrains.list, halflingTerrains.list, unalignedTerrains.list, expeditionTerrains.list, supportTerrains.list, formationTerrains.list];
         this.clear = <HTMLButtonElement> document.getElementById("clearTerrains");
         this.clear.onclick = () => this.clearTerrains();
         this.kingdomName = 'NEW KINGDOM';
@@ -49,7 +52,7 @@ class RegionSelection {
     };
     public init(): void { 
         this.terrainLists.forEach((terrainList: Array<Terrain>)=> terrainList.forEach((terrain: Terrain) => {
-            if(terrain.region === 1 && !(terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || terrain.race === 'Unaligned')) {
+            if(terrain.region === 1 && !(terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || ['Unaligned', 'Expedition', 'Support', 'Formation'].includes(terrain.race))) {
                 this.terrains_1.push(terrain);
             }
         }));
@@ -136,6 +139,9 @@ class RegionSelection {
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const halflingTerrainTable: HTMLElement = document.getElementById('halflingTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
+        const expeditionTerrainTable: HTMLElement = document.getElementById('expeditionTerrains');
+        const supportTerrainTable: HTMLElement = document.getElementById('supportTerrains');
+        const formationTerrainTable: HTMLElement = document.getElementById('formationTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
@@ -143,6 +149,9 @@ class RegionSelection {
         undeadTerrainTable.innerHTML = '';
         halflingTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
+        expeditionTerrainTable.innerHTML = '';
+        supportTerrainTable.innerHTML = '';
+        formationTerrainTable.innerHTML = '';
         list.forEach((terrain: Terrain) => {
             if (terrain.unique && this.chosenTerrains.find(chosenTerrain => chosenTerrain.terrain.name === terrain.name)) {
                 return;
@@ -152,7 +161,10 @@ class RegionSelection {
             terrain.race === 'Elf' ? elfTerrainTable : 
             terrain.race === 'Goblin and Orc' ? goblinAndOrcTerrainTable :
             terrain.race === 'Undead' ? undeadTerrainTable : 
-            terrain.race === 'Halfling' ? halflingTerrainTable : unalignedTerrainTable;
+            terrain.race === 'Halfling' ? halflingTerrainTable : 
+            terrain.race === 'Unaligned' ? unalignedTerrainTable :
+            terrain.race === 'Expedition' ? expeditionTerrainTable :
+            terrain.race === 'Support' ? supportTerrainTable : formationTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
             terrainButton.className = "btn lightGrey btn-block";
@@ -171,6 +183,9 @@ class RegionSelection {
                 undeadTerrainTable.innerHTML = '';
                 halflingTerrainTable.innerHTML = '';
                 unalignedTerrainTable.innerHTML = '';
+                expeditionTerrainTable.innerHTML = '';
+                supportTerrainTable.innerHTML = '';
+                formationTerrainTable.innerHTML = '';
                 this.chosenTerrains.push({terrain: terrain, region: region});
                 this.troopSelection.createTable();
                 this.exportKingdom();
@@ -191,6 +206,9 @@ class RegionSelection {
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const halflingTerrainTable: HTMLElement = document.getElementById('halflingTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
+        const expeditionTerrainTable: HTMLElement = document.getElementById('expeditionTerrains');
+        const supportTerrainTable: HTMLElement = document.getElementById('supportTerrains');
+        const formationTerrainTable: HTMLElement = document.getElementById('formationTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
@@ -198,13 +216,19 @@ class RegionSelection {
         undeadTerrainTable.innerHTML = '';
         halflingTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
+        expeditionTerrainTable.innerHTML = '';
+        supportTerrainTable.innerHTML = '';
+        formationTerrainTable.innerHTML = '';
         list.forEach((terrain: Terrain) => {
             const terrainTable: HTMLElement = terrain.race === 'Dwarf' ? dwarfTerrainTable : 
             terrain.race === 'Human' ? humanTerrainTable : 
             terrain.race === 'Elf' ? elfTerrainTable : 
             terrain.race === 'Goblin and Orc' ? goblinAndOrcTerrainTable :
             terrain.race === 'Undead' ? undeadTerrainTable : 
-            terrain.race === 'Halfling' ? halflingTerrainTable : unalignedTerrainTable;
+            terrain.race === 'Halfling' ? halflingTerrainTable : 
+            terrain.race === 'Unaligned' ? unalignedTerrainTable :
+            terrain.race === 'Expedition' ? expeditionTerrainTable :
+            terrain.race === 'Support' ? supportTerrainTable : formationTerrainTable;
             const terrainButton: HTMLButtonElement = document.createElement('button');
             terrainButton.innerHTML = terrain.name;
             terrainButton.className = "btn lightGrey btn-block";
@@ -231,6 +255,9 @@ class RegionSelection {
                 undeadTerrainTable.innerHTML = '';
                 halflingTerrainTable.innerHTML = '';
                 unalignedTerrainTable.innerHTML = '';
+                expeditionTerrainTable.innerHTML = '';
+                supportTerrainTable.innerHTML = '';
+                formationTerrainTable.innerHTML = '';
                 this.capital = terrain;
                 this.chosenTerrains.push({terrain: terrain, region: region});
                 this.fillRegions();
@@ -300,7 +327,7 @@ class RegionSelection {
         this.terrainLists.forEach((terrainList: Array<Terrain>) => terrainList.forEach((terrain: Terrain) => {
             switch (terrain.region) {
                 case 1:
-                    if (terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || terrain.race === 'Unaligned') {
+                    if (terrain.name.toLowerCase().includes('city') || terrain.name.toLowerCase().includes('minor') || ['Unaligned', 'Expedition', 'Support', 'Formation'].includes(terrain.race)) {
                         this.terrains_2.push(terrain);
                         this.terrains_3.push(terrain);
                         this.terrains_4.push(terrain);
@@ -361,6 +388,9 @@ class RegionSelection {
         const undeadTerrainTable: HTMLElement = document.getElementById('undeadTerrains');
         const halflingTerrainTable: HTMLElement = document.getElementById('halflingTerrains');
         const unalignedTerrainTable: HTMLElement = document.getElementById('unalignedTerrains');
+        const expeditionTerrainTable: HTMLElement = document.getElementById('expeditionTerrains');
+        const supportTerrainTable: HTMLElement = document.getElementById('supportTerrains');
+        const formationTerrainTable: HTMLElement = document.getElementById('formationTerrains');
         dwarfTerrainTable.innerHTML = '';
         humanTerrainTable.innerHTML = '';
         elfTerrainTable.innerHTML = '';
@@ -368,6 +398,9 @@ class RegionSelection {
         undeadTerrainTable.innerHTML = '';
         halflingTerrainTable.innerHTML = '';
         unalignedTerrainTable.innerHTML = '';
+        expeditionTerrainTable.innerHTML = '';
+        supportTerrainTable.innerHTML = '';
+        formationTerrainTable.innerHTML = '';
         for(let i: number = 2; i<=5; i++ ){
             for (let j: number = 1; j<=Math.min(i,4); j++) {
                 const regionButton: HTMLElement = document.getElementById(`region_${i}_${j}`);
