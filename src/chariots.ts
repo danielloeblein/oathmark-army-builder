@@ -54,7 +54,7 @@ class Chariots {
             });
             return usedChariots < availableChariots;
         }
-        return false;
+        return true;
     }
 }
 

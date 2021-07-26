@@ -207,7 +207,7 @@ class TroopSelection {
     }
 
     public isTroopRemaining(troop: Unit): boolean {
-        if (troop.name.includes('Chariot')) {
+        if (troop.name.includes('Chariot') && !troop.name.includes('Revenant')) {
             return this.chariots.isChariotAvailable(troop);
         }
         const allSelectedTroops: Array<SelectedUnit> = this.armySelection.getSelectedUnits();
